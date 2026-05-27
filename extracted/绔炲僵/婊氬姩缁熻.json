@@ -1,0 +1,317 @@
+{
+  "last_updated": "20260526",
+  "version": "1.8.0",
+  "rolling_7day": {
+    "period": "2026-05-19 至 2026-05-25",
+    "summary": {
+      "total_bets": 53,
+      "hits": 12,
+      "misses": 33,
+      "pending": 5,
+      "hit_rate": "26.7%",
+      "total_invested": 2820,
+      "total_return": 1596.8,
+      "net_profit": -1223.2,
+      "roi": "-43.2%"
+    },
+    "by_type": {
+      "conservative": {
+        "total_bets": 24,
+        "hits": 7,
+        "misses": 14,
+        "pending": 3,
+        "hit_rate": "33.3%",
+        "total_invested": 1896,
+        "total_return": 1317.6,
+        "net_profit": -578.4,
+        "roi": "-30.5%",
+        "trend": "down",
+        "consecutive_hits": 1,
+        "consecutive_misses": 0,
+        "fuse_released": true,
+        "recommendation": "稳健型2连红！恢复正常推荐"
+      },
+      "aggressive": {
+        "total_bets": 17,
+        "hits": 4,
+        "misses": 11,
+        "pending": 2,
+        "hit_rate": "26.7%",
+        "total_invested": 750,
+        "total_return": 411,
+        "net_profit": -339,
+        "roi": "-45.2%",
+        "trend": "down",
+        "consecutive_hits": 0,
+        "consecutive_misses": 5,
+        "fuse_released": true,
+        "recommendation": "进取型永久取消"
+      },
+      "bookmaker": {
+        "total_bets": 14,
+        "hits": 5,
+        "misses": 9,
+        "pending": 0,
+        "hit_rate": "35.7%",
+        "total_invested": 314,
+        "total_return": 127.5,
+        "net_profit": -146.5,
+        "roi": "-46.7%",
+        "consecutive_hits": 0,
+        "consecutive_misses": 5,
+        "note": "庄家视角4连黑，但单场4/6命中率高，串关被冷门杀死",
+        "recommendation": "庄家视角4串一未中，命中率2/4，降低权重至40%"
+      }
+    },
+    "daily_detail": [
+      {
+        "date": "20260525",
+        "conservative": {
+          "scheme": "稳健型二串一",
+          "bets": "热刺主胜 × 那不勒斯主胜",
+          "hit": true,
+          "odds": 2.35,
+          "invested": 10,
+          "return": 23.5,
+          "profit": 13.5,
+          "note": "热刺1-0埃弗顿✅ 那不勒斯1-0乌迪内斯✅"
+        },
+        "aggressive": {
+          "scheme": "进取型",
+          "bets": "暂停推荐（熔断中）",
+          "hit": "pending",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "进取型熔断暂停"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角冷门四串一",
+          "bets": "拜仁让负 × 曼城让负 × 伯恩利平 × 维罗纳让胜",
+          "hit": "partial",
+          "odds": 204,
+          "invested": 40,
+          "return": 0,
+          "note": "命中2场(曼城让负✅/伯恩利平✅)，拜仁让负❌维罗纳让胜❌"
+        }
+      },
+      {
+        "date": "20260526",
+        "conservative": {
+          "scheme": "稳健三串一(TOP3)",
+          "bets": "001客不败 × 002主胜 × 009主不败",
+          "hit": false,
+          "odds": 5.8,
+          "invested": 16,
+          "return": 0,
+          "note": "001斯达2-0瓦勒伦加💥大冷门！垫底队10轮首胜杀死三串一"
+        },
+        "aggressive": {
+          "scheme": "进取型",
+          "bets": "永久取消",
+          "hit": "cancelled",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "进取型永久取消"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角六串一",
+          "bets": "001客不败×002主胜×004主不败×005莫尔德方向×007+1让胜×009主不败",
+          "hit": false,
+          "odds": 45.0,
+          "invested": 4,
+          "return": 0,
+          "note": "4/6单场命中(002✅004✅007✅009✅)，001冷门+005退盘信号杀串关"
+        }
+      },
+      {
+        "date": "20260525",
+        "conservative": {
+          "scheme": "稳健型方案A",
+          "bets": "热刺主胜 × 那不勒斯主胜",
+          "hit": true,
+          "odds": 2.35,
+          "invested": 20,
+          "return": 47.0,
+          "profit": 27.0,
+          "note": "热刺1-0埃弗顿✅ 那不勒斯1-0乌迪内斯✅"
+        },
+        "aggressive": {
+          "scheme": "进取型",
+          "bets": "暂停推荐（熔断中）",
+          "hit": "pending",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "进取型熔断暂停"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角冷门四串一",
+          "bets": "拜仁让负 × 曼城让负 × 伯恩利平 × 维罗纳让胜",
+          "hit": "partial",
+          "odds": 204,
+          "invested": 40,
+          "return": 0,
+          "note": "命中2场(曼城让负✅/伯恩利平✅)，拜仁让负❌维罗纳让胜❌"
+        }
+      },
+      {
+        "date": "20260524",
+        "conservative": {
+          "scheme": "稳健型方案A",
+          "bets": "博洛尼亚让胜 × 赫尔城让胜",
+          "hit": true,
+          "odds": 3.99,
+          "invested": 20,
+          "return": 79.8,
+          "profit": 59.8,
+          "note": "博洛尼亚3-3国米✅ 赫尔城1-0米堡✅"
+        },
+        "aggressive": {
+          "scheme": "进取型",
+          "bets": "暂停推荐（熔断中）",
+          "hit": "pending",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "进取型熔断暂停"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角冷门四串一",
+          "bets": "博洛尼亚让胜 × 赫尔城让胜 × 皇马让负 × 西班牙人主胜",
+          "hit": "partial",
+          "odds": 17.3,
+          "invested": 20,
+          "return": 0,
+          "note": "命中2场(博洛尼亚/赫尔城)，皇马让负❌ 西班牙人主胜❌"
+        }
+      },
+      {
+        "date": "20260523",
+        "conservative": {
+          "scheme": "稳健型方案",
+          "bets": "暂停推荐（13连黑）",
+          "hit": "pending",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "稳健型熔断暂停"
+        },
+        "aggressive": {
+          "scheme": "进取型",
+          "bets": "暂停推荐（熔断中）",
+          "hit": "pending",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "进取型熔断暂停"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角冷门三串一",
+          "bets": "拉普大学不败 × 波特诺让平 × 弗赖堡+1胜",
+          "hit": false,
+          "odds": 27.5,
+          "invested": 10,
+          "return": 0,
+          "note": "008让胜❌（0-3大败超出预判）"
+        }
+      },
+      {
+        "date": "20260522",
+        "conservative": {
+          "scheme": "稳健型方案",
+          "bets": "暂停推荐（13连黑）",
+          "hit": "pending",
+          "odds": 0,
+          "invested": 0,
+          "return": 0,
+          "note": "稳健型熔断暂停"
+        },
+        "aggressive": {
+          "scheme": "进取型方案A",
+          "bets": "003主胜 × 006让负",
+          "hit": false,
+          "odds": 3.34,
+          "invested": 10,
+          "return": 0,
+          "note": "003吉达联合1-5大败❌ 006阿贾克斯2-0让胜❌"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角冷门三串一",
+          "bets": "005客胜 × 006让负 × 003客胜",
+          "hit": false,
+          "odds": 9.95,
+          "invested": 20,
+          "return": 0,
+          "note": "003客胜✅命中！005主胜❌006让胜❌"
+        }
+      },
+      {
+        "date": "20260521",
+        "conservative": {
+          "scheme": "稳健型方案A",
+          "bets": "利勒斯特主胜 × 弗赖堡不败",
+          "hit": false,
+          "odds": 2.68,
+          "invested": 10,
+          "return": 0,
+          "note": "005利勒斯特1-2克里斯蒂❌ 008弗赖堡0-3维拉❌"
+        },
+        "aggressive": {
+          "scheme": "进取型",
+          "bets": "弗赖堡平 × 威廉二世让平",
+          "hit": false,
+          "odds": 11.63,
+          "invested": 10,
+          "return": 0,
+          "note": "008弗赖堡0-3❌ 011威廉二世1-2❌"
+        },
+        "bookmaker": {
+          "scheme": "庄家视角冷门三串一",
+          "bets": "拉普大学不败 × 波特诺让平 × 弗赖堡+1胜",
+          "hit": false,
+          "odds": 27.5,
+          "invested": 10,
+          "return": 0,
+          "note": "008让胜❌（0-3大败超出预判）"
+        }
+      }
+    ]
+  },
+  "model_notes": {
+    "v1.7.8_update": "更新滚动统计至5/24，稳健型13连黑后首次命中，庄家视角3连红🔥",
+    "recent_performance": "稳健型14连黑→1红，进取型5连黑，庄家视角3连红",
+    "recommendation": "稳健型建议谨慎观察；进取型暂停观望；庄家视角权重提升至60-70%",
+    "key_insights": [
+      "庄家视角连续3场命中（5/21-5/23），赔率变动幅度是核心信号",
+      "博洛尼亚场客胜赔率1.85→2.21是教科书级阻上信号",
+      "赫尔城场盘口不变但客队水位稳定=庄家不造热，完美预判主胜",
+      "皇马场盘口加深=诱上信号，但基本面进攻效率高导致正路打出",
+      "建议：庄家单场信号优先于串关"
+    ],
+    "bookmaker_signal_cases": [
+      {
+        "date": "20260521",
+        "match": "吉达联合 vs 胡拜尔库",
+        "signal": "盘口0.75→0.25，极端退盘",
+        "result": "1-5客胜大冷",
+        "judgment": "完美预判🔥"
+      },
+      {
+        "date": "20260523",
+        "match": "赫尔城 vs 米德尔斯堡",
+        "signal": "盘口维持0.25球，客队水位稳定",
+        "result": "1-0主胜绝杀",
+        "judgment": "完美预判🔥"
+      },
+      {
+        "date": "20260523",
+        "match": "博洛尼亚 vs 国际米兰",
+        "signal": "客胜赔率1.85→2.21大幅上调，退盘0.5→0.25",
+        "result": "3-3绝平",
+        "judgment": "完美预判🔥"
+      }
+    ]
+  }
+}

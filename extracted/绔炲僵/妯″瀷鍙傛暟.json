@@ -1,0 +1,985 @@
+{
+  "version": "v1.8.0",
+  "changelog": "v1.7.9→v1.8.0: 新增保级队主场爆冷因子(001斯达教训)+退盘权重提升(005莫尔德教训)+决赛射手谢幕庄家降权(拜仁凯恩)+降级队庄家信号降权(维罗纳)",
+  "last_updated": "2026-05-26",
+  "math_model_enabled": true,
+  "parameters": {
+    "胜率权重": {
+      "base": 0.35,
+      "high_profile": 0.4,
+      "low_profile": 0.3,
+      "season_end_last_3_rounds": 0.2
+    },
+    "战意权重": {
+      "base": 0.25,
+      "cup_knockout": 0.3,
+      "relegation_battle": 0.33,
+      "season_end": 0.27,
+      "equal_motivation": 0.32
+    },
+    "伤病权重": {
+      "base": 0.2,
+      "key_player_missing": 0.25,
+      "season_end_mass_injury": 0.3
+    },
+    "冷门系数": {
+      "base": 0.15,
+      "derby": 0.12,
+      "small_league": 0.18,
+      "season_end": 0.22,
+      "equal_motivation_upsets": 0.25
+    },
+    "稳胆诱上识别": {
+      "description": "赔率<1.25时，赔率持续降水是庄家诱上信号",
+      "odds_threshold": 1.25,
+      "water_drop_trigger": 0.03,
+      "upset_multiplier": 1.3,
+      "execution_rule": "当主胜赔率<1.25且赛前24小时内降水>0.03时，冷门概率×1.30，胜率权重×0.80",
+      "extreme_odds_threshold": 1.2,
+      "extreme_odds_extra_verification": {
+        "description": "赔率<1.20时，大胜概率需额外蒙特卡洛验证",
+        "monte_carlo_required": true,
+        "cold_prob_boost": 1.4,
+        "execution_rule": "赔率<1.20时，冷门概率×1.40，需10000次蒙特卡洛模拟验证大胜概率>60%才推荐"
+      }
+    },
+    "赛季末强队过热识别": {
+      "description": "赛季末强队赔率被过度压缩时，警惕冷门",
+      "trigger_conditions": [
+        "联赛最后5轮",
+        "强队赔率<1.30",
+        "对手无欲无求（积分差>10分）"
+      ],
+      "upset_boost": 0.25,
+      "execution_rule": "同时满足上述3个条件时，弱队胜率权重+0.25，冷门系数+0.20"
+    },
+    "庄家视角_稳胆场景": {
+      "description": "赔率<1.25时，庄家视角权重提升",
+      "trader_weight_boost": 0.7,
+      "normal_trader_weight": 0.5,
+      "trigger_condition": "主胜赔率<1.25",
+      "execution_rule": "赔率<1.25时，庄家视角权重从50%提升至70%，模型权重降至30%",
+      "applicable_scenarios": {
+        "stable_odds_trap": "稳胆诱上识别场景",
+        "handicap_contradiction": "让球盘口矛盾场景（如004阿森纳让-3球，实际1-0小胜）",
+        "relegation_final_stretch": "赛季末保级关键战"
+      }
+    },
+    "体能因子": {
+      "base": 0.1,
+      "midweek_match": 0.12,
+      "extra_time": 0.15
+    },
+    "红牌风险": {
+      "base": 0.05,
+      "aggressive_defense": 0.08
+    },
+    "平局因子": {
+      "base": 0.08,
+      "high_profile_knockout": 0.15,
+      "defensive_tactical": 0.12,
+      "relegation_tension": 0.17,
+      "equal_motivation_draw": 0.22,
+      "relegation_points_diff": {
+        "description": "保级积分差与平局概率正相关（积分差越小，平局概率越高）",
+        "diff_0_3": 0.25,
+        "diff_4_6": 0.16,
+        "diff_7_plus": 0.1
+      }
+    },
+    "高关注度比赛因子": {
+      "description": "赛前锁定冠军/欧冠等利好消息导致防守专注度下降",
+      "pre_match_celebration": 0.12,
+      "high_stakes_pressure": 0.08,
+      "execution_rule": "当比赛赛前出现夺冠/锁定欧冠等利好消息时，胜率权重下调0.05，防守专注度风险+0.12"
+    },
+    "保级队主场爆冷因子": {
+      "description": "垫底队/保级队主场背水一战时的爆发力被低估，需额外加权",
+      "source": "20260525复盘-001斯达(垫底队10轮首胜2-0完胜)",
+      "trigger_conditions": [
+        "主队排名联赛倒数3名",
+        "主队连续5轮以上不胜",
+        "客队赔率<1.50"
+      ],
+      "upset_multiplier": 1.25,
+      "execution_rule": "满足2个以上条件时，冷门概率×1.25；满足全部3个条件时×1.40；客队赔率<1.50时额外触发预警"
+    },
+    "退盘权重提升": {
+      "description": "退盘幅度明显时，退盘方向信号权重提升",
+      "source": "20260525复盘-005莫尔德(初赔1.85→即时1.95，退盘0.10但方向判断失误)",
+      "withdraw_threshold": 0.08,
+      "weight_boost": 0.2,
+      "execution_rule": "退盘幅度>0.08时，退盘方向信号权重+20%；退盘+水位松动双重信号时，冷门概率×1.35；退盘信号应更果断反选"
+    },
+    "客队进攻效率修正": {
+      "description": "保级队主场时客队进攻效率打折",
+      "relegation_home_team": 0.85,
+      "season_end_mass_injury_home_advantage": 0.0,
+      "execution_rule": "当主队为保级队时，客队进攻效率参数×0.85；赛季末残阵主场优势归零计算"
+    },
+    "战意对等因子": {
+      "description": "双方战意级别对等时（亚冠vs保级/欧冠vs欧战），实力优势被显著压缩",
+      "equal_motivation_draw_boost": 0.22,
+      "equal_motivation_upsets_boost": 0.25,
+      "execution_rule": "当双方战意级别对等且存在级别差时（如亚冠队vs保级队），平局因子+0.22，冷门系数+0.25"
+    },
+    "赛季末历史数据衰减": {
+      "description": "赛季末最后2-3轮，历史数据（历史交锋/历史平局率）权重大幅衰减",
+      "last_3_rounds_weight": 0.2,
+      "last_2_rounds_weight": 0.15,
+      "execution_rule": "赛季末最后3轮，历史数据权重从0.35降至0.20；最后2轮降至0.15；优先依赖近期状态和战意"
+    },
+    "榜首队赛季不败历史权重": {
+      "description": "当领头羊球队赛季不败时，历史交锋数据参考价值大幅下降",
+      "unbeaten_leader_history_weight": 0.2,
+      "trigger_conditions": [
+        "球队为联赛领头羊",
+        "赛季不败或仅1败",
+        "历史交锋显示主队占优"
+      ],
+      "execution_rule": "同时满足上述条件时，历史交锋权重从0.35降至0.20；优先依赖当前赛季客场表现和状态"
+    },
+    "让球盘因子": {
+      "base": 0.1,
+      "handicap_threshold": 0.15,
+      "season_end_handicap": 0.18,
+      "execution_rule": "让球盘赔率需额外+0.5门槛"
+    },
+    "赛季末轮换风险": {
+      "top_league_last_5": 0.15,
+      "mid_table_team": 0.2,
+      "rotation_risk_indicator": "首发名单与上轮变化>4人",
+      "cross_verify_required": true,
+      "description": "赛季末轮换风险评估，需交叉验证首发名单"
+    },
+    "保级战意爆发因子": {
+      "description": "联赛末轮保级队主场时，对手胜率需要额外下调",
+      "base": 0.15,
+      "last_3_rounds": 0.2,
+      "last_1_round": 0.25,
+      "execution_rule": "当保级队距安全区≤3分且处于主场时，对手胜率权重×0.85（即保级队胜率权重+0.15）"
+    },
+    "队内竞争因子": {
+      "description": "赛季末无欲无求队的球员仍有证明自己的动力",
+      "top_team_rotation": 0.08,
+      "mid_table_competition": 0.15,
+      "last_5_matches": 0.18,
+      "execution_rule": "赛季末中游队（无欲无求），对手胜率权重额外×0.90"
+    },
+    "信息源可信度": {
+      "description": "赛季末信息源（轮换报道）与赔率变动矛盾时，优先相信赔率变动",
+      "base_confidence": 0.9,
+      "rotation_news_vs_odds": 0.75,
+      "execution_rule": "当轮换报道与赔率变动矛盾时，报道可信度打75折；赔率异动可信度+0.10"
+    },
+    "双引擎一致性反指": {
+      "description": "当模型与庄家视角一致时，赛季末增加反向判断权重",
+      "season_end_trigger": true,
+      "confidence_penalty": 0.2,
+      "execution_rule": "赛季末（5月）当模型与庄家赔率同向时，信心权重-0.20（原0.15），增加反向选项概率"
+    },
+    "凯利临界庄家权重提升": {
+      "description": "凯利值临界时（0.05-0.08），庄家视角权重优先提升",
+      "kelly_critical_range": [
+        0.05,
+        0.08
+      ],
+      "trader_weight_boost": 0.6,
+      "base_trader_weight": 0.5,
+      "execution_rule": "凯利值处于0.05-0.08临界区间时，庄家视角权重从50%提升至60%，同时投注金额从50元降至30元"
+    },
+    "庄家阻上信号识别": {
+      "description": "赛季末保级战庄家阻上信号识别与权重",
+      "season_end_relegation_boost": 0.6,
+      "signal_conditions": [
+        "盘口强拉主队但基本面不支持",
+        "凯利值临界(0.05-0.08)",
+        "保级积分差0-3分"
+      ],
+      "execution_rule": "同时满足上述3个条件时，庄家阻上信号可信度+0.15，可考虑让球负选项"
+    },
+    "赛季末主场谢幕战荣誉感因子": {
+      "description": "赛季末无欲无求队的主场谢幕战，球员荣誉感和告别情绪会激发超常发挥",
+      "base_multiplier": 1.15,
+      "last_home_match": 1.25,
+      "farewell_player_count": {
+        "description": "告别球员数量与权重关系",
+        "1_2_players": 1.1,
+        "3_plus_players": 1.2,
+        "captain_farewell": 1.25
+      },
+      "execution_rule": "当球队：1)已确定无欲无求 2)本场为主场 3)为本赛季最后一个主场 → 主队胜率权重×1.15-1.25",
+      "weight_adjustment": {
+        "description": "主队胜率权重调整值",
+        "last_3_rounds": 0.12,
+        "last_home_game": 0.18
+      }
+    },
+    "赛季末谢幕战荣誉感因子_升级版": {
+      "description": "合并主场谢幕战+客场谢幕战+决赛谢幕战，形成完整谢幕战体系",
+      "home_farewell": {
+        "description": "主场谢幕战",
+        "base": 1.15,
+        "last_home": 1.25,
+        "captain_farewell": 1.3
+      },
+      "away_farewell": {
+        "description": "客场谢幕战荣誉感略低",
+        "base": 1.08,
+        "captain_farewell": 1.15
+      },
+      "final_farewell": {
+        "description": "决赛谢幕战最强",
+        "knockout_cup": 1.3,
+        "champions_league": 1.35,
+        "league_finale": 1.28
+      },
+      "execution_rule": "谢幕战时：主队胜率权重×1.15-1.35；决赛+谢幕战权重叠加×1.25-1.40"
+    },
+    "决赛谢幕战_顶级球星爆种因子": {
+      "description": "决赛/赛季大结局+顶级球星谢幕战时，球星超常发挥概率大幅提升",
+      "trigger_conditions": [
+        "杯赛决赛或联赛大结局",
+        "顶级射手/核心球员谢幕战",
+        "赔率显示强队大热"
+      ],
+      "star_player_boost": {
+        "description": "顶级球星谢幕战进球数期望提升",
+        "top_scorer": 1.35,
+        "captain_farewell": 1.25,
+        "regular_star": 1.15
+      },
+      "execution_rule": "满足≥2个条件时：强势方穿盘概率+0.25，庄家视角权重×0.70（庄家也可能被误导）",
+      "bookmaker_overridden": true
+    },
+    "决赛场景_庄家降权": {
+      "description": "决赛/大结局场景，庄家视角权重需降权处理",
+      "applicable_scenarios": [
+        "杯赛决赛",
+        "联赛大结局",
+        "升降级附加赛决赛"
+      ],
+      "weight_settings": {
+        "normal_trader_weight": 0.5,
+        "final_trader_weight": 0.45,
+        "final_with_star_farewell": 0.4
+      },
+      "execution_rule": "决赛场景庄家权重-5%至-10%；决赛+谢幕战降权-10%至-15%"
+    },
+    "情绪失控红牌风险参数": {
+      "description": "赛季末关键战/保级战/荣誉战中的情绪失控和红牌风险评估",
+      "base_risk": 0.08,
+      "aggressive_teams": {
+        "description": "防守凶悍球队的红牌风险",
+        "high_aggro": 0.18,
+        "medium_aggro": 0.12,
+        "low_aggro": 0.06
+      },
+      "match_context": {
+        "description": "比赛场景与红牌风险",
+        "season_finale": 0.15,
+        "relegation_battle": 0.13,
+        "farewell_match": 0.12,
+        "cup_finale": 0.1
+      },
+      "red_card_impact": {
+        "description": "红牌对比赛结果的影响系数",
+        "early_red_card": 0.35,
+        "mid_red_card": 0.25,
+        "late_red_card": 0.15,
+        "same_team": 0.8
+      },
+      "execution_rule": "赛季末关键战评估时需考虑：1)球队风格(防守凶悍×1.5) 2)比赛重要性 3)情绪失控概率 → 弱势方胜率权重+0.05-0.15"
+    },
+    "残阵量化精度提升": {
+      "description": "5/19复盘教训：弗鲁米嫩塞中场4名核心缺阵影响被低估，需要更精确的量化评估",
+      "core_defender_missing": {
+        "description": "核心后防缺阵影响",
+        "base_penalty": 0.2,
+        "one_key_player": 0.22,
+        "two_key_players": 0.28,
+        "three_plus": 0.35
+      },
+      "core_midfielder_missing": {
+        "description": "核心中场缺阵影响",
+        "base_penalty": 0.18,
+        "one_key_player": 0.2,
+        "two_key_players": 0.26,
+        "three_plus": 0.32
+      },
+      "combined_penalty": {
+        "description": "后防+中场同时缺阵",
+        "multiplier": 0.85,
+        "execution_rule": "当核心后防+核心中场同时缺阵时，总影响系数×0.85（双重打击叠加效应）"
+      },
+      "execution_rule": "残阵评估需区分：1)位置（后防>中场>前场）2)数量 3)是否为核心球员 → 综合降档系数0.20-0.35"
+    },
+    "强队客场陷阱识别强化": {
+      "description": "5/19复盘教训：曼城客战南海岸球队4场不胜，需强化强队客场不稳识别",
+      "strong_team_away_trap": {
+        "description": "强队客场不稳识别",
+        "premier_league_teams": [
+          "曼城",
+          "阿森纳",
+          "利物浦",
+          "热刺",
+          "切尔西"
+        ],
+        "south_coast_teams": [
+          "伯恩茅斯",
+          "南安普敦",
+          "布莱顿"
+        ],
+        "historical_fails": 0.15,
+        "recent_away_struggle": 0.12
+      },
+      "trader_away_risk_signal": {
+        "description": "庄家明确提示客场风险时的权重",
+        "trigger_conditions": [
+          "庄家提示客场不胜",
+          "庄家提示历史劣势",
+          "赔率偏高"
+        ],
+        "cold_factor_boost": 0.1,
+        "execution_rule": "当庄家明确提示强队客场风险时（≥2项），冷门系数+0.10，胜率权重×0.85"
+      },
+      "derby_derby_factor": {
+        "description": "德比战因子强化",
+        "derby_derby": 0.15,
+        "local_rivalry": 0.1,
+        "execution_rule": "同城德比/地区德比时，意外因素权重+0.15，平局概率+0.10"
+      }
+    },
+    "庄家提示采纳规则强化": {
+      "description": "5/19复盘教训：庄家多次明确提示风险但未被采纳，需强化采纳规则",
+      "trader_signal_priority": {
+        "description": "庄家提示优先采纳条件",
+        "cold_factor_boost": 0.15,
+        "trader_weight_boost": 0.15,
+        "trigger_count": 2,
+        "execution_rule": "当庄家明确提示≥2项风险因子时：庄家权重+0.15，冷门系数+0.15"
+      },
+      "trader_odds_resonance": {
+        "description": "赔率异动+庄家提示共振",
+        "resonance_boost": 0.25,
+        "trader_weight_final": 0.75,
+        "execution_rule": "当赔率异动+庄家提示同时出现时，庄家权重提升至75%，模型权重降至25%"
+      }
+    },
+    "杯赛决赛大胜风险参数": {
+      "description": "5/21复盘教训：欧联决赛弗赖堡0-3维拉大败，杯赛决赛盘口接近时需考虑大胜可能",
+      "handicap_close_threshold": {
+        "description": "让平赔率与让胜赔率接近程度",
+        "ratio_threshold": 1.15,
+        "execution_rule": "让平/让胜<1.15时，考虑大胜风险"
+      },
+      "finale_big_win_factor": {
+        "description": "决赛大胜因子",
+        "knockout_cup_final": 0.2,
+        "champions_league_final": 0.25,
+        "execution_rule": "杯赛决赛盘口接近时，弱势方胜率权重+0.20-0.25"
+      },
+      "manager_experience_premium": {
+        "description": "教练决赛经验溢价",
+        "emery_4_titles": 0.15,
+        "multiple_final_experience": 0.1,
+        "execution_rule": "当教练有≥2次杯赛决赛经验时，强势方胜率权重+0.10-0.15"
+      }
+    },
+    "北欧联赛二次降权": {
+      "description": "5/21复盘教训：挪超利勒斯特预测失败，北欧联赛信心权重需二次下调",
+      "northern_europe_leagues": {
+        "挪超": 0.45,
+        "芬超": 0.4,
+        "瑞超": 0.5,
+        "丹麦超": 0.45
+      },
+      "execution_rule": "北欧联赛赔率解读权重×0.60，模型胜率权重×0.70",
+      "exception_scenarios": [
+        "强队客场且庄家提示明确阻上",
+        "关键战且信息透明"
+      ]
+    },
+    "赛季末附加赛风险参数": {
+      "description": "5/21复盘教训：威廉二世附加赛盘口矛盾识别正确但方向错误",
+      "promotion_relegation_playoff": {
+        "description": "升降级附加赛特殊因子",
+        "base_risk": 0.2,
+        "psychological_pressure": 0.15,
+        "neutral_venue": 0.1,
+        "execution_rule": "附加赛时双方胜率权重各×0.85，平局概率+0.20"
+      },
+      "single_match_pressure": {
+        "description": "单场定胜负压力因子",
+        "value": 0.18,
+        "execution_rule": "单场定胜负时，意外因素概率+0.18"
+      }
+    },
+    "稳健型熔断升级": {
+      "description": "5/21复盘：稳健型12连黑历史最差，升级熔断规则",
+      "consecutive_12_loss": {
+        "bet_limit": 5,
+        "odds_threshold": 2.5,
+        "odds_recommended": 3.0,
+        "recommendation": "暂停推荐，等待模型重新校准"
+      },
+      "consecutive_15_loss": {
+        "bet_limit": 0,
+        "recommendation": "完全暂停，等待3场复盘验证后恢复"
+      },
+      "restart_condition": {
+        "hit_rate_threshold": 0.6,
+        "consecutive_hits": 3,
+        "execution_rule": "最近5场命中率≥60%且连续命中≥3场时，可逐步恢复推荐"
+      }
+    },
+    "连黑动态调整强化": {
+      "description": "5/19稳健型11连黑，需强化连黑时的投注控制",
+      "consecutive_loss_adjustment": {
+        "conservative_5_loss": {
+          "bet_limit": 15,
+          "odds_threshold": 2.0
+        },
+        "conservative_10_loss": {
+          "bet_limit": 5,
+          "odds_threshold": 2.5,
+          "recommendation": "熔断观察"
+        },
+        "conservative_15_loss": {
+          "bet_limit": 0,
+          "recommendation": "暂停推荐，等待模型重新校准"
+        }
+      },
+      "aggressive_fuse": {
+        "description": "进取型熔断规则",
+        "fuse_threshold": 5,
+        "fuse_bet_limit": 10,
+        "release_condition": "模型命中率≥50%时释放"
+      }
+    },
+    "阻上信号_强化版": {
+      "description": "5/23复盘教训：博洛尼亚场客胜赔率1.85→2.21是教科书级阻上，需强化识别",
+      "trigger_conditions": {
+        "odds_change_threshold": 0.2,
+        "handicap_retreat_threshold": 0.25,
+        "kelly_draw_stable_range": [
+          0.91,
+          0.97
+        ]
+      },
+      "weight_adjustment": {
+        "cold_factor_boost": 0.2,
+        "weak_team_unbeaten_weight_boost": 0.2,
+        "cold_coefficient_boost": 0.15
+      },
+      "execution_rule": "同时满足：赔率变动≥0.20 + 退盘≥0.25球 + 凯利平局稳定 → 弱队不败概率权重+0.20，冷门系数+0.15"
+    },
+    "决赛附加赛_庄家权重提升": {
+      "description": "5/23复盘教训：赫尔城温布利100%胜率=庄家权重需提升至70%",
+      "applicable_scenarios": [
+        "英冠升级附加赛决赛",
+        "杯赛决赛",
+        "保级生死战"
+      ],
+      "weight_settings": {
+        "final_playoff_weight": 0.7,
+        "relegation_final_weight": 0.65,
+        "season_end_rotation_weight": 0.7
+      },
+      "execution_rule": "决赛/附加赛/赛季末轮换场景，庄家视角权重从50%提升至65-70%"
+    },
+    "盘口加深_双因素判断": {
+      "description": "5/23复盘教训：皇马场盘口加深但正路打出，需结合基本面和赔率结构",
+      "basic_analysis_rules": {
+        "strong_attack_confirmed": "进攻效率高（近5场场均≥1.8球）→ 正路概率大 → 优先让胜",
+        "rotation_confirmed": "残阵（主力缺阵≥3人）→ 诱上概率大 → 优先让负",
+        "normal_squad": "正常阵容 → 参考赔率结构"
+      },
+      "odds_structure_rules": {
+        "let_draw_approx_let_loss": "让平≈让负赔率（差值<0.10）→ 诱上信号 → 反向",
+        "let_win_lower_expected": "让胜赔率低于预期 → 真实信心 → 正路"
+      },
+      "execution_rule": "盘口加深时：1)基本面进攻效率高→正路 2)赔率结构让平≈让负→诱上 3)需同时满足两个诱上条件才反向"
+    },
+    "保级战_战术分析": {
+      "description": "5/23复盘教训：西班牙人保级战1-1平局，压力导致保守战术",
+      "pressure_tactical_rules": {
+        "last_3_rounds_relegation": "保级压力可能导致保守→优先考虑小分/平局",
+        "direct_battle": "直接保级大战→平局概率+0.10",
+        "home_advantage_limited": "主场优势被压力抵消→权重×0.80"
+      },
+      "execution_rule": "保级战时：1)优先分析战术保守倾向 2)平局概率+0.10 3)大球概率-0.15 4)主场优势权重×0.80"
+    },
+    "决赛+谢幕战_庄家紧急降权": {
+      "description": "决赛+顶级射手谢幕战时，庄家视角权重紧急降权至25-30%",
+      "trigger_conditions": [
+        "杯赛决赛或联赛大结局",
+        "赔率<1.30",
+        "顶级射手谢幕战（单赛季进球>50球）"
+      ],
+      "weight_settings": {
+        "final_with_star_farewell": 0.25,
+        "execution_rule": "满足3个条件时，庄家权重从40%降至25%，模型权重从60%升至75%"
+      },
+      "bookmaker_overridden_cases": [
+        {
+          "date": "20260525",
+          "match": "拜仁 vs 斯图加特（德国杯决赛）",
+          "signal": "庄家诱上信号，预判拜仁让负",
+          "result": "拜仁3-0大胜，凯恩帽子戏法",
+          "reason": "凯恩61球赛季谢幕战，荣誉感爆发超出庄家预判",
+          "lesson": "决赛+顶级射手谢幕时，庄家信号完全失效"
+        }
+      ]
+    }
+  },
+  "math_model_parameters": {
+    "description": "三层叠加架构数学模型参数",
+    "layer1_probability_generation": {
+      "poisson_dixon_coles": {
+        "weight": 0.6,
+        "description": "泊松/Dixon-Coles进球期望模型权重",
+        "parameters": {
+          "hfa": {
+            "description": "主场优势因子（联赛差异）",
+            "英超": 1.12,
+            "西甲": 1.08,
+            "德甲": 1.15,
+            "意甲": 1.1,
+            "法甲": 1.08,
+            "default": 1.1
+          },
+          "rho": {
+            "description": "Dixon-Coles低比分修正因子",
+            "high_scoring_league": 1.03,
+            "balanced_league": 1.0,
+            "low_scoring_league": 0.98
+          },
+          "time_decay_xi": {
+            "description": "时间衰减系数",
+            "value": 0.01,
+            "half_life_days": 70
+          }
+        }
+      },
+      "elo_rating": {
+        "weight": 0.4,
+        "description": "Elo等级分实力评估权重",
+        "parameters": {
+          "default_rating": 1500,
+          "k_factor": {
+            "description": "Elo更新系数",
+            "premier_league": 25,
+            "other_top_leagues": 30,
+            "cup_friendly": 40,
+            "initial_phase": 60
+          },
+          "hfa_elo": {
+            "description": "Elo主场优势加分",
+            "英超": 75,
+            "德甲": 90,
+            "西甲": 65,
+            "意甲": 80,
+            "法甲": 70,
+            "default": 75
+          },
+          "half_life_days": 180
+        }
+      }
+    },
+    "layer2_bayesian_update": {
+      "description": "贝叶斯自进化参数",
+      "enabled": true,
+      "parameters": {
+        "prior_alpha": {
+          "description": "Beta先验alpha参数",
+          "home": 2.0,
+          "draw": 2.0,
+          "away": 2.0
+        },
+        "prior_beta": {
+          "description": "Beta先验beta参数",
+          "home": 2.0,
+          "draw": 2.0,
+          "away": 2.0
+        },
+        "learning_rate": {
+          "description": "学习率（权重调整速度）",
+          "base": 0.2,
+          "pre_season": 0.1,
+          "mid_season": 0.2,
+          "run_in": 0.3
+        },
+        "window_size": {
+          "description": "分析窗口大小（场次）",
+          "default": 20,
+          "min_samples": 5
+        },
+        "season_phase_factor": {
+          "description": "赛季阶段因子",
+          "pre_season_months": [
+            7,
+            8
+          ],
+          "early_season_months": [
+            9,
+            10
+          ],
+          "mid_season_months": [
+            11,
+            12,
+            1,
+            2
+          ],
+          "run_in_months": [
+            3,
+            4,
+            5
+          ]
+        }
+      }
+    },
+    "layer3_kelly_criterion": {
+      "description": "凯利公式仓位管理参数",
+      "enabled": true,
+      "parameters": {
+        "fractional_kelly": {
+          "description": "分数凯利系数",
+          "conservative": 0.3,
+          "moderate": 0.5,
+          "aggressive": 0.7
+        },
+        "thresholds": {
+          "description": "仓位分级阈值",
+          "heavy_bet": 0.15,
+          "normal_bet": 0.05,
+          "light_bet": 0.02,
+          "forbid": 0.0
+        },
+        "position_level": {
+          "description": "仓位等级定义",
+          "heavy": "f* > 0.15 - 重注",
+          "normal": "0.05 < f* <= 0.15 - 正常",
+          "light": "0.02 < f* <= 0.05 - 轻仓",
+          "skip": "f* <= 0.02 - 跳过"
+        },
+        "kelly_adjustment": {
+          "description": "凯利动态调整",
+          "hot_streak_threshold": 3,
+          "hot_streak_multiplier": 1.2,
+          "cold_streak_threshold": -3,
+          "cold_streak_multiplier": 0.7
+        },
+        "limits": {
+          "description": "限制条件",
+          "min_odds": 1.5,
+          "max_simultaneous_bets": 3,
+          "max_total_position": 0.5
+        }
+      }
+    },
+    "validation_monte_carlo": {
+      "description": "蒙特卡洛验证参数",
+      "enabled": true,
+      "parameters": {
+        "n_simulations": 10000,
+        "max_goals": 10,
+        "cold_prob_threshold": 0.35,
+        "consistency_threshold": 0.05,
+        "verification_required": {
+          "description": "必须验证的场景",
+          "heavy_bet": true,
+          "cold_match": true,
+          "low_confidence": false
+        }
+      }
+    }
+  },
+  "league_weights": {
+    "欧冠": 1.0,
+    "欧冠半决赛决赛": 0.8,
+    "欧联": 0.9,
+    "英超": 0.95,
+    "西甲": 0.9,
+    "德甲": 0.88,
+    "意甲": 0.85,
+    "法甲": 0.82,
+    "荷甲": 0.75,
+    "荷乙附加赛": 0.7,
+    "K联赛": 0.6,
+    "J联赛": 0.62,
+    "瑞超": 0.55,
+    "小联赛_degraded": {
+      "description": "小联赛信息不透明，庄家信号可靠性下降",
+      "weight_multiplier": 0.5,
+      "applicable_leagues": [
+        "瑞超",
+        "丹麦超",
+        "挪超",
+        "芬超",
+        "奥甲",
+        "瑞士超"
+      ],
+      "execution_rule": "上述小联赛赔率权重×0.50，庄家视角信号可信度-0.20"
+    },
+    "解放者杯": 0.65,
+    "南美其他": 0.6,
+    "其他亚洲联赛": 0.55
+  },
+  "odds_thresholds": {
+    "conservative": {
+      "min": 2.0,
+      "max": 3.0,
+      "recommended": 2.3
+    },
+    "aggressive": {
+      "min": 3.0,
+      "max": 5.0,
+      "recommended": 3.5,
+      "hard_limit": "赔率<3.0坚决不进方案"
+    },
+    "single_bet_ceiling": {
+      "conservative": 1.5,
+      "aggressive": 2.2
+    }
+  },
+  "odds_execution_fuse": {
+    "aggressive_min_strict": 3.0,
+    "violation_action": "直接跳过该选项，不降低赔率凑单",
+    "single_bet_min": {
+      "conservative": 1.5,
+      "aggressive": 2.2
+    },
+    "strong_upset_fuse": {
+      "description": "赔率<1.25的强队，需满足庄家视角无阻上信号才可推荐",
+      "odds_threshold": 1.25,
+      "trader_signal_check": true,
+      "if_trader_against": "跳过该选项，不降低赔率凑单"
+    },
+    "hard_stop": "赔率不达标时整单跳过，禁止凑单"
+  },
+  "betting_strategy": {
+    "conservative": {
+      "base_amount": 100,
+      "hot_streak_multiplier": 1.2,
+      "hot_streak_threshold": 3,
+      "kelly_critical_adjustment": {
+        "description": "凯利临界值(0.05-0.08)时投注金额调整",
+        "normal_amount": 100,
+        "critical_amount": 60,
+        "trigger": "凯利值处于0.05-0.08区间"
+      }
+    },
+    "aggressive": {
+      "base_amount": 50,
+      "reduced_amount": 30,
+      "cool_streak_threshold": 2,
+      "preferred_odds_range": [
+        2.0,
+        2.5
+      ],
+      "avoid_odds_below": 1.5,
+      "if_no_suitable_match": "直接跳过当日进取型推荐"
+    }
+  },
+  "fuse_mechanism": {
+    "conservative_fuse": {
+      "trigger": "连续失误3场",
+      "action": "第4场自动降权至0.7倍信心，或提示观望",
+      "status": "当前10连黑，建议暂停或仅跟庄家视角"
+    },
+    "aggressive_fuse": {
+      "trigger": "连续失误2场",
+      "action": "暂停进取型推荐，等待合适场次",
+      "status": "连续失误9场，熔断状态，建议继续暂停至5月下旬"
+    }
+  },
+  "emergency_adjustment": {
+    "description": "5月19日紧急调整：稳健型10连黑/庄家视角3场2错",
+    "conservative_strategy": {
+      "current_status": "10连黑，暂停推荐或仅跟庄家视角",
+      "recommended_action": "稳健型暂停，等待庄家视角信号明确时跟进",
+      "base_amount": 0,
+      "trader_only_amount": 20
+    },
+    "aggressive_strategy": {
+      "current_status": "熔断状态",
+      "recommended_action": "继续暂停，不轻举妄动"
+    },
+    "trader_only_mode": {
+      "description": "当前推荐仅使用庄家视角，模型预测仅供参考",
+      "trader_weight": 0.8,
+      "model_weight": 0.2,
+      "applicable_scenarios": [
+        "赔率<1.25稳胆",
+        "让球盘口矛盾",
+        "赛季末保级关键战"
+      ]
+    }
+  },
+  "赔率倒挂识别精细化": {
+    "description": "5/22复盘教训：006场让负<让胜是防范平局而非真实信号",
+    "odds_inversion_threshold": 0.1,
+    "execution_rule": "当让负/让胜赔率差<0.10时，首先检查防范平局可能性，再判断冷门信号",
+    "exclusion_check": [
+      "附加赛/杯赛场景→平局优先排除",
+      "主队无欲无求但客队也无战意→平局概率+0.15",
+      "赔率差>0.15时→才考虑真正的冷门信号"
+    ],
+    "handicap_odds_boost": {
+      "description": "赔率倒挂时平局因子调整",
+      "playoff_cup": 0.25,
+      "normal_league": 0.15,
+      "execution_rule": "附加赛/杯赛赔率倒挂时，平局因子+0.25（原0.15）"
+    }
+  },
+  "附加赛庄家权重二次降权": {
+    "description": "5/22复盘教训：006场附加赛庄家信号完全失效，需进一步降权",
+    "playoff_cup_trader_weight": 0.4,
+    "normal_trader_weight": 0.5,
+    "execution_rule": "附加赛/升降级附加赛场景，庄家视角权重从50%降至40%",
+    "exception_scenarios": [
+      "盘口变化≥0.75级（极强矛盾）",
+      "庄家提示明确阻上且≥3项"
+    ]
+  },
+  "冷门串赔率阈值提升": {
+    "description": "5/22复盘教训：庄家完美判断被其他场次拖累，冷门串需更高赔率才有价值",
+    "current_threshold": 5.0,
+    "new_threshold": 8.0,
+    "execution_rule": "庄家冷门串赔率需≥8.0倍才推荐投入",
+    "recommended_range": [
+      8.0,
+      12.0
+    ],
+    "single_cold_bet_preference": {
+      "description": "单场冷门价值优于串关",
+      "trigger": "盘口变化≥0.75级",
+      "recommendation": "单场重注优先，冷门串为辅"
+    }
+  },
+  "盘口矛盾识别分档细化": {
+    "description": "5/22复盘教训：003场盘口0.75→0.25完美命中，需更精细的分档",
+    "tier1_contradiction": {
+      "handicap_change": "0.5-0.75级",
+      "cold_factor_boost": 0.2,
+      "trader_weight": 0.8,
+      "execution_rule": "盘口变化0.5-0.75级时，冷门系数+0.20，庄家权重80%"
+    },
+    "tier2_extreme_contradiction": {
+      "handicap_change": "≥0.75级",
+      "cold_factor_boost": 0.25,
+      "trader_weight": 0.85,
+      "execution_rule": "盘口变化≥0.75级时，冷门系数+0.25，庄家权重85%，可考虑单场重注"
+    },
+    "league_adjustment": {
+      "description": "联赛类型对盘口矛盾信号的放大效应",
+      "top_league": 1.0,
+      "mid_league": 0.9,
+      "small_league": 0.75,
+      "cup_playoff": 0.65
+    }
+  },
+  "adjustment_history": [
+    {
+      "date": "2026-05-25",
+      "version": "v1.7.9",
+      "change": "决赛+谢幕战特殊场景建模 + 庄家降权规则 + 谢幕战荣誉感因子升级",
+      "reason": "5月24日复盘：拜仁vs斯图加特决赛+凯恩谢幕战，凯恩帽子戏法(61球)超出所有模型预判，庄家也被真实情绪误导",
+      "details": [
+        "1. 新增'赛季末谢幕战荣誉感因子_升级版'(合并主场/客场/决赛三场景)",
+        "2. 新增'决赛谢幕战_顶级球星爆种因子'(触发≥2条件，强势方穿盘概率+0.25)",
+        "3. 新增'决赛场景_庄家降权规则'(决赛权重45%/决赛+谢幕40%)"
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "change": "v1.7.8：赔率倒挂精细化 + 附加赛庄家权重二次降权 + 冷门串阈值提升 + 盘口矛盾分档细化",
+      "reason": "5月21日复盘：006场让负<让胜赔率倒挂是防范平局而非真实信号（实际让胜）；庄家冷门串仅中1场性价比低",
+      "details": "1. 新增'赔率倒挂识别精细化'(赔率差<0.10时优先排除防范平局)；2. 附加赛庄家权重从50%降至40%；3. 冷门串赔率阈值从5.0提升至8.0；4. 盘口矛盾分档细化(0.5级+0.20权重/≥0.75级+0.25权重+单场重注)"
+    },
+    {
+      "change": "v1.7.7：新增杯赛决赛大胜风险参数 + 北欧联赛二次降权 + 赛季末附加赛风险参数 + 稳健型熔断升级",
+      "reason": "5月20日复盘：欧联决赛弗赖堡0-3维拉大败超出预判；挪超利勒斯特预测失败；稳健型12连黑历史最差",
+      "details": "1. 新增'杯赛决赛大胜风险参数'(盘口接近时大胜因子0.20-0.25)；2. 北欧联赛信心权重二次降权(挪超0.45/芬超0.40/瑞超0.50)；3. 新增'赛季末附加赛风险参数'(单场定胜负压力因子0.18)；4. 稳健型熔断升级(12连黑暂停推荐，15连黑完全暂停)"
+    },
+    {
+      "date": "2026-05-17",
+      "change": "v1.7.3：新增赛季末主场谢幕战荣誉感因子 + 情绪失控红牌风险参数",
+      "reason": "5月16日复盘：门兴4-0大胜霍芬海姆，稳健型七连黑；赛季末无欲队主场谢幕战荣誉感被低估；霍芬海姆红牌导致崩盘",
+      "details": "1. 新增'赛季末主场谢幕战荣誉感因子'(base=1.15/最后一个主场=1.25)；2. 新增'情绪失控红牌风险参数'(base=0.08/赛季末 finale=0.15/红牌影响系数)；3. 稳健型七连黑，建议暂停或降额至20元"
+    },
+    {
+      "date": "2026-05-16",
+      "change": "v1.7.2：新增战意对等因子 + 赛季末历史数据衰减 + 残阵主场优势归零",
+      "reason": "5月15日复盘：稳健型5连黑/进取型7连黑；历史平局率在保级绝境中失效；战意对等场次实力优势被压缩；圣埃蒂安11人伤停仍0-0守住",
+      "details": "1. 新增'战意对等因子'(equal_motivation_draw=0.22/upsets=0.25)；2. 新增'赛季末历史数据衰减'(最后3轮0.20/最后2轮0.15)；3. 赛季末残阵主场优势归零(season_end_mass_injury_home_advantage=0.0)；4. 胜率权重season_end_last_3_rounds=0.20"
+    },
+    {
+      "date": "2026-05-15",
+      "change": "v1.7.1：新增凯利临界庄家权重提升 + 庄家阻上信号识别 + 强化双引擎一致性反指 + 微调保级平局因子",
+      "reason": "5月15日复盘：004场次赫罗纳凯利值0.05临界，模型走盘但庄家视角让球负命中；凯利临界时决策不坚决；庄家阻上信号在赛季末保级战有效",
+      "details": "1. 新增'凯利临界庄家权重提升'(0.05-0.08时庄家权重60%)；2. 新增'庄家阻上信号识别'(赛季末保级战+盘口矛盾+凯利临界=让球负)；3. 双引擎一致性反指confidence_penalty: 0.15→0.20；4. 保级积分差0-3分平局因子: 0.22→0.25；5. 稳健型凯利临界投注金额: 100→60元"
+    },
+    {
+      "date": "2026-05-15",
+      "change": "v1.7.0：新增三层叠加架构数学模型模块",
+      "reason": "整合泊松/Dixon-Coles、Elo等级分、贝叶斯自进化、凯利公式、蒙特卡洛验证",
+      "details": "1. 新增'math_model_parameters'配置节点；2. 第一层：泊松/DC 60% + Elo 40%；3. 第二层：贝叶斯自进化机制；4. 第三层：凯利公式仓位管理；5. 验证层：蒙特卡洛10000次模拟"
+    },
+    {
+      "date": "2026-05-14",
+      "change": "v1.6.9：新增队内竞争因子 + 信息源可信度折扣 + 双引擎一致性反指逻辑",
+      "reason": "5月13日复盘：两引擎一致时错误率100%，巴黎轮换情报失真，赛季末无欲无求误判",
+      "details": "1. 新增'队内竞争因子'(mid_table_competition=0.15)；2. 新增'信息源可信度折扣'(rotation_news_vs_odds=0.75)；3. 新增'双引擎一致性反指'(confidence_penalty=0.15)"
+    },
+    {
+      "date": "2026-05-13",
+      "change": "v1.6.8：新增保级战意爆发因子 + 强化赛季末冷门系数 + 强化保级战意权重",
+      "reason": "5月12日复盘：塞尔塔2-0领先被莱万特3球逆转（保级战意爆发）+ 圣旺红星六连黑",
+      "details": "1. 新增'保级战意爆发因子'(base=0.15/末3轮0.20/末轮0.25)；2. 冷门系数season_end: 0.20→0.22；3. 战意权重relegation_battle: 0.28→0.33"
+    },
+    {
+      "date": "2026-05-12",
+      "change": "v1.6.7：新增高关注度比赛因子 + 强化平局因子 + 客队进攻效率修正",
+      "reason": "5月11日复盘：那不勒斯高关注度防守松懈、法马利康客胜被高估、热刺保级战平局概率被低估",
+      "details": "1. 新增'高关注度比赛因子'pre_match_celebration=0.12；2. 平局因子relegation_tension: 0.14→0.17；3. 新增relegation_points_diff保级积分差参数；4. 新增客队进攻效率修正(保级队主场×0.85)"
+    },
+    {
+      "date": "2026-05-11",
+      "change": "v1.6.6：新增让球盘因子+执行熔断+赛季末轮换风险",
+      "reason": "5月9日复盘：赔率1.64严重违规+让球盘误判+赛季末轮换风险",
+      "details": "1. 新增让球盘因子base=0.10；2. 强化赔率执行熔断(禁止凑单)；3. 新增赛季末轮换风险参数；4. 进取型明确首选赔率范围2.0-2.5"
+    },
+    {
+      "date": "2026-05-10",
+      "change": "新增赛季末战意因子 + 赔率下限硬性限制",
+      "reason": "5月9日进取型失误：霍芬海姆赔率1.37太低，赛季末保级队战意难以预测",
+      "details": "1. 战意参数新增season_end=0.27；2. 冷门系数新增season_end=0.20；3. 平局因子新增relegation_tension=0.14；4. 赔率下限严格执行3.0；5. 单注赔率上限：稳健1.50/进取2.20"
+    },
+    {
+      "date": "2026-05-09",
+      "change": "无调整（验证模式）",
+      "reason": "5月8日推送方案双命中（稳健+进取全中），稳健型连续2场命中，进取型熔断解除",
+      "details": "方案全中且实际为延续5月7日方案（维拉让胜×利雅胜利让负），模型表现正常，维持v1.6.3不变"
+    },
+    {
+      "date": "2026-05-08",
+      "change": "无调整（验证模式）",
+      "reason": "5月7日推送方案双命中（维拉让胜×利雅得胜利让负、维拉让胜×巴列卡诺让胜），稳健型连续2场命中，进取型熔断解除",
+      "details": "方案全中，模型表现正常，维持v1.6.2不变，等待更多样本验证"
+    },
+    {
+      "date": "2026-05-06",
+      "change": "新增红牌风险因子",
+      "reason": "首尔FC比赛中出现两张红牌，导致预测失误",
+      "details": "增加aggressive_defense球队的红牌风险权重"
+    },
+    {
+      "date": "2026-05-06",
+      "change": "降低亚洲小联赛权重",
+      "reason": "K联赛信息透明度不足，红牌等突发事件难以预测",
+      "details": "K联赛从0.65降至0.60，其他亚洲联赛从0.60降至0.55"
+    }
+  ]
+}
