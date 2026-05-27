@@ -60,13 +60,13 @@ jobs:
             -d chat_id="${TELEGRAM_CHAT_ID}" \
             -d text="${MSG}" \
             -d disable_web_page_preview=true
-          REPORT_PATH="$(ls -1 records/reviews/*.md 2>/dev/null | sort | tail -n1)"
-          echo "Resolved report path: ${REPORT_PATH}"
+          REPORT_PATH="$(ls -1 extracted/竞彩/复盘报告-*.md 2>/dev/null | sort | tail -n1)"
+          echo "Resolved source report path: ${REPORT_PATH}"
           if [ -f "${REPORT_PATH}" ]; then
             curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument" \
               -F chat_id="${TELEGRAM_CHAT_ID}" \
               -F document=@"${REPORT_PATH}" \
-              -F caption="早间复盘结果文件"
+              -F caption="早间复盘（源文件）"
           else
-            echo "Report file not found: ${REPORT_PATH}"
+            echo "Source report file not found: ${REPORT_PATH}"
           fi
