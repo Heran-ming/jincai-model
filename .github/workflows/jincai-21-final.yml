@@ -1,9 +1,9 @@
-name: jincai-17-initial
+name: jincai-21-final
 
 on:
   schedule:
-    # 17:00 Asia/Shanghai == 09:00 UTC
-    - cron: "0 9 * * *"
+    # 21:05 Asia/Shanghai == 13:05 UTC
+    - cron: "5 13 * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,19 +24,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate 17:00 initial record
+      - name: Generate 21:00 final record
         env:
           TZ: Asia/Shanghai
-        run: python scripts/generate_17_initial.py
+        run: python scripts/generate_21_final.py
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add records/17_initial/*.md
+          git add records/21_final/*.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore: update 17 initial record"
+          git commit -m "chore: update 21 final record"
           git push
