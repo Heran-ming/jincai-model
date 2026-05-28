@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import json
+import os
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -43,8 +44,20 @@ def fetch_status(url: str) -> str:
         return f"error:{type(e).__name__}"
 
 
-def build_content(now: dt.datetime) -> str:
-    day = now.strftime("%Y-%m-%d")
+def resolve_target_date(now: dt.datetime) -> dt.date:
+    configured = os.environ.get("TARGET_DATE")
+    if configured:
+        return dt.date.fromisoformat(configured)
+
+    # GitHub scheduled jobs can run late. If the 21:05 job starts after
+    # midnight China time, it still belongs to the previous match day.
+    if now.hour < 6:
+        return now.date() - dt.timedelta(days=1)
+    return now.date()
+
+
+def build_content(now: dt.datetime, target_date: dt.date) -> str:
+    day = target_date.strftime("%Y-%m-%d")
     initial_file = ROOT / "records" / "17_initial" / f"{day}.md"
     initial_exists = initial_file.exists()
 
@@ -117,9 +130,10 @@ def build_content(now: dt.datetime) -> str:
 
 def main() -> None:
     now = dt.datetime.now(TZ)
+    target_date = resolve_target_date(now)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output = OUTPUT_DIR / f"{now.strftime('%Y-%m-%d')}.md"
-    output.write_text(build_content(now), encoding="utf-8")
+    output = OUTPUT_DIR / f"{target_date.strftime('%Y-%m-%d')}.md"
+    output.write_text(build_content(now, target_date), encoding="utf-8")
     print(f"wrote {output}")
 
 
