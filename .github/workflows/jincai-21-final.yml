@@ -61,7 +61,11 @@ jobs:
             -d text="${MSG}" \
             -d disable_web_page_preview=true)"
           echo "Telegram sendMessage response: ${MESSAGE_RESPONSE}"
-          REPORT_PATH="$(ls -1 records/21_final/*.md 2>/dev/null | sort | tail -n1)"
+          if [ -f records/21_final/.latest_path ]; then
+            REPORT_PATH="$(cat records/21_final/.latest_path)"
+          else
+            REPORT_PATH="$(ls -1 records/21_final/*.md 2>/dev/null | sort | tail -n1)"
+          fi
           echo "Resolved report path: ${REPORT_PATH}"
           if [ -f "${REPORT_PATH}" ]; then
             DOCUMENT_RESPONSE="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument" \

@@ -12,6 +12,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "records" / "21_final"
+LATEST_PATH_FILE = OUTPUT_DIR / ".latest_path"
 TZ = dt.timezone(dt.timedelta(hours=8))
 
 
@@ -134,6 +135,7 @@ def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output = OUTPUT_DIR / f"{target_date.strftime('%Y-%m-%d')}.md"
     output.write_text(build_content(now, target_date), encoding="utf-8")
+    LATEST_PATH_FILE.write_text(str(output.relative_to(ROOT)).replace("\\", "/"), encoding="utf-8")
     print(f"wrote {output}")
 
 
