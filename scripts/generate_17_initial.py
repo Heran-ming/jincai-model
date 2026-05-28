@@ -8,6 +8,8 @@ from pathlib import Path
 from urllib.error import URLError, HTTPError
 from urllib.request import Request, urlopen
 
+from cold_observation_strategy import cold_observation_section
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "records" / "17_initial"
@@ -114,6 +116,7 @@ def build_content(now: dt.datetime) -> str:
     lines.append("- 本自动化阶段默认只做可达性核验与锁版记录，未承诺完整抓取官方竞彩动态页全部字段。")
     lines.append("- 当第三方页面可达但字段不完整时，结论保持保守：黄色观察或红色跳过，不凑串。")
     lines.append("")
+    lines.extend(cold_observation_section("17点初稿"))
     lines.append("## 21点重点复查项（模板）")
     lines.append("")
     lines.append("- 最新赛程与官方玩法字段完整性")

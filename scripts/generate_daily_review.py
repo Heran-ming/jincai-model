@@ -8,6 +8,8 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from cold_observation_strategy import cold_review_section
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "records" / "reviews"
@@ -102,6 +104,7 @@ def build_content(now: dt.datetime) -> str:
     out.append("- Brier / LogLoss / CLV（仅在数据足够时）")
     out.append("- 参数微调候选（需满足样本量门槛）")
     out.append("")
+    out.extend(cold_review_section())
     out.append("## 运行说明")
     out.append("")
     out.append("- 该文件由 `.github/workflows/jincai-daily-review.yml` 生成。")

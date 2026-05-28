@@ -9,6 +9,8 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from cold_observation_strategy import cold_observation_section
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "records" / "21_final"
@@ -121,6 +123,7 @@ def build_content(now: dt.datetime, target_date: dt.date) -> str:
     out.append("- 本自动化当前优先保证“规则读取 + 复查落档 + 风险声明”。")
     out.append("- 当外部页面可达但字段缺失时，输出缺口，不补造数据。")
     out.append("")
+    out.extend(cold_observation_section("21点终版"))
     out.append("## 运行说明")
     out.append("")
     out.append("- 该文件由 `.github/workflows/jincai-21-final.yml` 生成。")
