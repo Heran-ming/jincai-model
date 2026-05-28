@@ -49,7 +49,8 @@ def fetch_status(url: str) -> str:
 def build_content(now: dt.datetime) -> str:
     day = now.strftime("%Y-%m-%d")
     prev = (now - dt.timedelta(days=1)).strftime("%Y-%m-%d")
-    initial_prev = ROOT / "records" / "17_initial" / f"{prev}.md"
+    initial_1130_prev = ROOT / "records" / "1130_initial" / f"{prev}.md"
+    check_17_prev = ROOT / "records" / "17_check" / f"{prev}.md"
     final_prev = ROOT / "records" / "21_final" / f"{prev}.md"
     model = load_json(ROOT / "extracted" / "竞彩" / "模型参数.json")
     roll = load_json(ROOT / "extracted" / "竞彩" / "滚动统计.json")
@@ -73,7 +74,8 @@ def build_content(now: dt.datetime) -> str:
     out.append(f"- 模型版本：{model.get('version', 'unknown')}")
     out.append(f"- 滚动统计更新时间：{roll.get('last_updated', 'unknown')}")
     out.append(f"- 账本结构化记录数：{ledger_rows()}")
-    out.append(f"- 前一日17点初稿：`{'存在' if initial_prev.exists() else '缺失'}`")
+    out.append(f"- 前一日11点半初始：`{'存在' if initial_1130_prev.exists() else '缺失'}`")
+    out.append(f"- 前一日17点复查：`{'存在' if check_17_prev.exists() else '缺失'}`")
     out.append(f"- 前一日21点终版：`{'存在' if final_prev.exists() else '缺失'}`")
     out.append("")
     out.append("## 读取材料")
@@ -82,7 +84,8 @@ def build_content(now: dt.datetime) -> str:
     out.append("- `竞彩模型赛前锁版与复盘账本.csv`")
     out.append("- `extracted/竞彩/模型参数.json`")
     out.append("- `extracted/竞彩/滚动统计.json`")
-    out.append("- `records/17_initial/YYYY-MM-DD.md`（前一日，如存在）")
+    out.append("- `records/1130_initial/YYYY-MM-DD.md`（前一日，如存在）")
+    out.append("- `records/17_check/YYYY-MM-DD.md`（前一日，如存在）")
     out.append("- `records/21_final/YYYY-MM-DD.md`（前一日，如存在）")
     out.append("")
     out.append("## 外部核验状态")

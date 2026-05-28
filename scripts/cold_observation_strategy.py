@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def cold_observation_section(stage: str) -> list[str]:
-    """Return the cold-double observation block shared by 17:00 and 21:05 reports."""
+    """Return the cold-double observation block shared by timed plan reports."""
     return [
         "## 冷门双选观察策略",
         "",

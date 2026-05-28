@@ -52,7 +52,7 @@ def resolve_target_date(now: dt.datetime) -> dt.date:
     if configured:
         return dt.date.fromisoformat(configured)
 
-    # GitHub scheduled jobs can run late. If the 21:05 job starts after
+    # GitHub scheduled jobs can run late. If the 21:00 job starts after
     # midnight China time, it still belongs to the previous match day.
     if now.hour < 6:
         return now.date() - dt.timedelta(days=1)
@@ -61,8 +61,10 @@ def resolve_target_date(now: dt.datetime) -> dt.date:
 
 def build_content(now: dt.datetime, target_date: dt.date) -> str:
     day = target_date.strftime("%Y-%m-%d")
-    initial_file = ROOT / "records" / "17_initial" / f"{day}.md"
-    initial_exists = initial_file.exists()
+    initial_1130_file = ROOT / "records" / "1130_initial" / f"{day}.md"
+    check_17_file = ROOT / "records" / "17_check" / f"{day}.md"
+    initial_1130_exists = initial_1130_file.exists()
+    check_17_exists = check_17_file.exists()
 
     model = load_json(ROOT / "extracted" / "竞彩" / "模型参数.json")
     roll = load_json(ROOT / "extracted" / "竞彩" / "滚动统计.json")
@@ -87,7 +89,8 @@ def build_content(now: dt.datetime, target_date: dt.date) -> str:
     out.append(f"- 模型版本：{model.get('version', 'unknown')}")
     out.append(f"- 滚动统计更新时间：{roll.get('last_updated', 'unknown')}")
     out.append(f"- 历史锁版账本有效记录数：{ledger_rows()}")
-    out.append(f"- 当日17点初稿：`{'已读取' if initial_exists else '缺失'}` -> `records/17_initial/{day}.md`")
+    out.append(f"- 当日11点半初始：`{'已读取' if initial_1130_exists else '缺失'}` -> `records/1130_initial/{day}.md`")
+    out.append(f"- 当日17点复查：`{'已读取' if check_17_exists else '缺失'}` -> `records/17_check/{day}.md`")
     out.append("")
     out.append("## 输入材料")
     out.append("")
@@ -95,7 +98,8 @@ def build_content(now: dt.datetime, target_date: dt.date) -> str:
     out.append("- 已读取：`竞彩模型赛前锁版与复盘账本.csv`")
     out.append("- 已读取：`extracted/竞彩/模型参数.json`、`extracted/竞彩/滚动统计.json`")
     out.append("- 已读取：`extracted/竞彩/赔率时间窗口分析.md`")
-    out.append("- 已读取：`records/17_initial/YYYY-MM-DD.md`（若存在）")
+    out.append("- 已读取：`records/1130_initial/YYYY-MM-DD.md`（若存在）")
+    out.append("- 已读取：`records/17_check/YYYY-MM-DD.md`（若存在）")
     out.append("")
     out.append("## 21点联网核验状态")
     out.append("")
@@ -104,16 +108,16 @@ def build_content(now: dt.datetime, target_date: dt.date) -> str:
     out.append("")
     out.append("## 终版执行结论")
     out.append("")
-    if initial_exists:
-        out.append("- 已在17点初稿基础上完成21点复查锁版。")
+    if initial_1130_exists or check_17_exists:
+        out.append("- 已在11点半初始与17点复查基础上完成21点最终锁版。")
     else:
-        out.append("- 当日17点初稿缺失，终版降级为仅复查记录，不输出正式推荐。")
+        out.append("- 当日11点半初始与17点复查均缺失，终版降级为仅复查记录，不输出正式推荐。")
     out.append("- 黄色场次仅观察或模拟，红色场次继续跳过。")
     out.append("- 若关键赔率/凯利/首发数据不完整，维持保守，不编造方向。")
     out.append("")
     out.append("## 21点重点复查模板")
     out.append("")
-    out.append("- 17点与21点赔率方向是否一致（升盘/退盘/平赔异动）")
+    out.append("- 11点半、17点与21点赔率方向是否一致（升盘/退盘/平赔异动）")
     out.append("- 伤停与首发是否推翻17点判断")
     out.append("- 市场去水概率与模型概率差是否仍有安全边际")
     out.append("- 黄色场次是否降红；红色是否继续跳过")

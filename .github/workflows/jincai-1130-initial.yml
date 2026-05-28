@@ -1,9 +1,9 @@
-name: jincai-21-final
+name: jincai-1130-initial
 
 on:
   schedule:
-    # 21:00 Asia/Shanghai == 13:00 UTC
-    - cron: "0 13 * * *"
+    # 11:30 Asia/Shanghai == 03:30 UTC
+    - cron: "30 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,21 +24,25 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate 21:00 final record
+      - name: Generate 11:30 initial record
         env:
           TZ: Asia/Shanghai
-        run: python scripts/generate_21_final.py
+          JINCAI_OUTPUT_DIR: "1130_initial"
+          JINCAI_BATCH_LABEL: "11点半初始方案"
+          JINCAI_NEXT_RECHECK_LABEL: "17点重点复查项（模板）"
+          JINCAI_WORKFLOW_FILE: ".github/workflows/jincai-1130-initial.yml"
+        run: python scripts/generate_17_initial.py
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add records/21_final/*.md
+          git add records/1130_initial/*.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore: update 21 final record"
+          git commit -m "chore: update 1130 initial record"
           git push
 
       - name: Notify Telegram
@@ -61,17 +65,17 @@ jobs:
             -d text="${MSG}" \
             -d disable_web_page_preview=true)"
           echo "Telegram sendMessage response: ${MESSAGE_RESPONSE}"
-          if [ -f records/21_final/.latest_path ]; then
-            REPORT_PATH="$(cat records/21_final/.latest_path)"
+          if [ -f records/1130_initial/.latest_path ]; then
+            REPORT_PATH="$(cat records/1130_initial/.latest_path)"
           else
-            REPORT_PATH="$(ls -1 records/21_final/*.md 2>/dev/null | sort | tail -n1)"
+            REPORT_PATH="$(ls -1 records/1130_initial/*.md 2>/dev/null | sort | tail -n1)"
           fi
           echo "Resolved report path: ${REPORT_PATH}"
           if [ -f "${REPORT_PATH}" ]; then
             DOCUMENT_RESPONSE="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument" \
               -F chat_id="${TELEGRAM_CHAT_ID}" \
               -F document=@"${REPORT_PATH}" \
-              -F caption="21点终版结果文件")"
+              -F caption="11点半初始结果文件")"
             echo "Telegram sendDocument response: ${DOCUMENT_RESPONSE}"
           else
             echo "Report file not found: ${REPORT_PATH}"

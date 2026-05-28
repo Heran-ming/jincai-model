@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import json
+import os
 from pathlib import Path
 from urllib.error import URLError, HTTPError
 from urllib.request import Request, urlopen
@@ -12,8 +13,12 @@ from cold_observation_strategy import cold_observation_section
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = ROOT / "records" / "17_initial"
+OUTPUT_DIR_NAME = os.environ.get("JINCAI_OUTPUT_DIR", "17_initial")
+OUTPUT_DIR = ROOT / "records" / OUTPUT_DIR_NAME
 LATEST_PATH_FILE = OUTPUT_DIR / ".latest_path"
+BATCH_LABEL = os.environ.get("JINCAI_BATCH_LABEL", "17点初步方案")
+NEXT_RECHECK_LABEL = os.environ.get("JINCAI_NEXT_RECHECK_LABEL", "21点重点复查项（模板）")
+WORKFLOW_FILE = os.environ.get("JINCAI_WORKFLOW_FILE", ".github/workflows/jincai-17-initial.yml")
 TZ = dt.timezone(dt.timedelta(hours=8))
 
 
@@ -82,14 +87,14 @@ def build_content(now: dt.datetime) -> str:
     ts = now.strftime("%Y-%m-%d %H:%M:%S %z")
 
     lines: list[str] = []
-    lines.append(f"# 体彩竞彩17点初步方案 - {today}")
+    lines.append(f"# 体彩竞彩{BATCH_LABEL} - {today}")
     lines.append("")
     lines.append("> 本文件由 GitHub Actions 定时生成，定位为模型观察与复盘材料，不构成下注建议。")
     lines.append("")
     lines.append("## 锁版信息")
     lines.append("")
     lines.append(f"- 生成时间：{ts} (Asia/Shanghai)")
-    lines.append("- 锁版批次：17点初步方案")
+    lines.append(f"- 锁版批次：{BATCH_LABEL}")
     lines.append(f"- 模型版本：{model_version}（参数更新时间：{model_updated}）")
     lines.append(f"- 滚动统计更新时间：{rollup_updated}（近7日ROI：{rollup_roi}）")
     lines.append(f"- 历史锁版账本有效记录数：{ledger_count}")
@@ -116,8 +121,8 @@ def build_content(now: dt.datetime) -> str:
     lines.append("- 本自动化阶段默认只做可达性核验与锁版记录，未承诺完整抓取官方竞彩动态页全部字段。")
     lines.append("- 当第三方页面可达但字段不完整时，结论保持保守：黄色观察或红色跳过，不凑串。")
     lines.append("")
-    lines.extend(cold_observation_section("17点初稿"))
-    lines.append("## 21点重点复查项（模板）")
+    lines.extend(cold_observation_section(BATCH_LABEL))
+    lines.append(f"## {NEXT_RECHECK_LABEL}")
     lines.append("")
     lines.append("- 最新赛程与官方玩法字段完整性")
     lines.append("- 欧赔、亚盘、凯利、大小球变化的一致性与反向信号")
@@ -126,7 +131,7 @@ def build_content(now: dt.datetime) -> str:
     lines.append("")
     lines.append("## 运行说明")
     lines.append("")
-    lines.append("- 该文件由 `.github/workflows/jincai-17-initial.yml` 生成。")
+    lines.append(f"- 该文件由 `{WORKFLOW_FILE}` 生成。")
     lines.append("- 手动重跑可使用 GitHub Actions 的 `workflow_dispatch`。")
     lines.append("")
     return "\n".join(lines) + "\n"

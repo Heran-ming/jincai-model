@@ -8,5 +8,7 @@ __pycache__/
 tmp/
 .cache/
 records/21_final/.latest_path
+records/1130_initial/.latest_path
 records/17_initial/.latest_path
+records/17_check/.latest_path
 records/reviews/.latest_path
