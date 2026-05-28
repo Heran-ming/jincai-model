@@ -56,17 +56,23 @@ jobs:
           WORKFLOW="${{ github.workflow }}"
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           MSG="[$REPO] $WORKFLOW: $STATUS%0A$RUN_URL"
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+          MESSAGE_RESPONSE="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -d chat_id="${TELEGRAM_CHAT_ID}" \
             -d text="${MSG}" \
-            -d disable_web_page_preview=true
-          REPORT_PATH="$(ls -1 extracted/竞彩/复盘报告-*.md 2>/dev/null | sort | tail -n1)"
-          echo "Resolved source report path: ${REPORT_PATH}"
+            -d disable_web_page_preview=true)"
+          echo "Telegram sendMessage response: ${MESSAGE_RESPONSE}"
+          if [ -f records/reviews/.latest_path ]; then
+            REPORT_PATH="$(cat records/reviews/.latest_path)"
+          else
+            REPORT_PATH="$(ls -1 records/reviews/*.md 2>/dev/null | sort | tail -n1)"
+          fi
+          echo "Resolved report path: ${REPORT_PATH}"
           if [ -f "${REPORT_PATH}" ]; then
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument" \
+            DOCUMENT_RESPONSE="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument" \
               -F chat_id="${TELEGRAM_CHAT_ID}" \
               -F document=@"${REPORT_PATH}" \
-              -F caption="早间复盘（源文件）"
+              -F caption="早间复盘结果文件")"
+            echo "Telegram sendDocument response: ${DOCUMENT_RESPONSE}"
           else
-            echo "Source report file not found: ${REPORT_PATH}"
+            echo "Report file not found: ${REPORT_PATH}"
           fi
