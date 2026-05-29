@@ -21,6 +21,18 @@ PLAN_SOURCES = [
     ("17500让球胜平负", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=2"),
     ("17500总进球", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=4"),
     ("彩票网竞彩", "https://www.17500.cn/"),
+    ("500彩票网指数中心", "https://odds.500.com/"),
+    ("澳客足球数据", "https://www.okooo.com/"),
+    ("澳客移动数据", "https://m.okooo.com/"),
+    ("7M足球资料库", "https://data.7m.com.cn/"),
+    ("7M赛事资料", "https://data.7m.com.cn/matches_data/index.shtml"),
+]
+
+ODDS_SEARCH_SITE_QUERIES = [
+    "site:odds.500.com 竞彩足球 欧赔 亚盘 即时指数",
+    "site:okooo.com 竞彩足球 欧赔 亚盘 必发 凯利",
+    "site:data.7m.com.cn 足球 欧赔 亚盘 赔率",
+    "site:jibao.310win.com 竞彩足球 欧赔 亚盘",
 ]
 
 REVIEW_SOURCES = [
@@ -278,11 +290,16 @@ def build_search_supplement(*, day: str, source_blocks: str, mode: str) -> str:
             "Only fixed sources were used.\n"
         )
 
-    base = f"{day} 竞彩足球 今日 赔率 亚盘 凯利 伤停 战意"
+    base = f"{day} 竞彩足球 今日 欧赔 亚盘 大小球 凯利 伤停 战意 500彩票网 澳客 7M"
     queries = [base] if mode == "plan" else [f"{day} 竞彩足球 赛果 比分 赛后 复盘"]
+    if mode == "plan":
+        queries.extend(f"{day} {query}" for query in ODDS_SEARCH_SITE_QUERIES)
     for match_id, league, home, away in extract_jincai_matches(source_blocks):
         if mode == "plan":
-            queries.append(f"{day} 竞彩足球 {match_id} {league} {home} vs {away} 赔率 亚盘 凯利 伤停")
+            queries.append(
+                f"{day} 竞彩足球 {match_id} {league} {home} vs {away} "
+                "欧赔 亚盘 大小球 凯利 500彩票网 澳客 7M"
+            )
         else:
             queries.append(f"{day} 竞彩足球 {match_id} {home} vs {away} 赛果 比分")
 
