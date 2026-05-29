@@ -30,13 +30,15 @@ jobs:
       - name: Generate daily review record
         env:
           TZ: Asia/Shanghai
-        run: python scripts/generate_daily_review.py
+        run: |
+          python scripts/generate_daily_review.py
+          python scripts/update_portfolio_status.py
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add records/reviews/*.md
+          git add records/reviews/*.md records/portfolio_status.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0

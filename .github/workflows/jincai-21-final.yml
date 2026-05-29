@@ -27,16 +27,18 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate 21:00 final record
+      - name: Generate 21:05 final record
         env:
           TZ: Asia/Shanghai
-        run: python scripts/generate_21_final.py
+        run: |
+          python scripts/generate_21_final.py
+          python scripts/update_portfolio_status.py
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add records/21_final/*.md
+          git add records/21_final/*.md records/portfolio_status.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
