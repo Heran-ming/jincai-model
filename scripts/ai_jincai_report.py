@@ -63,7 +63,7 @@ def fetch_snippet(name: str, url: str, limit: int = 18000) -> str:
     return f"## {name}\nURL: {url}\nSTATUS: 200\nSNIPPET:\n{text[:limit]}\n"
 
 
-def output_text_from_response(data: dict) -> str:
+def output_text_from_openai_response(data: dict) -> str:
     if isinstance(data.get("output_text"), str):
         return data["output_text"].strip()
     parts: list[str] = []
@@ -75,7 +75,24 @@ def output_text_from_response(data: dict) -> str:
     return "\n".join(parts).strip()
 
 
-def call_openai(prompt: str) -> tuple[str | None, str | None]:
+def output_text_from_chat_response(data: dict) -> str:
+    choices = data.get("choices", [])
+    if not choices:
+        return ""
+    message = choices[0].get("message", {})
+    content = message.get("content")
+    if isinstance(content, str):
+        return content.strip()
+    if isinstance(content, list):
+        parts = []
+        for item in content:
+            if isinstance(item, dict) and isinstance(item.get("text"), str):
+                parts.append(item["text"])
+        return "\n".join(parts).strip()
+    return ""
+
+
+def call_openai_responses(prompt: str) -> tuple[str | None, str | None]:
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
         return None, "OPENAI_API_KEY is not configured in GitHub Secrets."
@@ -105,10 +122,75 @@ def call_openai(prompt: str) -> tuple[str | None, str | None]:
     except Exception as e:  # pragma: no cover
         return None, f"OpenAI API error: {type(e).__name__}: {e}"
 
-    text = output_text_from_response(data)
+    text = output_text_from_openai_response(data)
     if not text:
         return None, f"OpenAI API returned no output text. response_id={data.get('id', 'unknown')}"
     return text, None
+
+
+def call_openai_compatible_chat(
+    *,
+    provider_name: str,
+    api_key_env: str,
+    base_url: str,
+    model: str,
+    prompt: str,
+) -> tuple[str | None, str | None]:
+    api_key = os.environ.get(api_key_env)
+    if not api_key:
+        return None, f"{api_key_env} is not configured in GitHub Secrets."
+
+    payload = {
+        "model": model,
+        "messages": [
+            {
+                "role": "system",
+                "content": "你是保守的竞彩模型记录员。只输出可复盘的 Markdown 正文，不编造数据。",
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": float(os.environ.get("AI_TEMPERATURE", "0.2")),
+        "max_tokens": int(os.environ.get("AI_MAX_TOKENS", "12000")),
+    }
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    endpoint = base_url.rstrip("/") + "/chat/completions"
+    req = Request(
+        endpoint,
+        data=body,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(req, timeout=240) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")[:2000]
+        return None, f"{provider_name} API HTTP {e.code}: {detail}"
+    except Exception as e:  # pragma: no cover
+        return None, f"{provider_name} API error: {type(e).__name__}: {e}"
+
+    text = output_text_from_chat_response(data)
+    if not text:
+        return None, f"{provider_name} API returned no output text. response_id={data.get('id', 'unknown')}"
+    return text, None
+
+
+def call_llm(prompt: str) -> tuple[str | None, str | None]:
+    provider = os.environ.get("AI_PROVIDER", "deepseek").strip().lower()
+    if provider == "openai":
+        return call_openai_responses(prompt)
+    if provider == "deepseek":
+        return call_openai_compatible_chat(
+            provider_name="DeepSeek",
+            api_key_env="DEEPSEEK_API_KEY",
+            base_url=os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
+            model=os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-flash"),
+            prompt=prompt,
+        )
+    return None, f"Unsupported AI_PROVIDER: {provider}. Use 'deepseek' or 'openai'."
 
 
 def local_context(day: str, previous_day: str | None = None) -> str:
@@ -239,7 +321,7 @@ def generate_plan(
         next_recheck_label=next_recheck_label,
         workflow_file=workflow_file,
     )
-    content, error = call_openai(prompt)
+    content, error = call_llm(prompt)
     if error:
         content = failure_report(title, now, error)
     return write_report(output_dir, target_date, content)
@@ -275,7 +357,7 @@ def build_review_prompt(now: dt.datetime) -> tuple[str, dt.date]:
 def generate_review() -> Path:
     now = dt.datetime.now(TZ)
     prompt, target = build_review_prompt(now)
-    content, error = call_openai(prompt)
+    content, error = call_llm(prompt)
     if error:
         content = failure_report(f"竞彩模型每日复盘 - {now:%Y-%m-%d}", now, error)
     return write_report("reviews", now.date(), content)
