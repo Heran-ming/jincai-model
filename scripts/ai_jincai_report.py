@@ -51,13 +51,61 @@ def ledger_rows() -> int:
         return max(len(list(csv.reader(f))) - 1, 0)
 
 
+def html_meta_charset(raw: bytes) -> str | None:
+    head = raw[:4096]
+    patterns = [
+        rb"<meta[^>]+charset=[\"']?\s*([A-Za-z0-9_\-]+)",
+        rb"<meta[^>]+content=[\"'][^\"']*charset=([A-Za-z0-9_\-]+)",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, head, flags=re.I)
+        if match:
+            return match.group(1).decode("ascii", errors="ignore")
+    return None
+
+
+def decode_score(text: str) -> int:
+    replacement_penalty = text.count("\ufffd") * 20
+    question_penalty = text.count("?") * 4
+    mojibake_penalty = sum(text.count(mark) for mark in ("鍚", "鐞", "绔", "銆", "Ã", "Â")) * 8
+    chinese_bonus = len(re.findall(r"[\u4e00-\u9fff]", text))
+    return replacement_penalty + question_penalty + mojibake_penalty - chinese_bonus
+
+
+def decode_html(raw: bytes, header_charset: str | None) -> tuple[str, str]:
+    candidates: list[str] = []
+    for item in [header_charset, html_meta_charset(raw), "utf-8", "gb18030", "gbk", "big5"]:
+        if item and item.lower() not in [c.lower() for c in candidates]:
+            candidates.append(item)
+
+    best_text = ""
+    best_charset = candidates[0] if candidates else "utf-8"
+    best_score = 10**9
+    for charset in candidates:
+        try:
+            text = raw.decode(charset, errors="replace")
+        except LookupError:
+            continue
+        score = decode_score(text)
+        if score < best_score:
+            best_text = text
+            best_charset = charset
+            best_score = score
+    return best_text, best_charset
+
+
 def fetch_snippet(name: str, url: str, limit: int = 18000) -> str:
-    req = Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; jincai-model-bot/2.0)"})
+    req = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; jincai-model-bot/2.0)",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.5",
+        },
+    )
     try:
         with urlopen(req, timeout=20) as resp:
             raw = resp.read(limit * 3)
-            charset = resp.headers.get_content_charset() or "utf-8"
-            text = raw.decode(charset, errors="replace")
+            text, charset = decode_html(raw, resp.headers.get_content_charset())
     except HTTPError as e:
         return f"## {name}\nURL: {url}\nSTATUS: http_error:{e.code}\n"
     except URLError as e:
@@ -68,7 +116,7 @@ def fetch_snippet(name: str, url: str, limit: int = 18000) -> str:
     text = re.sub(r"(?is)<script.*?</script>|<style.*?</style>", " ", text)
     text = re.sub(r"(?s)<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
-    return f"## {name}\nURL: {url}\nSTATUS: 200\nSNIPPET:\n{text[:limit]}\n"
+    return f"## {name}\nURL: {url}\nSTATUS: 200\nCHARSET: {charset}\nSNIPPET:\n{text[:limit]}\n"
 
 
 def search_result_limit() -> int:
