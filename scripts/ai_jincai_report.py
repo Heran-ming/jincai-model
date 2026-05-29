@@ -140,6 +140,7 @@ def call_openai_compatible_chat(
     if not api_key:
         return None, f"{api_key_env} is not configured in GitHub Secrets."
 
+    thinking_type = os.environ.get("DEEPSEEK_THINKING", "enabled").strip().lower()
     payload = {
         "model": model,
         "messages": [
@@ -149,9 +150,14 @@ def call_openai_compatible_chat(
             },
             {"role": "user", "content": prompt},
         ],
-        "temperature": float(os.environ.get("AI_TEMPERATURE", "0.2")),
         "max_tokens": int(os.environ.get("AI_MAX_TOKENS", "12000")),
     }
+    if thinking_type == "enabled":
+        payload["thinking"] = {"type": "enabled"}
+        payload["reasoning_effort"] = os.environ.get("DEEPSEEK_REASONING_EFFORT", "high")
+    else:
+        payload["thinking"] = {"type": "disabled"}
+        payload["temperature"] = float(os.environ.get("AI_TEMPERATURE", "0.2"))
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     endpoint = base_url.rstrip("/") + "/chat/completions"
     req = Request(
