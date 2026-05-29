@@ -2,8 +2,8 @@ name: jincai-21-final
 
 on:
   schedule:
-    # 21:00 Asia/Shanghai == 13:00 UTC
-    - cron: "0 13 * * *"
+    # 21:05 Asia/Shanghai == 13:05 UTC
+    - cron: "5 13 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,6 +15,7 @@ jobs:
     env:
       OPENAI_MODEL: gpt-5.4
       OPENAI_REASONING_EFFORT: high
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -15,6 +15,7 @@ jobs:
     env:
       OPENAI_MODEL: gpt-5.4
       OPENAI_REASONING_EFFORT: high
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +30,7 @@ jobs:
           TZ: Asia/Shanghai
           JINCAI_OUTPUT_DIR: "1130_initial"
           JINCAI_BATCH_LABEL: "11点半初始方案"
-          JINCAI_NEXT_RECHECK_LABEL: "17点重点复查项（模板）"
+          JINCAI_NEXT_RECHECK_LABEL: "17点重点复查项"
           JINCAI_WORKFLOW_FILE: ".github/workflows/jincai-1130-initial.yml"
         run: python scripts/generate_17_initial.py
 
