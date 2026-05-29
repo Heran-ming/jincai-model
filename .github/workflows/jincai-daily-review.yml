@@ -18,6 +18,11 @@ jobs:
       DEEPSEEK_THINKING: enabled
       DEEPSEEK_REASONING_EFFORT: high
       DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      JINCAI_SEARCH_PROVIDER: auto
+      JINCAI_SEARCH_MAX_QUERIES: "8"
+      JINCAI_SEARCH_RESULTS_PER_QUERY: "4"
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+      BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

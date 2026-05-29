@@ -7,6 +7,7 @@ import json
 import os
 import re
 from pathlib import Path
+from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -26,6 +27,13 @@ REVIEW_SOURCES = [
     ("17500赛果参考", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb"),
     ("Flashscore", "https://www.flashscore.com/"),
 ]
+
+
+def env_int(name: str, default: int) -> int:
+    try:
+        return int(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
 
 
 def read_text(path: Path, limit: int = 24000) -> str:
@@ -61,6 +69,183 @@ def fetch_snippet(name: str, url: str, limit: int = 18000) -> str:
     text = re.sub(r"(?s)<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     return f"## {name}\nURL: {url}\nSTATUS: 200\nSNIPPET:\n{text[:limit]}\n"
+
+
+def search_result_limit() -> int:
+    return max(1, min(env_int("JINCAI_SEARCH_RESULTS_PER_QUERY", 4), 8))
+
+
+def search_query_limit() -> int:
+    return max(1, min(env_int("JINCAI_SEARCH_MAX_QUERIES", 8), 20))
+
+
+def compact_text(text: object, limit: int = 900) -> str:
+    if not isinstance(text, str):
+        return ""
+    return re.sub(r"\s+", " ", text).strip()[:limit]
+
+
+def call_tavily_search(query: str) -> tuple[str | None, str | None]:
+    api_key = os.environ.get("TAVILY_API_KEY")
+    if not api_key:
+        return None, "TAVILY_API_KEY is not configured."
+
+    payload = {
+        "query": query,
+        "topic": os.environ.get("TAVILY_TOPIC", "general"),
+        "search_depth": os.environ.get("TAVILY_SEARCH_DEPTH", "basic"),
+        "max_results": search_result_limit(),
+        "include_answer": False,
+        # Tavily extracts cleaned text/markdown itself, which works better than
+        # a plain GitHub runner on JavaScript-heavy odds pages.
+        "include_raw_content": os.environ.get("TAVILY_INCLUDE_RAW_CONTENT", "markdown"),
+    }
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = Request(
+        "https://api.tavily.com/search",
+        data=body,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(req, timeout=45) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")[:800]
+        return None, f"Tavily HTTP {e.code}: {detail}"
+    except Exception as e:
+        return None, f"Tavily error: {type(e).__name__}: {e}"
+
+    lines = [f"### Tavily query: {query}"]
+    for idx, result in enumerate(data.get("results", [])[: search_result_limit()], start=1):
+        title = compact_text(result.get("title"), 160)
+        url = compact_text(result.get("url"), 260)
+        content = compact_text(result.get("content") or result.get("raw_content"), 1100)
+        score = result.get("score")
+        lines.extend(
+            [
+                f"- result {idx}: {title}",
+                f"  url: {url}",
+                f"  score: {score}",
+                f"  snippet: {content}",
+            ]
+        )
+    return "\n".join(lines), None
+
+
+def call_brave_search(query: str) -> tuple[str | None, str | None]:
+    api_key = os.environ.get("BRAVE_SEARCH_API_KEY")
+    if not api_key:
+        return None, "BRAVE_SEARCH_API_KEY is not configured."
+
+    params = urlencode(
+        {
+            "q": query,
+            "count": search_result_limit(),
+            "country": os.environ.get("BRAVE_SEARCH_COUNTRY", "cn"),
+            "search_lang": os.environ.get("BRAVE_SEARCH_LANG", "zh-hans"),
+            "safesearch": os.environ.get("BRAVE_SAFESEARCH", "moderate"),
+        }
+    )
+    req = Request(
+        f"https://api.search.brave.com/res/v1/web/search?{params}",
+        headers={
+            "Accept": "application/json",
+            "X-Subscription-Token": api_key,
+        },
+    )
+    try:
+        with urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")[:800]
+        return None, f"Brave Search HTTP {e.code}: {detail}"
+    except Exception as e:
+        return None, f"Brave Search error: {type(e).__name__}: {e}"
+
+    lines = [f"### Brave query: {query}"]
+    for idx, result in enumerate((data.get("web") or {}).get("results", [])[: search_result_limit()], start=1):
+        snippets = [result.get("description")]
+        snippets.extend(result.get("extra_snippets") or [])
+        lines.extend(
+            [
+                f"- result {idx}: {compact_text(result.get('title'), 160)}",
+                f"  url: {compact_text(result.get('url'), 260)}",
+                f"  snippet: {compact_text(' '.join(s for s in snippets if s), 1100)}",
+            ]
+        )
+    return "\n".join(lines), None
+
+
+def call_search(query: str) -> tuple[str | None, str | None]:
+    provider = os.environ.get("JINCAI_SEARCH_PROVIDER", "auto").strip().lower()
+    providers = ["tavily", "brave"] if provider == "auto" else [p.strip() for p in provider.split(",") if p.strip()]
+    errors: list[str] = []
+    for item in providers:
+        if item == "tavily":
+            text, error = call_tavily_search(query)
+        elif item == "brave":
+            text, error = call_brave_search(query)
+        else:
+            text, error = None, f"Unsupported search provider: {item}"
+        if text:
+            return text, None
+        if error:
+            errors.append(error)
+    return None, "; ".join(errors) if errors else "No search provider configured."
+
+
+def extract_jincai_matches(source_blocks: str) -> list[tuple[str, str, str, str]]:
+    pattern = re.compile(
+        r"(周[一二三四五六日]\d{3})\s+"
+        r"([\u4e00-\u9fffA-Za-z]+)\s+"
+        r"\d{2}-\d{2}\s+\d{2}:\d{2}\s+"
+        r"\S+\s+\S+\s+"
+        r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
+        r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
+        r"\d+\.\d{2}\s+\d+\.\d{2}\s+\d+\.\d{2}"
+    )
+    seen: set[tuple[str, str, str]] = set()
+    matches: list[tuple[str, str, str, str]] = []
+    for match_id, league, home, away in pattern.findall(source_blocks):
+        key = (match_id, home, away)
+        if key in seen:
+            continue
+        seen.add(key)
+        matches.append((match_id, league, home, away))
+    return matches
+
+
+def build_search_supplement(*, day: str, source_blocks: str, mode: str) -> str:
+    if os.environ.get("JINCAI_SEARCH_ENABLED", "1").strip().lower() in {"0", "false", "no"}:
+        return "## 搜索补充\nSTATUS: disabled by JINCAI_SEARCH_ENABLED\n"
+
+    if not os.environ.get("TAVILY_API_KEY") and not os.environ.get("BRAVE_SEARCH_API_KEY"):
+        return (
+            "## 搜索补充\n"
+            "STATUS: disabled; no TAVILY_API_KEY or BRAVE_SEARCH_API_KEY configured. "
+            "Only fixed sources were used.\n"
+        )
+
+    base = f"{day} 竞彩足球 今日 赔率 亚盘 凯利 伤停 战意"
+    queries = [base] if mode == "plan" else [f"{day} 竞彩足球 赛果 比分 赛后 复盘"]
+    for match_id, league, home, away in extract_jincai_matches(source_blocks):
+        if mode == "plan":
+            queries.append(f"{day} 竞彩足球 {match_id} {league} {home} vs {away} 赔率 亚盘 凯利 伤停")
+        else:
+            queries.append(f"{day} 竞彩足球 {match_id} {home} vs {away} 赛果 比分")
+
+    blocks = ["## 搜索补充", "说明：搜索 API 返回摘要/抽取文本，用于补充 JS 渲染站点无法被 GitHub runner 直接读取的问题。"]
+    for query in queries[: search_query_limit()]:
+        text, error = call_search(query)
+        if text:
+            blocks.append(text)
+        else:
+            blocks.append(f"### Search query: {query}\nSTATUS: search_error:{error}")
+    return "\n\n".join(blocks)
 
 
 def output_text_from_openai_response(data: dict) -> str:
@@ -271,6 +456,7 @@ def build_plan_prompt(
 ) -> str:
     day = f"{target_date:%Y-%m-%d}"
     source_blocks = "\n\n".join(fetch_snippet(name, url) for name, url in PLAN_SOURCES)
+    search_blocks = build_search_supplement(day=day, source_blocks=source_blocks, mode="plan")
     return f"""
 你是一个保守的中国体彩竞彩赛前锁版记录员。请只输出 Markdown 正文，不要代码块，不要写模板，不要写“待补”。
 
@@ -307,6 +493,9 @@ def build_plan_prompt(
 
 联网赔率片段：
 {source_blocks}
+
+联网搜索补充：
+{search_blocks}
 """.strip()
 
 
@@ -337,6 +526,7 @@ def build_review_prompt(now: dt.datetime) -> tuple[str, dt.date]:
     target = now.date() - dt.timedelta(days=1)
     day = f"{target:%Y-%m-%d}"
     source_blocks = "\n\n".join(fetch_snippet(name, url) for name, url in REVIEW_SOURCES)
+    search_blocks = build_search_supplement(day=day, source_blocks=source_blocks, mode="review")
     prompt = f"""
 你是一个保守的竞彩模型赛后复盘记录员。请只输出 Markdown 正文，不要代码块，不要流程模板。
 
@@ -356,6 +546,9 @@ def build_review_prompt(now: dt.datetime) -> tuple[str, dt.date]:
 
 联网赛果片段：
 {source_blocks}
+
+联网搜索补充：
+{search_blocks}
 """.strip()
     return prompt, target
 
