@@ -2,9 +2,9 @@ from __future__ import annotations
 
 
 def cold_observation_section(stage: str) -> list[str]:
-    """Return the cold/upset and dual-selection block shared by plan reports."""
+    """Return the cold, dual-selection, and favorite-cover block shared by plan reports."""
     return [
-        "## 冷门与双选观察策略",
+        "## 冷门、双选与热门穿盘观察策略",
         "",
         f"- 适用阶段：{stage}，与正式/模拟/跳过结论并列输出，不替代三色灯。",
         "- 定位：先判断单选能否直接到绿灯；若单选只能黄灯，再评估胜平负双选或让球双选能否把稳定性提升到可复核绿灯。",
@@ -17,6 +17,9 @@ def cold_observation_section(stage: str) -> list[str]:
         "- 分层：A档可进入21点重点复核；B档只做单场观察；C档噪音直接跳过。",
         "- 升级限制：至少同时满足赔率方向、盘口落点、战意/赛制三个信号，且首发/伤停无重大缺口，才允许黄灯升绿。",
         "- 风控纪律：不能为了凑串升绿；红灯不能通过双选升绿；双选升绿默认不自动进入串关，仍需串关规则单独复核。",
+        "- 热门穿盘观察：与冷门双选并列，单独记录`主队 -1 让球胜`或`主队 -2 让球胜`；前10场只进入模拟池，不进入正式方案。",
+        "- 穿盘触发：热门胜平负与让球胜至少两个窗口同向强化，亚盘不退盘，大小球支持两球及以上优势，并有至少一项首发/伤停/战意/实力差外部确认。",
+        "- 穿盘限制：小联赛、友谊赛、小杯赛或战意不透明场次最多观察绿；盘口退让、赔率反复或多个核心矛盾时跳过。",
         "",
         "| 字段 | 记录要求 |",
         "|---|---|",
@@ -28,6 +31,7 @@ def cold_observation_section(stage: str) -> list[str]:
         "| 反方证据 | 热门方硬实力、主场、必须赢、首发完整等最大反证 |",
         "| 推翻条件 | 21点赔率回稳、首发强阵、战意确认、盘口重新支撑热门 |",
         "| 执行层级 | 正式/模拟/观察/跳过四选一，默认不因双选自动串关 |",
+        "| 热门穿盘观察 | 写清让球胜玩法、赔率变化、亚盘、大小球、外部确认、数据缺口和A/B/C档 |",
         "",
         "### 黄灯升级口径",
         "",
@@ -41,9 +45,9 @@ def cold_observation_section(stage: str) -> list[str]:
 
 
 def cold_review_section() -> list[str]:
-    """Return the review checklist for cold and dual-selection branches."""
+    """Return the review checklist for cold, dual-selection, and favorite-cover branches."""
     return [
-        "## 冷门与双选观察复盘",
+        "## 冷门、双选与热门穿盘观察复盘",
         "",
         "- 单独统计冷门双选、让球双选和黄灯升级样本，不与原始单选方案混算。",
         "- 记录每场赛前单选灯色、双选后灯色、最终执行层级，避免赛后反向美化。",
@@ -51,5 +55,6 @@ def cold_review_section() -> list[str]:
         "- 若黄灯经双选升绿但赛果未覆盖，必须复盘是赔率成本过高、盘口落点误读，还是战意/首发缺口。",
         "- 若黄灯经双选升绿并连续稳定命中，样本少于10场前仍只更新观察日志，不提高主模型权重。",
         "- 若低赔热门击穿正式方案，必须检查是否漏记`让平/让负`或穿盘不足信号。",
+        "- 单独统计热门穿盘观察的让球胜命中、失误和走盘；样本少于10场时只记录，不提高主模型权重。",
         "",
     ]
