@@ -11,27 +11,36 @@ from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from collect_500_snapshots import collect_snapshot, latest_snapshot_context
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = dt.timezone(dt.timedelta(hours=8))
 
 
 PLAN_SOURCES = [
-    ("17500胜平负", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=1"),
-    ("17500让球胜平负", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=2"),
-    ("17500总进球", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=4"),
-    ("彩票网竞彩", "https://www.17500.cn/"),
-    ("500彩票网指数中心", "https://odds.500.com/"),
-    ("澳客足球数据", "https://www.okooo.com/"),
-    ("澳客移动数据", "https://m.okooo.com/"),
-    ("7M足球资料库", "https://data.7m.com.cn/"),
-    ("7M赛事资料", "https://data.7m.com.cn/matches_data/index.shtml"),
+    ("17500胜平负", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=1", 18000),
+    ("17500让球胜平负", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=2", 18000),
+    ("17500总进球", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=3", 18000),
+    ("17500半全场", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=4", 18000),
+    ("17500比分", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb&s=0&a=5", 18000),
+    ("竞彩网受注赛程", "https://www.sporttery.cn/jc/zqszsc/", 5000),
+    ("500彩票网综合指数", "https://odds.500.com/index_all.shtml", 14000),
+    ("足彩网赔率中心", "https://odds.zgzcw.com/", 12000),
+    ("澳客足球数据", "https://www.okooo.com/", 8000),
+    ("澳客竞彩", "https://www.okooo.com/jingcai/", 8000),
+    ("澳客移动数据", "https://m.okooo.com/", 5000),
+    ("7M足球资料库", "https://data.7m.com.cn/", 6000),
+    ("500彩票网即时比分", "https://live.500star.com/", 6000),
 ]
 
 ODDS_SEARCH_SITE_QUERIES = [
+    "site:sporttery.cn 竞彩足球 足球受注赛程",
     "site:odds.500.com 竞彩足球 欧赔 亚盘 即时指数",
     "site:okooo.com 竞彩足球 欧赔 亚盘 必发 凯利",
     "site:data.7m.com.cn 足球 欧赔 亚盘 赔率",
+    "site:odds.zgzcw.com 即时赔率 凯利指数 亚盘 大小球",
+    "site:live.titan007.com 足球 欧赔 亚盘 大小球",
     "site:jibao.310win.com 竞彩足球 欧赔 亚盘",
 ]
 
@@ -259,23 +268,40 @@ def call_search(query: str) -> tuple[str | None, str | None]:
 
 
 def extract_jincai_matches(source_blocks: str) -> list[tuple[str, str, str, str]]:
-    pattern = re.compile(
-        r"(周[一二三四五六日]\d{3})\s+"
-        r"([\u4e00-\u9fffA-Za-z]+)\s+"
-        r"\d{2}-\d{2}\s+\d{2}:\d{2}\s+"
-        r"\S+\s+\S+\s+"
-        r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
-        r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
-        r"\d+\.\d{2}\s+\d+\.\d{2}\s+\d+\.\d{2}"
-    )
+    patterns = [
+        # 胜平负行：主队 客队 胜 平 负
+        re.compile(
+            r"(周[一二三四五六日]\d{3})\s+"
+            r"([\u4e00-\u9fffA-Za-z]+)\s+"
+            r"\d{2}-\d{2}\s+\d{2}:\d{2}\s+"
+            r"\S+\s+\S+\s+"
+            r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
+            r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
+            r"\d+\.\d{2}\s+\d+\.\d{2}\s+\d+\.\d{2}"
+        ),
+        # 让球胜平负行：主队 +/-让球 客队 让胜 让平 让负。
+        # 部分竞彩比赛只开放让球玩法，不能依赖胜平负行发现比赛。
+        re.compile(
+            r"(周[一二三四五六日]\d{3})\s+"
+            r"([\u4e00-\u9fffA-Za-z]+)\s+"
+            r"\d{2}-\d{2}\s+\d{2}:\d{2}\s+"
+            r"\S+\s+\S+\s+"
+            r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
+            r"[+-]\d+\s+"
+            r"([\u4e00-\u9fffA-Za-z0-9]+)\s+"
+            r"\d+\.\d{2}\s+\d+\.\d{2}\s+\d+\.\d{2}"
+        ),
+    ]
     seen: set[tuple[str, str, str]] = set()
     matches: list[tuple[str, str, str, str]] = []
-    for match_id, league, home, away in pattern.findall(source_blocks):
-        key = (match_id, home, away)
-        if key in seen:
-            continue
-        seen.add(key)
-        matches.append((match_id, league, home, away))
+    for pattern in patterns:
+        for match_id, league, home, away in pattern.findall(source_blocks):
+            key = (match_id, home, away)
+            if key in seen:
+                continue
+            seen.add(key)
+            matches.append((match_id, league, home, away))
+    matches.sort(key=lambda item: item[0])
     return matches
 
 
@@ -290,18 +316,19 @@ def build_search_supplement(*, day: str, source_blocks: str, mode: str) -> str:
             "Only fixed sources were used.\n"
         )
 
-    base = f"{day} 竞彩足球 今日 欧赔 亚盘 大小球 凯利 伤停 战意 500彩票网 澳客 7M"
+    base = f"{day} 竞彩足球 今日 欧赔 亚盘 大小球 凯利 必发 伤停 战意 竞彩网 500彩票网 足彩网 澳客 7M 新球体育"
     queries = [base] if mode == "plan" else [f"{day} 竞彩足球 赛果 比分 赛后 复盘"]
-    if mode == "plan":
-        queries.extend(f"{day} {query}" for query in ODDS_SEARCH_SITE_QUERIES)
     for match_id, league, home, away in extract_jincai_matches(source_blocks):
         if mode == "plan":
             queries.append(
                 f"{day} 竞彩足球 {match_id} {league} {home} vs {away} "
-                "欧赔 亚盘 大小球 凯利 500彩票网 澳客 7M"
+                "欧赔 亚盘 大小球 凯利 必发 竞彩网 500彩票网 足彩网 澳客 7M 新球体育"
             )
         else:
             queries.append(f"{day} 竞彩足球 {match_id} {home} vs {away} 赛果 比分")
+    if mode == "plan":
+        # 逐场搜索优先，避免通用站点查询挤掉仅开放让球玩法的比赛。
+        queries.extend(f"{day} {query}" for query in ODDS_SEARCH_SITE_QUERIES)
 
     blocks = ["## 搜索补充", "说明：搜索 API 返回摘要/抽取文本，用于补充 JS 渲染站点无法被 GitHub runner 直接读取的问题。"]
     for query in queries[: search_query_limit()]:
@@ -477,6 +504,7 @@ def local_context(day: str, previous_day: str | None = None) -> str:
         except ValueError:
             rel = path
         blocks.append(f"\n## FILE {rel}\n{read_text(path)}")
+    blocks.append(f"\n{latest_snapshot_context(day)}")
     return "\n".join(blocks)
 
 
@@ -520,7 +548,7 @@ def build_plan_prompt(
     workflow_file: str,
 ) -> str:
     day = f"{target_date:%Y-%m-%d}"
-    source_blocks = "\n\n".join(fetch_snippet(name, url) for name, url in PLAN_SOURCES)
+    source_blocks = "\n\n".join(fetch_snippet(name, url, limit) for name, url, limit in PLAN_SOURCES)
     search_blocks = build_search_supplement(day=day, source_blocks=source_blocks, mode="plan")
     return f"""
 你是一个保守的中国体彩竞彩赛前锁版记录员。请只输出 Markdown 正文，不要代码块，不要写模板，不要写“待补”。
@@ -545,6 +573,9 @@ def build_plan_prompt(
 11. 缺少亚盘、凯利、伤停、首发或战意中的部分数据时，应增加不确定性惩罚，不得机械地把全部场次标红。存在方向矛盾、多个未覆盖核心风险或全部外部确认缺失时，仍不得升级为执行绿灯。
 12. 当日竞彩场次达到 8 场及以上时，必须输出最多 3 场观察绿灯，或逐场说明为何没有任何场次达到观察绿灯。不得为了数量硬升绿。
 13. 必须加入“热门穿盘观察”独立分支：逐场检查让球胜是否有可复核价值。至少记录具体让球胜玩法、胜平负与让球胜跨窗口变化、亚盘是否退盘、大小球是否支持、外部确认、数据缺口、A/B/C档、三分、最大反方证据和推翻条件。前10场只进入模拟池，不进入正式推荐或串关。
+14. 部分竞彩比赛只开放让球胜平负，不开放胜平负。此时必须把让球玩法作为独立锁版场次分析，不得把“胜平负未开售”误写成比赛缺失，也不得虚构胜平负赔率。
+15. 竞彩总进球、亚洲大小球和半全场是不同玩法。必须分别记录来源；不得把半全场赔率当作大小球或总进球证据。
+16. 必须加入“历史相似盘口观察”独立分支：只使用赛前快照，亚盘、亚洲大小球、欧赔和竞彩玩法分栏记录；输出样本数、全网/同联赛样本、亚盘赢走输、亚洲大小球大走小、欧赔胜平负和数据缺口。滚球数据不得混入赛前分母；样本不足20场时只记录，不得补造匹配结果或写100%概率，不得单独升级执行绿。
 
 请按以下结构输出：
 - 标题
@@ -554,6 +585,7 @@ def build_plan_prompt(
 - 正式方案结论
 - 黄灯双选/让球双选升级检查
 - 热门穿盘观察
+- 历史相似盘口观察
 - 逐场赛前锁版
 - {next_recheck_label}
 - 最终摘要
@@ -579,6 +611,12 @@ def generate_plan(
 ) -> Path:
     now = dt.datetime.now(TZ)
     title = f"体彩竞彩{batch_label} - {target_date:%Y-%m-%d}"
+    if os.environ.get("JINCAI_500_SNAPSHOT_ENABLED", "1").strip().lower() not in {"0", "false", "no"}:
+        try:
+            snapshot_path = collect_snapshot(now=now)
+            print(f"wrote {snapshot_path}")
+        except Exception as exc:  # pragma: no cover
+            print(f"500 snapshot collection failed: {type(exc).__name__}: {exc}")
     prompt = build_plan_prompt(
         batch_label=batch_label,
         target_date=target_date,
@@ -611,6 +649,7 @@ def build_review_prompt(now: dt.datetime) -> tuple[str, dt.date]:
 4. 只有样本量和阈值满足时才提出模型参数调整；否则只记录观察。
 5. 输出要包含命中/失误、赔率变化复盘、错误归因、下一轮规则修正候选。
 6. 热门穿盘观察必须单独统计让球胜命中、失误和走盘，不与冷门双选或正式方案混算；累计样本少于10场时只记录，不调整主模型权重。
+7. 历史相似盘口观察必须单独复盘：记录赛前样本数、全网/同联赛分栏、亚盘赢走输、亚洲大小球大走小、欧赔胜平负、ROI与校准缺口。滚球样本不得混入；样本门槛未满足时不得调整主模型权重。
 
 本地上下文：
 {local_context(day, previous_day=day)}
