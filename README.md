@@ -13,8 +13,8 @@
 
 - 11:30 任务输出当天初始方案到 `records/1130_initial/YYYY-MM-DD.md`。
 - 17:00 任务输出当天复查方案到 `records/17_check/YYYY-MM-DD.md`。
-- 21:00 任务读取当天初始/复查方案，并输出最终方案到 `records/21_final/YYYY-MM-DD.md`。
-- 21:00 任务同时刷新 `records/portfolio_status.md`，用于查看当前持仓。
+- 21:05 任务读取当天初始/复查方案，并输出最终方案到 `records/21_final/YYYY-MM-DD.md`。
+- 21:05 任务同时刷新 `records/portfolio_status.md`，用于查看当前持仓。
 - 每日复盘任务读取预测、赛果和账本，输出复盘到 `records/reviews/YYYY-MM-DD.md`，并刷新 `records/portfolio_status.md` 的收益率。
 - 盲测回放写入 `records/blind_tests/YYYY-MM-DD-blind-replay.md`，用于隐藏赛果后验证模型和流程。
 
@@ -28,3 +28,4 @@
 - JavaScript 渲染页面无法被 runner 稳定读取时，使用 Tavily 或 Brave Search 摘要补充，并在报告中明确数据缺口。
 - 历史相似盘口观察只使用赛前快照，亚盘、亚洲大小球、欧赔和竞彩玩法分栏积累；样本不足时只报告缺口，不混入滚球盘口或补造概率。
 - 每次赛前自动化都会运行 `scripts/collect_500_snapshots.py`，将 500 彩票网竞彩列表及逐场亚盘、让球指数、亚洲大小球、欧赔公司行写入 `records/odds_snapshots/`。500 比赛 ID 必须结合队名与开赛时间核验后才能映射到竞彩周编号。
+- 11:30、17:00、21:05 三个赛前报告都会输出独立的“亚洲大小球变化与预测”栏目：11:30 建立基线，17:00 比较 11:30 与当前窗口，21:05 比较三个窗口并标记临场反转。

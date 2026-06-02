@@ -316,7 +316,50 @@ def latest_snapshot_path(day: str, output_dir: Path | None = None) -> Path | Non
     return candidates[-1] if candidates else None
 
 
-def latest_snapshot_context(day: str, output_dir: Path | None = None, limit: int = 26000) -> str:
+def snapshot_paths_for_comparison(day: str, output_dir: Path | None = None) -> list[Path]:
+    candidates = sorted(output_dir_path(output_dir).glob(f"{day}-*.json"))
+    if len(candidates) <= 3:
+        return candidates
+
+    target = dt.datetime.strptime(f"{day}-170000", "%Y-%m-%d-%H%M%S")
+
+    def distance_from_17(path: Path) -> float:
+        timestamp = dt.datetime.strptime(path.stem, "%Y-%m-%d-%H%M%S")
+        return abs((timestamp - target).total_seconds())
+
+    closest_to_17 = min(candidates, key=distance_from_17)
+    return sorted({candidates[0], closest_to_17, candidates[-1]})
+
+
+def over_under_window_context(day: str, output_dir: Path | None = None, limit: int = 14000) -> str:
+    paths = snapshot_paths_for_comparison(day, output_dir)
+    if not paths:
+        return "## 亚洲大小球跨窗口快照\nSTATUS: missing; 尚未运行赛前快照采集器。\n"
+
+    lines = [
+        "## 亚洲大小球跨窗口快照",
+        "说明：以下仅为亚洲大小球盘口和水位，不是竞彩总进球。11:30 建立基线；17:00 对比 11:30；21:05 对比 11:30 与 17:00。比赛 ID 引用前必须结合队名与开赛时间核验。",
+    ]
+    for path in paths:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        lines.extend(["", f"### WINDOW {path.name}", f"generated_at={data.get('generated_at')}"])
+        for match in data.get("matches", []):
+            detail = (match.get("details") or {}).get("over_under") or {}
+            lines.extend(
+                [
+                    f"- 500比赛ID {match.get('match_id')}; kickoff={match.get('kickoff')}; list_row={match.get('row_text')}",
+                    (
+                        f"  over_under: status={detail.get('status')} charset={detail.get('charset')} "
+                        f"rows={detail.get('row_count', 0)} title={detail.get('title', '')}"
+                    ),
+                ]
+            )
+            for row in (detail.get("rows") or [])[:4]:
+                lines.append(f"  row: {row.get('text', '')}")
+    return "\n".join(lines)[:limit] + "\n"
+
+
+def latest_snapshot_context(day: str, output_dir: Path | None = None, limit: int = 40000) -> str:
     path = latest_snapshot_path(day, output_dir)
     if not path:
         return "## 500彩票网赛前结构化快照\nSTATUS: missing; 尚未运行赛前快照采集器。\n"
@@ -351,7 +394,9 @@ def latest_snapshot_context(day: str, output_dir: Path | None = None, limit: int
             same_links = detail.get("same_history_links") or []
             if same_links:
                 lines.append(f"  same_history_links={len(same_links)}; sample={same_links[0]}")
-    return "\n".join(lines)[:limit] + "\n"
+    latest_context = "\n".join(lines)
+    window_context = over_under_window_context(day, output_dir)
+    return f"{window_context}\n{latest_context}"[:limit] + "\n"
 
 
 def main() -> None:
