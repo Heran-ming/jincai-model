@@ -207,6 +207,7 @@ def build_report(now: dt.datetime) -> str:
         f"- 最新复盘：`{latest_file('reviews')}`",
         "",
     ]
+    lines.insert(3, "> 观察池另按赛前锁定的让球单选主项与初盘赔率做模拟收益复盘；双选只作附录覆盖观察。")
     append_ledger_section(lines, rows)
     append_rolling_section(lines, rolling)
     lines.extend(
@@ -219,6 +220,10 @@ def build_report(now: dt.datetime) -> str:
             "- 低置信观察、黄灯模拟、冷门样本不计入正式收益，避免把模拟命中包装成真实收益。",
             "",
         ]
+    )
+    lines.insert(
+        -1,
+        "- 观察池收益优先按让球单选主项计算：每场 1u，命中回报=初盘赔率，未命中回报=0；赛前未锁单选主项时不得赛后择优计入。",
     )
     return "\n".join(lines)
 
