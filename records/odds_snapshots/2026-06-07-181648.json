@@ -1,0 +1,5731 @@
+{
+  "schema_version": "1.0",
+  "source": "500彩票网",
+  "source_url": "https://odds.500.com/yazhi_jczq.shtml",
+  "generated_at": "2026-06-07T18:16:48.211938+08:00",
+  "pre_match_only": true,
+  "mapping_note": "500比赛ID不是竞彩周编号。报告引用前必须结合队名与开赛时间核验映射。",
+  "matches": [
+    {
+      "match_id": "1411008",
+      "kickoff": "2026-06-08 02:45:00",
+      "row_text": "周日201 友谊赛 六月 06-08 02:45 克罗地亚 VS 斯洛文尼亚 0.950 0.980 0.960 1.000 0.920 析 亚 欧",
+      "links": [
+        "//liansai.500.com/zuqiu-19472/",
+        "//liansai.500.com/team/36/",
+        "//liansai.500.com/team/35/",
+        "//odds.500.com/fenxi/shuju-1411008.shtml",
+        "//odds.500.com/fenxi/yazhi-1411008.shtml",
+        "//odds.500.com/fenxi/ouzhi-1411008.shtml"
+      ],
+      "details": {
+        "asian_handicap": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/yazhi-1411008.shtml",
+          "bytes": 96955,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "克罗地亚VS斯洛文尼亚(2026友谊赛)-亚盘对比-500彩票网",
+          "row_count": 44,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.880↓ 一球/球半 降 0.740↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.150 球半 0.650"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.880↓ 一球/球半 降 0.740↑ 1 06-07 17:50 1.150 球半 0.650 06-03 22:47 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.960↑ 一球/球半 0.820↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.870 一球/球半 0.910"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.960↑ 一球/球半 0.820↓ 06-07 15:53 0.870 一球/球半 0.910 06-06 18:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.000↓ 球半 0.730↑"
+            },
+            {
+              "data_time": null,
+              "text": "1.050 球半 0.700"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 1.000↓ 球半 0.730↑ 06-07 03:00 1.050 球半 0.700 05-30 00:05 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.980↑ 一球/球半 0.830↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.850 一球/球半 0.950"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.980↑ 一球/球半 0.830↓ 06-07 18:00 0.850 一球/球半 0.950 06-03 22:37 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.100↑ 球半 0.650↓"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 1.100↑ 球半 0.650↓ 06-07 14:24 1.050 球半 0.700 06-02 16:02 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.920↑ 一球/球半 0.900↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.800 一球/球半 0.960"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.920↑ 一球/球半 0.900↓ 06-07 17:50 0.800 一球/球半 0.960 06-05 20:10 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.930↑ 一球/球半 0.940↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.870 一球/球半 0.980"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 0.930↑ 一球/球半 0.940↓ 06-07 17:55 0.870 一球/球半 0.980 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.990↓ 一球/球半 降 0.920↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.050 球半 0.650"
+            },
+            {
+              "data_time": null,
+              "text": "8 on** on** 0.990↓ 一球/球半 降 0.920↑ 1 06-07 17:57 1.050 球半 0.650 05-11 18:30 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.880↑ 一球/球半 0.840↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.820 一球/球半 0.900"
+            },
+            {
+              "data_time": null,
+              "text": "9 伟* 伟* 0.880↑ 一球/球半 0.840↓ 06-07 17:34 0.820 一球/球半 0.900 05-30 16:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.950↑ 一球/球半 0.900↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.860 一球/球半 0.910"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.950↑ 一球/球半 0.900↓ 1 06-07 17:33 0.860 一球/球半 0.910 06-05 00:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.940↑ 一球/球半 0.900↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.800 一球/球半 0.980"
+            },
+            {
+              "data_time": null,
+              "text": "11 利* 利* 0.940↑ 一球/球半 0.900↓ 06-07 18:03 0.800 一球/球半 0.980 06-07 08:46 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.790 一球/球半 1.010"
+            },
+            {
+              "data_time": null,
+              "text": "12 M****on88 (明*) M****on88 (明*) 0.940↑ 一球/球半 0.900↓ 06-07 18:05 0.790 一球/球半 1.010 06-06 18:00 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.870↑ 一球/球半 0.890↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.810 一球/球半 0.960"
+            },
+            {
+              "data_time": null,
+              "text": "13 香**会 香**会 0.870↑ 一球/球半 0.890↓ 06-07 15:49 0.810 一球/球半 0.960 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "14 12**t (壹*博) 12**t (壹*博) 0.940↑ 一球/球半 0.900↓ 06-07 18:03 0.850 一球/球半 0.950 06-07 10:14 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.890↑ 一球/球半 0.870↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.810 一球/球半 0.920"
+            },
+            {
+              "data_time": null,
+              "text": "15 18**t 18**t 0.890↑ 一球/球半 0.870↓ 06-07 17:51 0.810 一球/球半 0.920 06-02 08:55 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.950↑ 一球/球半 0.870↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.850 一球/球半 0.970"
+            },
+            {
+              "data_time": null,
+              "text": "16 W****t (盈*) W****t (盈*) 0.950↑ 一球/球半 0.870↓ 06-07 18:05 0.850 一球/球半 0.970 06-02 16:14 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=293&cp=球半&id=1411008&s1=1.150&s2=0.650",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=5&cp=一球/球半&id=1411008&s1=0.870&s2=0.910",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=2&cp=球半&id=1411008&s1=1.050&s2=0.700",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=3&cp=一球/球半&id=1411008&s1=0.850&s2=0.950",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=4&cp=球半&id=1411008&s1=1.050&s2=0.700",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=280&cp=一球/球半&id=1411008&s1=0.800&s2=0.960",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=9&cp=一球/球半&id=1411008&s1=0.870&s2=0.980",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1484&cp=球半&id=1411008&s1=1.050&s2=0.650",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=6&cp=一球/球半&id=1411008&s1=0.820&s2=0.900",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1055&cp=一球/球半&id=1411008&s1=0.860&s2=0.910",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=651&cp=一球/球半&id=1411008&s1=0.800&s2=0.980",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=140&cp=一球/球半&id=1411008&s1=0.790&s2=1.010"
+          ]
+        },
+        "handicap_1x2": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/rangqiu-1411008.shtml?lot=jczq",
+          "bytes": 109775,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "克罗地亚VS斯洛文尼亚(2026友谊赛)-让球指数-500彩票网",
+          "row_count": 119,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "2.00 3.22 3.15"
+            },
+            {
+              "data_time": null,
+              "text": "2.08 3.02 3.15"
+            },
+            {
+              "data_time": null,
+              "text": "44.33% 27.53% 28.14%"
+            },
+            {
+              "data_time": null,
+              "text": "42.57% 29.32% 28.11%"
+            },
+            {
+              "data_time": null,
+              "text": "88.65%"
+            },
+            {
+              "data_time": null,
+              "text": "88.55%"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 0.88 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.82 0.97"
+            },
+            {
+              "data_time": "2026-06-07 17:59:53",
+              "text": "1 竞*官* 竞*官* (中国) -1 2.00 3.22 3.15 2.08 3.02 3.15 44.33% 27.53% 28.14% 42.57% 29.32% 28.11% 88.65% 88.55% 0.84 0.88 0.97 0.87 0.82 0.97 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.05 3.30 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.30 2.87"
+            },
+            {
+              "data_time": null,
+              "text": "43.39% 26.96% 29.65%"
+            },
+            {
+              "data_time": null,
+              "text": "41.66% 27.14% 31.21%"
+            },
+            {
+              "data_time": null,
+              "text": "88.95%"
+            },
+            {
+              "data_time": null,
+              "text": "89.56%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.90 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.90 0.89"
+            },
+            {
+              "data_time": "2026-06-07 15:50:04",
+              "text": "2 立* 立* (英国) -1 2.05 3.30 3.00 2.15 3.30 2.87 43.39% 26.96% 29.65% 41.66% 27.14% 31.21% 88.95% 89.56% 0.86 0.90 0.93 0.90 0.90 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.00 3.20 3.10"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.25 2.88"
+            },
+            {
+              "data_time": null,
+              "text": "44.05% 27.53% 28.42%"
+            },
+            {
+              "data_time": null,
+              "text": "42.10% 27.20% 30.70%"
+            },
+            {
+              "data_time": null,
+              "text": "88.10%"
+            },
+            {
+              "data_time": null,
+              "text": "88.41%"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 0.87 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.89 0.89"
+            },
+            {
+              "data_time": "2026-06-07 16:41:58",
+              "text": "3 伟* 伟* (直布罗陀) -1 2.00 3.20 3.10 2.10 3.25 2.88 44.05% 27.53% 28.42% 42.10% 27.20% 30.70% 88.10% 88.41% 0.84 0.87 0.96 0.88 0.89 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.25 2.85"
+            },
+            {
+              "data_time": null,
+              "text": "41.39% 27.38% 31.23%"
+            },
+            {
+              "data_time": null,
+              "text": "88.99%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.89 0.88"
+            },
+            {
+              "data_time": "2026-06-07 15:49:21",
+              "text": "4 B**n B**n (奥地利) -1 2.05 3.30 3.00 2.15 3.25 2.85 43.39% 26.96% 29.65% 41.39% 27.38% 31.23% 88.95% 88.99% 0.86 0.90 0.93 0.90 0.89 0.88 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.93 3.63 3.37"
+            },
+            {
+              "data_time": null,
+              "text": "2.23 3.47 3.09"
+            },
+            {
+              "data_time": null,
+              "text": "47.52% 25.27% 27.21%"
+            },
+            {
+              "data_time": null,
+              "text": "42.30% 27.18% 30.52%"
+            },
+            {
+              "data_time": null,
+              "text": "91.71%"
+            },
+            {
+              "data_time": null,
+              "text": "94.32%"
+            },
+            {
+              "data_time": null,
+              "text": "0.81 0.99 1.04"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.95 0.95"
+            },
+            {
+              "data_time": "2026-06-07 17:05:13",
+              "text": "5 Pi****le平* Pi****le平* (荷兰) -1 1.93 3.63 3.37 2.23 3.47 3.09 47.52% 25.27% 27.21% 42.30% 27.18% 30.52% 91.71% 94.32% 0.81 0.99 1.04 0.93 0.95 0.95 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.40 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "43.15% 26.65% 30.20%"
+            },
+            {
+              "data_time": null,
+              "text": "90.61%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.93 0.93"
+            },
+            {
+              "data_time": "2026-06-07 15:49:35",
+              "text": "6 C***l C***l (英国) -1 2.10 3.40 3.00 2.15 3.30 2.87 43.15% 26.65% 30.20% 41.66% 27.14% 31.21% 90.61% 89.56% 0.88 0.93 0.93 0.90 0.90 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.02 3.35 3.05"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.45 2.90"
+            },
+            {
+              "data_time": null,
+              "text": "44.14% 26.62% 29.24%"
+            },
+            {
+              "data_time": null,
+              "text": "42.29% 26.36% 31.35%"
+            },
+            {
+              "data_time": null,
+              "text": "89.17%"
+            },
+            {
+              "data_time": null,
+              "text": "90.93%"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 0.91 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.94 0.89"
+            },
+            {
+              "data_time": "2026-06-07 15:21:53",
+              "text": "7 U****t (优*客) U****t (优*客) (马耳他) -1 2.02 3.35 3.05 2.15 3.45 2.90 44.14% 26.62% 29.24% 42.29% 26.36% 31.35% 89.17% 90.93% 0.85 0.91 0.94 0.90 0.94 0.89 同"
+            },
+            {
+              "data_time": "2026-06-07 15:49:48",
+              "text": "8 S***t**g**t (博*堂) S***t**g**t (博*堂) (英国) -1 2.05 3.30 3.00 2.15 3.25 2.85 43.39% 26.96% 29.65% 41.39% 27.38% 31.23% 88.95% 88.99% 0.86 0.90 0.93 0.90 0.89 0.88 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.25 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "2.20 3.20 2.90"
+            },
+            {
+              "data_time": null,
+              "text": "42.62% 27.54% 29.84%"
+            },
+            {
+              "data_time": null,
+              "text": "40.88% 28.11% 31.01%"
+            },
+            {
+              "data_time": null,
+              "text": "89.51%"
+            },
+            {
+              "data_time": null,
+              "text": "89.94%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.89 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.87 0.89"
+            },
+            {
+              "data_time": "2026-06-07 17:38:51",
+              "text": "9 88****** 88****** (塞浦路斯) -1 2.10 3.25 3.00 2.20 3.20 2.90 42.62% 27.54% 29.84% 40.88% 28.11% 31.01% 89.51% 89.94% 0.88 0.89 0.93 0.92 0.87 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.08 3.55 3.15"
+            },
+            {
+              "data_time": null,
+              "text": "2.21 3.55 2.95"
+            },
+            {
+              "data_time": null,
+              "text": "44.52% 26.08% 29.40%"
+            },
+            {
+              "data_time": null,
+              "text": "42.16% 26.25% 31.59%"
+            },
+            {
+              "data_time": null,
+              "text": "92.60%"
+            },
+            {
+              "data_time": null,
+              "text": "93.18%"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.97 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.97 0.91"
+            },
+            {
+              "data_time": "2026-06-07 15:21:48",
+              "text": "10 大巨* 大巨* (柬埔寨) -1 2.08 3.55 3.15 2.21 3.55 2.95 44.52% 26.08% 29.40% 42.16% 26.25% 31.59% 92.60% 93.18% 0.87 0.97 0.97 0.92 0.97 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.00 3.25 3.30"
+            },
+            {
+              "data_time": null,
+              "text": "2.20 3.25 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "45.02% 27.70% 27.28%"
+            },
+            {
+              "data_time": null,
+              "text": "41.49% 28.09% 30.43%"
+            },
+            {
+              "data_time": null,
+              "text": "90.03%"
+            },
+            {
+              "data_time": null,
+              "text": "91.28%"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 0.89 1.02"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.89 0.93"
+            },
+            {
+              "data_time": "2026-06-07 17:08:49",
+              "text": "11 必* 必* (英国) -1 2.00 3.25 3.30 2.20 3.25 3.00 45.02% 27.70% 27.28% 41.49% 28.09% 30.43% 90.03% 91.28% 0.84 0.89 1.02 0.92 0.89 0.93 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.19 2.93 3.34"
+            },
+            {
+              "data_time": null,
+              "text": "2.27 3.07 2.99"
+            },
+            {
+              "data_time": null,
+              "text": "41.61% 31.10% 27.28%"
+            },
+            {
+              "data_time": null,
+              "text": "40.02% 29.59% 30.38%"
+            },
+            {
+              "data_time": null,
+              "text": "91.13%"
+            },
+            {
+              "data_time": null,
+              "text": "90.85%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.80 1.03"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.84 0.92"
+            },
+            {
+              "data_time": "2026-06-07 17:58:58",
+              "text": "12 1x**t 1x**t -1 2.19 2.93 3.34 2.27 3.07 2.99 41.61% 31.10% 27.28% 40.02% 29.59% 30.38% 91.13% 90.85% 0.92 0.80 1.03 0.95 0.84 0.92 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.50 3.10"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.40 2.95"
+            },
+            {
+              "data_time": null,
+              "text": "43.91% 26.35% 29.75%"
+            },
+            {
+              "data_time": null,
+              "text": "42.35% 26.78% 30.87%"
+            },
+            {
+              "data_time": null,
+              "text": "92.21%"
+            },
+            {
+              "data_time": null,
+              "text": "91.06%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.96 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.93 0.91"
+            },
+            {
+              "data_time": "2026-06-07 18:06:51",
+              "text": "13 **ts**n **ts**n (瑞典) -1 2.10 3.50 3.10 2.15 3.40 2.95 43.91% 26.35% 29.75% 42.35% 26.78% 30.87% 92.21% 91.06% 0.88 0.96 0.96 0.90 0.93 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.05 3.65 2.90"
+            },
+            {
+              "data_time": null,
+              "text": "2.20 3.50 2.90"
+            },
+            {
+              "data_time": null,
+              "text": "44.08% 24.76% 31.16%"
+            },
+            {
+              "data_time": null,
+              "text": "41.89% 26.33% 31.78%"
+            },
+            {
+              "data_time": null,
+              "text": "90.37%"
+            },
+            {
+              "data_time": null,
+              "text": "92.16%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 1.00 0.89"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.96 0.89"
+            },
+            {
+              "data_time": "2026-06-07 15:23:39",
+              "text": "14 D***k T**********e D***k T**********e (丹麦) -1 2.05 3.65 2.90 2.20 3.50 2.90 44.08% 24.76% 31.16% 41.89% 26.33% 31.78% 90.37% 92.16% 0.86 1.00 0.89 0.92 0.96 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.08 3.30 2.80"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.35 2.90"
+            },
+            {
+              "data_time": null,
+              "text": "42.14% 26.56% 31.30%"
+            },
+            {
+              "data_time": null,
+              "text": "42.54% 26.66% 30.80%"
+            },
+            {
+              "data_time": null,
+              "text": "87.65%"
+            },
+            {
+              "data_time": null,
+              "text": "89.32%"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.90 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.91 0.89"
+            },
+            {
+              "data_time": "2026-06-07 17:51:30",
+              "text": "15 Sv****a Spel Sv****a Spel (瑞典) -1 2.08 3.30 2.80 2.10 3.35 2.90 42.14% 26.56% 31.30% 42.54% 26.66% 30.80% 87.65% 89.32% 0.87 0.90 0.86 0.88 0.91 0.89 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1&handicapline=-1&win=2.00&draw=3.22&lost=3.15&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=2&handicapline=-1&win=2.05&draw=3.30&lost=3.00&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=6&handicapline=-1&win=2.00&draw=3.20&lost=3.10&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=11&handicapline=-1&win=2.05&draw=3.30&lost=3.00&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1055&handicapline=-1&win=1.93&draw=3.63&lost=3.37&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=14&handicapline=-1&win=2.10&draw=3.40&lost=3.00&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=291&handicapline=-1&win=2.02&draw=3.35&lost=3.05&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=275&handicapline=-1&win=2.05&draw=3.30&lost=3.00&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1487&handicapline=-1&win=2.10&draw=3.25&lost=3.00&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1488&handicapline=-1&win=2.08&draw=3.55&lost=3.15&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=18&handicapline=-1&win=2.00&draw=3.25&lost=3.30&id=1411008",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1259&handicapline=-1&win=2.19&draw=2.93&lost=3.34&id=1411008"
+          ]
+        },
+        "over_under": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/daxiao-1411008.shtml",
+          "bytes": 98540,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "克罗地亚VS斯洛文尼亚(2026友谊赛)-大小对比-500彩票网",
+          "row_count": 49,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.85↑ 2.5 0.85↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.75 2.5 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.85↑ 2.5 0.85↓ 06-07 16:19 0.75 2.5 0.95 06-03 22:35 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.90↓ 2.5 0.82↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 2.5 0.80"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.90↓ 2.5 0.82↑ 06-07 16:01 0.92 2.5 0.80 06-06 18:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.91↓ 2.5 0.80↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 2.5 0.75"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 0.91↓ 2.5 0.80↑ 06-07 02:46 0.95 2.5 0.75 05-30 00:05 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.98↑ 2.5 0.83↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 2.5 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.98↑ 2.5 0.83↓ 06-07 18:04 0.83 2.5 0.98 06-03 22:37 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.90↓ 2.5 0.80↑"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 0.90↓ 2.5 0.80↑ 06-05 03:01 0.95 2.5 0.75 06-02 15:56 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.92↓ 2.5 0.88↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 2.5 0.82"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.92↓ 2.5 0.88↑ 06-07 15:48 0.94 2.5 0.82 06-05 20:10 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.99↑ 2.5 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 2.5 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 0.99↑ 2.5 0.90 06-07 15:44 0.94 2.5 0.90 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.94↑ 2.5↑ 0.84↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.80 2/2.5 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "8 伟* 伟* 0.94↑ 2.5↑ 0.84↓ 1 06-07 18:00 0.80 2/2.5 0.98 05-30 16:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.01↑ 2.5 0.90↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 2.5 0.74"
+            },
+            {
+              "data_time": null,
+              "text": "9 on** on** 1.01↑ 2.5 0.90↑ 1 06-07 18:00 0.93 2.5 0.74 05-11 18:30 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.97↑ 2.5 0.86↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 2.5 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.97↑ 2.5 0.86↓ 06-07 17:56 0.83 2.5 0.93 06-05 00:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.90↑ 2.5↑ 0.80↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.73 2/2.5 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "11 10**t 10**t 0.90↑ 2.5↑ 0.80↓ 1 06-07 18:04 0.73 2/2.5 0.95 06-02 15:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.97↑ 2.5 0.85↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 2.5 0.83"
+            },
+            {
+              "data_time": null,
+              "text": "12 利* 利* 0.97↑ 2.5 0.85↑ 06-07 17:11 0.93 2.5 0.83 06-07 08:46 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.94↓ 2.5 0.88↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 2.5 0.84"
+            },
+            {
+              "data_time": null,
+              "text": "13 M****on88 (明*) M****on88 (明*) 0.94↓ 2.5 0.88↑ 06-07 17:05 0.96 2.5 0.84 06-06 18:00 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.77 2.5 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "14 香**会 香**会 0.77 2.5 0.93 06-06 13:53 0.77 2.5 0.93 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.94↑ 2.5 0.88↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 2.5 0.87"
+            },
+            {
+              "data_time": null,
+              "text": "15 12**t (壹*博) 12**t (壹*博) 0.94↑ 2.5 0.88↑ 06-07 17:18 0.93 2.5 0.87 06-07 11:34 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.92↑ 2.5↑ 0.83↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.81 2/2.5 0.92"
+            },
+            {
+              "data_time": null,
+              "text": "16 18**t 18**t 0.92↑ 2.5↑ 0.83↓ 1 06-07 18:05 0.81 2/2.5 0.92 06-02 08:55 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.95↑ 2.5↑ 0.85↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.77 2/2.5 1.03"
+            },
+            {
+              "data_time": null,
+              "text": "17 W****t (盈*) W****t (盈*) 0.95↑ 2.5↑ 0.85↓ 1 06-07 15:48 0.77 2/2.5 1.03 06-02 16:14 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=293&bigpei=0.75&handi=2.5&smallpei=0.95&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=5&bigpei=0.92&handi=2.5&smallpei=0.80&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=2&bigpei=0.95&handi=2.5&smallpei=0.75&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=3&bigpei=0.83&handi=2.5&smallpei=0.98&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=4&bigpei=0.95&handi=2.5&smallpei=0.75&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=280&bigpei=0.94&handi=2.5&smallpei=0.82&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=9&bigpei=0.94&handi=2.5&smallpei=0.90&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=6&bigpei=0.80&handi=2/2.5&smallpei=0.98&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1484&bigpei=0.93&handi=2.5&smallpei=0.74&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1055&bigpei=0.83&handi=2.5&smallpei=0.93&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=16&bigpei=0.73&handi=2/2.5&smallpei=0.95&fixid=1411008",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=651&bigpei=0.93&handi=2.5&smallpei=0.83&fixid=1411008"
+          ]
+        },
+        "european_odds": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/ouzhi-1411008.shtml",
+          "bytes": 183752,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "克罗地亚VS斯洛文尼亚(2026友谊赛)-百家欧赔-500彩票网",
+          "row_count": 226,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "1.26 4.55 8.75"
+            },
+            {
+              "data_time": null,
+              "text": "1.26 4.45 9.00"
+            },
+            {
+              "data_time": null,
+              "text": "70.38% 19.49% 10.13%"
+            },
+            {
+              "data_time": null,
+              "text": "70.27% 19.90% 9.84%"
+            },
+            {
+              "data_time": null,
+              "text": "88.67%"
+            },
+            {
+              "data_time": null,
+              "text": "88.54%"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 0.96 1.01"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 0.94 1.04"
+            },
+            {
+              "data_time": "2026-06-07 14:56:07",
+              "text": "1 竞*官* 竞*官* (中国) 1.26 4.55 8.75 1.26 4.45 9.00 70.38% 19.49% 10.13% 70.27% 19.90% 9.84% 88.67% 88.54% 0.85 0.96 1.01 0.85 0.94 1.04 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.20 8.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.20 8.00"
+            },
+            {
+              "data_time": null,
+              "text": "67.39% 21.82% 10.78%"
+            },
+            {
+              "data_time": null,
+              "text": "66.94% 21.68% 11.38%"
+            },
+            {
+              "data_time": null,
+              "text": "91.66%"
+            },
+            {
+              "data_time": null,
+              "text": "91.04%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 0.93"
+            },
+            {
+              "data_time": "2026-06-07 14:58:13",
+              "text": "2 威**尔 威**尔 (英国) 1.36 4.20 8.50 1.36 4.20 8.00 67.39% 21.82% 10.78% 66.94% 21.68% 11.38% 91.66% 91.04% 0.91 0.89 0.98 0.91 0.89 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.32 4.30 7.40"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.20 6.50"
+            },
+            {
+              "data_time": null,
+              "text": "67.32% 20.67% 12.01%"
+            },
+            {
+              "data_time": null,
+              "text": "65.23% 21.12% 13.65%"
+            },
+            {
+              "data_time": null,
+              "text": "88.87%"
+            },
+            {
+              "data_time": null,
+              "text": "88.71%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.91 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 0.75"
+            },
+            {
+              "data_time": "2026-06-07 15:53:30",
+              "text": "3 *门 *门 (中国澳门) 1.32 4.30 7.40 1.36 4.20 6.50 67.32% 20.67% 12.01% 65.23% 21.12% 13.65% 88.87% 88.71% 0.89 0.91 0.86 0.91 0.89 0.75 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.40 4.50 8.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.40 4.50 8.00"
+            },
+            {
+              "data_time": null,
+              "text": "67.76% 21.08% 11.16%"
+            },
+            {
+              "data_time": null,
+              "text": "67.29% 20.93% 11.78%"
+            },
+            {
+              "data_time": null,
+              "text": "94.86%"
+            },
+            {
+              "data_time": null,
+              "text": "94.21%"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.95 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.95 0.93"
+            },
+            {
+              "data_time": "2026-06-07 15:49:33",
+              "text": "4 立* 立* (英国) 1.40 4.50 8.50 1.40 4.50 8.00 67.76% 21.08% 11.16% 67.29% 20.93% 11.78% 94.86% 94.21% 0.94 0.95 0.98 0.94 0.95 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.50 7.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.40 4.33 6.50"
+            },
+            {
+              "data_time": null,
+              "text": "66.82% 20.20% 12.98%"
+            },
+            {
+              "data_time": null,
+              "text": "64.99% 21.01% 14.00%"
+            },
+            {
+              "data_time": null,
+              "text": "90.88%"
+            },
+            {
+              "data_time": null,
+              "text": "90.99%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.95 0.81"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.92 0.75"
+            },
+            {
+              "data_time": "2026-06-07 17:59:21",
+              "text": "5 **t3*5 **t3*5 (英国) 1.36 4.50 7.00 1.40 4.33 6.50 66.82% 20.20% 12.98% 64.99% 21.01% 14.00% 90.88% 90.99% 0.91 0.95 0.81 0.94 0.92 0.75 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.35 4.50 9.00"
+            },
+            {
+              "data_time": null,
+              "text": "68.97% 20.69% 10.34%"
+            },
+            {
+              "data_time": null,
+              "text": "93.10%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.95 1.04"
+            },
+            {
+              "data_time": "2026-06-07 15:03:43",
+              "text": "6 I***rw**t*n I***rw**t*n (塞浦路斯) 1.35 4.50 9.00 1.40 4.50 8.00 68.97% 20.69% 10.34% 67.29% 20.93% 11.78% 93.10% 94.21% 0.91 0.95 1.04 0.94 0.95 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.33 4.55 8.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.35 4.40 7.50"
+            },
+            {
+              "data_time": null,
+              "text": "68.56% 20.04% 11.40%"
+            },
+            {
+              "data_time": null,
+              "text": "67.26% 20.64% 12.11%"
+            },
+            {
+              "data_time": null,
+              "text": "91.19%"
+            },
+            {
+              "data_time": null,
+              "text": "90.80%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.96 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.93 0.87"
+            },
+            {
+              "data_time": "2026-06-07 17:49:47",
+              "text": "7 *冠 *冠 (菲律宾) 1.33 4.55 8.00 1.35 4.40 7.50 68.56% 20.04% 11.40% 67.26% 20.64% 12.11% 91.19% 90.80% 0.89 0.96 0.93 0.91 0.93 0.87 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.38 4.50 7.10"
+            },
+            {
+              "data_time": null,
+              "text": "66.62% 20.43% 12.95%"
+            },
+            {
+              "data_time": null,
+              "text": "91.94%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.95 0.82"
+            },
+            {
+              "data_time": "2026-06-07 17:53:50",
+              "text": "8 易*博 易*博 (英国) 1.38 4.50 7.10 1.38 4.50 7.10 66.62% 20.43% 12.95% 66.62% 20.43% 12.95% 91.94% 91.94% 0.93 0.95 0.82 0.93 0.95 0.82 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.33 4.33 9.00"
+            },
+            {
+              "data_time": null,
+              "text": "68.73% 21.11% 10.16%"
+            },
+            {
+              "data_time": null,
+              "text": "91.41%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.92 1.04"
+            },
+            {
+              "data_time": "2026-06-07 14:56:43",
+              "text": "9 伟* 伟* (直布罗陀) 1.33 4.33 9.00 1.36 4.20 8.00 68.73% 21.11% 10.16% 66.94% 21.68% 11.38% 91.41% 91.04% 0.89 0.92 1.04 0.91 0.89 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.60 9.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.40 4.50 7.75"
+            },
+            {
+              "data_time": null,
+              "text": "69.12% 20.44% 10.44%"
+            },
+            {
+              "data_time": null,
+              "text": "67.04% 20.86% 12.11%"
+            },
+            {
+              "data_time": null,
+              "text": "94.00%"
+            },
+            {
+              "data_time": null,
+              "text": "93.85%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.97 1.04"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.95 0.90"
+            },
+            {
+              "data_time": "2026-06-07 15:49:44",
+              "text": "10 B**n B**n (奥地利) 1.36 4.60 9.00 1.40 4.50 7.75 69.12% 20.44% 10.44% 67.04% 20.86% 12.11% 94.00% 93.85% 0.91 0.97 1.04 0.94 0.95 0.90 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.58 7.53"
+            },
+            {
+              "data_time": null,
+              "text": "1.38 4.55 8.80"
+            },
+            {
+              "data_time": null,
+              "text": "67.68% 20.10% 12.22%"
+            },
+            {
+              "data_time": null,
+              "text": "68.49% 20.77% 10.74%"
+            },
+            {
+              "data_time": null,
+              "text": "92.04%"
+            },
+            {
+              "data_time": null,
+              "text": "94.51%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.97 0.87"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.96 1.02"
+            },
+            {
+              "data_time": "2026-06-07 17:56:40",
+              "text": "11 Pi****le平* Pi****le平* (荷兰) 1.36 4.58 7.53 1.38 4.55 8.80 67.68% 20.10% 12.22% 68.49% 20.77% 10.74% 92.04% 94.51% 0.91 0.97 0.87 0.93 0.96 1.02 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.33 4.40 8.80"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.70 8.00"
+            },
+            {
+              "data_time": null,
+              "text": "68.80% 20.80% 10.40%"
+            },
+            {
+              "data_time": null,
+              "text": "68.52% 19.83% 11.65%"
+            },
+            {
+              "data_time": null,
+              "text": "91.51%"
+            },
+            {
+              "data_time": null,
+              "text": "93.19%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.93 1.02"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.99 0.93"
+            },
+            {
+              "data_time": "2026-06-07 17:13:22",
+              "text": "12 10**t 10**t (英国) 1.33 4.40 8.80 1.36 4.70 8.00 68.80% 20.80% 10.40% 68.52% 19.83% 11.65% 91.51% 93.19% 0.89 0.93 1.02 0.91 0.99 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.36 4.60 9.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.40 4.60 8.50"
+            },
+            {
+              "data_time": null,
+              "text": "69.50% 20.55% 9.95%"
+            },
+            {
+              "data_time": null,
+              "text": "68.07% 20.72% 11.21%"
+            },
+            {
+              "data_time": null,
+              "text": "94.52%"
+            },
+            {
+              "data_time": null,
+              "text": "95.30%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.97 1.10"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.97 0.98"
+            },
+            {
+              "data_time": "2026-06-07 15:02:31",
+              "text": "13 C***l C***l (英国) 1.36 4.60 9.50 1.40 4.60 8.50 69.50% 20.55% 9.95% 68.07% 20.72% 11.21% 94.52% 95.30% 0.91 0.97 1.10 0.94 0.97 0.98 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.30 4.16 7.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.35 4.09 7.10"
+            },
+            {
+              "data_time": null,
+              "text": "67.30% 21.03% 11.67%"
+            },
+            {
+              "data_time": null,
+              "text": "65.78% 21.71% 12.51%"
+            },
+            {
+              "data_time": null,
+              "text": "87.49%"
+            },
+            {
+              "data_time": null,
+              "text": "88.80%"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.88 0.87"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.87 0.82"
+            },
+            {
+              "data_time": "2026-06-07 18:05:34",
+              "text": "14 利* 利* (英国) 1.30 4.16 7.50 1.35 4.09 7.10 67.30% 21.03% 11.67% 65.78% 21.71% 12.51% 87.49% 88.80% 0.87 0.88 0.87 0.91 0.87 0.82 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.33 4.35 8.50"
+            },
+            {
+              "data_time": null,
+              "text": "68.39% 20.91% 10.70%"
+            },
+            {
+              "data_time": null,
+              "text": "90.96%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.92 0.98"
+            },
+            {
+              "data_time": "2026-06-07 18:00:24",
+              "text": "15 U****t (优*客) U****t (优*客) (马耳他) 1.33 4.35 8.50 1.40 4.50 8.50 68.39% 20.91% 10.70% 67.76% 21.08% 11.16% 90.96% 94.86% 0.89 0.92 0.98 0.94 0.95 0.98 主 客 同"
+            },
+            {
+              "data_time": "2026-06-07 15:58:35",
+              "text": "16 S***t**g**t (博*堂) S***t**g**t (博*堂) (英国) 1.36 4.60 9.00 1.40 4.50 7.75 69.12% 20.44% 10.44% 67.04% 20.86% 12.11% 94.00% 93.85% 0.91 0.97 1.04 0.94 0.95 0.90 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1&win=1.26&draw=4.55&lost=8.75&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=293&win=1.36&draw=4.20&lost=8.50&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=5&win=1.32&draw=4.30&lost=7.40&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=2&win=1.40&draw=4.50&lost=8.50&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=3&win=1.36&draw=4.50&lost=7.00&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=4&win=1.35&draw=4.50&lost=9.00&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=280&win=1.33&draw=4.55&lost=8.00&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=9&win=1.38&draw=4.50&lost=7.10&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=6&win=1.33&draw=4.33&lost=9.00&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=11&win=1.36&draw=4.60&lost=9.00&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1055&win=1.36&draw=4.58&lost=7.53&fixtureid=1411008",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=16&win=1.33&draw=4.40&lost=8.80&fixtureid=1411008"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": "1406336",
+      "kickoff": "2026-06-08 03:00:00",
+      "row_text": "周日202 友谊赛 六月 06-08 03:00 摩洛哥 VS 挪威 0.810 0.830 0.800 0.650 0.770 析 亚 欧",
+      "links": [
+        "//liansai.500.com/zuqiu-19472/",
+        "//liansai.500.com/team/38/",
+        "//liansai.500.com/team/31/",
+        "//odds.500.com/fenxi/shuju-1406336.shtml",
+        "//odds.500.com/fenxi/yazhi-1406336.shtml",
+        "//odds.500.com/fenxi/ouzhi-1406336.shtml"
+      ],
+      "details": {
+        "asian_handicap": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/yazhi-1406336.shtml",
+          "bytes": 96876,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "摩洛哥VS挪威(2026友谊赛)-亚盘对比-500彩票网",
+          "row_count": 45,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.740↑ 受平手/半球 升 0.900↓ 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.570 受半球 1.250"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.740↑ 受平手/半球 升 0.900↓ 2 06-07 15:49 0.570 受半球 1.250 06-01 19:57 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.800↓ 受平手/半球 0.980↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.890 受平手/半球 0.890"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.800↓ 受平手/半球 0.980↑ 06-07 16:03 0.890 受平手/半球 0.890 06-06 18:03 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.650 受半球 1.100"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 0.650 受半球 1.100 06-06 08:26 0.650 受半球 1.100 06-06 08:26 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.830↓ 受平手/半球 降 0.980↑ 2"
+            },
+            {
+              "data_time": null,
+              "text": "1.050 平手 0.750"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.830↓ 受平手/半球 降 0.980↑ 2 06-07 18:00 1.050 平手 0.750 06-01 19:45 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.100↓ 平手 0.650↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.200 平手 0.600"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 1.100↓ 平手 0.650↑ 1 06-07 10:28 1.200 平手 0.600 06-02 15:50 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.770↓ 受平手/半球 1.050↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.880 受平手/半球 0.880"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.770↓ 受平手/半球 1.050↑ 06-07 18:05 0.880 受平手/半球 0.880 06-03 23:07 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.800↓ 受平手/半球 1.060↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.920 受平手/半球 0.930"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 0.800↓ 受平手/半球 1.060↑ 06-07 17:55 0.920 受平手/半球 0.930 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.810↓ 受平手/半球 降 0.960↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.100 平手 0.620"
+            },
+            {
+              "data_time": null,
+              "text": "8 on** on** 0.810↓ 受平手/半球 降 0.960↑ 1 06-07 17:22 1.100 平手 0.620 05-11 18:13 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.770↑ 受平手/半球 0.960↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.760 受平手/半球 0.970"
+            },
+            {
+              "data_time": null,
+              "text": "9 伟* 伟* 0.770↑ 受平手/半球 0.960↓ 06-07 17:55 0.760 受平手/半球 0.970 05-30 16:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.810↓ 受平手/半球 1.050↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.880 受平手/半球 0.890"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.810↓ 受平手/半球 1.050↑ 06-07 17:48 0.880 受平手/半球 0.890 06-03 01:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.790↓ 受平手/半球 1.050↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.800 受平手/半球 1.020"
+            },
+            {
+              "data_time": null,
+              "text": "11 利* 利* 0.790↓ 受平手/半球 1.050↑ 1 06-07 17:59 0.800 受平手/半球 1.020 06-07 09:21 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.800↓ 受平手/半球 1.040↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.920 受平手/半球 0.880"
+            },
+            {
+              "data_time": null,
+              "text": "12 M****on88 (明*) M****on88 (明*) 0.800↓ 受平手/半球 1.040↑ 06-07 17:49 0.920 受平手/半球 0.880 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.850↓ 受平手/半球 0.910↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.890 受平手/半球 0.870"
+            },
+            {
+              "data_time": null,
+              "text": "13 香**会 香**会 0.850↓ 受平手/半球 0.910↑ 06-07 13:46 0.890 受平手/半球 0.870 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "14 12**t (壹*博) 12**t (壹*博) 0.800↓ 受平手/半球 1.040↑ 06-07 17:50 0.920 受平手/半球 0.880 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.780↑ 受平手/半球 0.990 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.750 受平手/半球 0.990"
+            },
+            {
+              "data_time": null,
+              "text": "15 18**t 18**t 0.780↑ 受平手/半球 0.990 2 06-07 18:06 0.750 受平手/半球 0.990 05-30 01:58 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.060 平手 0.760 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.060 平手 0.760"
+            },
+            {
+              "data_time": null,
+              "text": "16 W****t (盈*) W****t (盈*) 1.060 平手 0.760 1 06-07 18:07 1.060 平手 0.760 06-02 00:16 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=293&cp=受半球&id=1406336&s1=0.570&s2=1.250",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=5&cp=受平手/半球&id=1406336&s1=0.890&s2=0.890",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=2&cp=受半球&id=1406336&s1=0.650&s2=1.100",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=3&cp=平手&id=1406336&s1=1.050&s2=0.750",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=4&cp=平手&id=1406336&s1=1.200&s2=0.600",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=280&cp=受平手/半球&id=1406336&s1=0.880&s2=0.880",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=9&cp=受平手/半球&id=1406336&s1=0.920&s2=0.930",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1484&cp=平手&id=1406336&s1=1.100&s2=0.620",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=6&cp=受平手/半球&id=1406336&s1=0.760&s2=0.970",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1055&cp=受平手/半球&id=1406336&s1=0.880&s2=0.890",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=651&cp=受平手/半球&id=1406336&s1=0.800&s2=1.020",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=140&cp=受平手/半球&id=1406336&s1=0.920&s2=0.880"
+          ]
+        },
+        "handicap_1x2": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/rangqiu-1406336.shtml?lot=jczq",
+          "bytes": 109526,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "摩洛哥VS挪威(2026友谊赛)-让球指数-500彩票网",
+          "row_count": 114,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "1.60 3.55 4.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.51 3.87 4.78"
+            },
+            {
+              "data_time": null,
+              "text": "55.36% 24.95% 19.68%"
+            },
+            {
+              "data_time": null,
+              "text": "58.61% 22.87% 18.52%"
+            },
+            {
+              "data_time": null,
+              "text": "88.58%"
+            },
+            {
+              "data_time": null,
+              "text": "88.51%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.81 0.92"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.88 0.97"
+            },
+            {
+              "data_time": "2026-06-07 18:11:31",
+              "text": "1 竞*官* 竞*官* (中国) 1 1.60 3.55 4.50 1.51 3.87 4.78 55.36% 24.95% 19.68% 58.61% 22.87% 18.52% 88.58% 88.51% 0.91 0.81 0.92 0.86 0.88 0.97 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.60 3.80 4.33"
+            },
+            {
+              "data_time": null,
+              "text": "1.60 3.90 4.20"
+            },
+            {
+              "data_time": null,
+              "text": "55.85% 23.52% 20.64%"
+            },
+            {
+              "data_time": null,
+              "text": "55.83% 22.90% 21.27%"
+            },
+            {
+              "data_time": null,
+              "text": "89.36%"
+            },
+            {
+              "data_time": null,
+              "text": "89.33%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.86 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 0.86"
+            },
+            {
+              "data_time": "2026-06-07 15:38:44",
+              "text": "2 立* 立* (英国) 1 1.60 3.80 4.33 1.60 3.90 4.20 55.85% 23.52% 20.64% 55.83% 22.90% 21.27% 89.36% 89.33% 0.91 0.86 0.88 0.91 0.89 0.86 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.53 3.80 4.60"
+            },
+            {
+              "data_time": null,
+              "text": "1.55 3.90 4.40"
+            },
+            {
+              "data_time": null,
+              "text": "57.63% 23.20% 19.17%"
+            },
+            {
+              "data_time": null,
+              "text": "57.15% 22.71% 20.13%"
+            },
+            {
+              "data_time": null,
+              "text": "88.17%"
+            },
+            {
+              "data_time": null,
+              "text": "88.59%"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.86 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.89 0.90"
+            },
+            {
+              "data_time": "2026-06-07 16:33:24",
+              "text": "3 伟* 伟* (直布罗陀) 1 1.53 3.80 4.60 1.55 3.90 4.40 57.63% 23.20% 19.17% 57.15% 22.71% 20.13% 88.17% 88.59% 0.87 0.86 0.94 0.88 0.89 0.90 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.58 3.80 4.40"
+            },
+            {
+              "data_time": null,
+              "text": "56.34% 23.43% 20.23%"
+            },
+            {
+              "data_time": null,
+              "text": "89.02%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.86 0.90"
+            },
+            {
+              "data_time": "2026-06-07 15:38:57",
+              "text": "4 B**n B**n (奥地利) 1 1.58 3.80 4.40 1.60 3.90 4.20 56.34% 23.43% 20.23% 55.83% 22.90% 21.27% 89.02% 89.33% 0.90 0.86 0.90 0.91 0.89 0.86 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.63 4.14 4.34"
+            },
+            {
+              "data_time": null,
+              "text": "1.60 4.31 4.73"
+            },
+            {
+              "data_time": null,
+              "text": "56.52% 22.25% 21.23%"
+            },
+            {
+              "data_time": null,
+              "text": "58.50% 21.72% 19.79%"
+            },
+            {
+              "data_time": null,
+              "text": "92.13%"
+            },
+            {
+              "data_time": null,
+              "text": "93.59%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.94 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.98 0.96"
+            },
+            {
+              "data_time": "2026-06-07 17:49:55",
+              "text": "5 Pi****le平* Pi****le平* (荷兰) 1 1.63 4.14 4.34 1.60 4.31 4.73 56.52% 22.25% 21.23% 58.50% 21.72% 19.79% 92.13% 93.59% 0.93 0.94 0.88 0.91 0.98 0.96 同"
+            },
+            {
+              "data_time": "2026-06-07 15:39:13",
+              "text": "6 C***l C***l (英国) 1 1.60 3.90 4.20 1.60 3.90 4.20 55.83% 22.90% 21.27% 55.83% 22.90% 21.27% 89.33% 89.33% 0.91 0.89 0.86 0.91 0.89 0.86 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.58 3.75 4.60"
+            },
+            {
+              "data_time": null,
+              "text": "1.58 3.90 4.75"
+            },
+            {
+              "data_time": null,
+              "text": "56.66% 23.87% 19.46%"
+            },
+            {
+              "data_time": null,
+              "text": "57.55% 23.31% 19.14%"
+            },
+            {
+              "data_time": null,
+              "text": "89.53%"
+            },
+            {
+              "data_time": null,
+              "text": "90.92%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.85 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.89 0.97"
+            },
+            {
+              "data_time": "2026-06-07 15:41:38",
+              "text": "7 U****t (优*客) U****t (优*客) (马耳他) 1 1.58 3.75 4.60 1.58 3.90 4.75 56.66% 23.87% 19.46% 57.55% 23.31% 19.14% 89.53% 90.92% 0.90 0.85 0.94 0.90 0.89 0.97 同"
+            },
+            {
+              "data_time": "2026-06-07 15:39:41",
+              "text": "8 S***t**g**t (博*堂) S***t**g**t (博*堂) (英国) 1 1.58 3.80 4.40 1.60 3.90 4.20 56.34% 23.43% 20.23% 55.83% 22.90% 21.27% 89.02% 89.33% 0.90 0.86 0.90 0.91 0.89 0.86 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.57 3.75 4.80"
+            },
+            {
+              "data_time": null,
+              "text": "1.60 3.90 4.40"
+            },
+            {
+              "data_time": null,
+              "text": "57.28% 23.98% 18.74%"
+            },
+            {
+              "data_time": null,
+              "text": "56.37% 23.13% 20.50%"
+            },
+            {
+              "data_time": null,
+              "text": "89.93%"
+            },
+            {
+              "data_time": null,
+              "text": "90.20%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.85 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 0.90"
+            },
+            {
+              "data_time": "2026-06-07 15:39:26",
+              "text": "9 88****** 88****** (塞浦路斯) 1 1.57 3.75 4.80 1.60 3.90 4.40 57.28% 23.98% 18.74% 56.37% 23.13% 20.50% 89.93% 90.20% 0.89 0.85 0.98 0.91 0.89 0.90 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.61 4.20 4.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.60 4.40 4.60"
+            },
+            {
+              "data_time": null,
+              "text": "57.43% 22.02% 20.55%"
+            },
+            {
+              "data_time": null,
+              "text": "58.43% 21.25% 20.32%"
+            },
+            {
+              "data_time": null,
+              "text": "92.47%"
+            },
+            {
+              "data_time": null,
+              "text": "93.49%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.95 0.92"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 1.00 0.94"
+            },
+            {
+              "data_time": "2026-06-07 15:41:34",
+              "text": "10 大巨* 大巨* (柬埔寨) 1 1.61 4.20 4.50 1.60 4.40 4.60 57.43% 22.02% 20.55% 58.43% 21.25% 20.32% 92.47% 93.49% 0.92 0.95 0.92 0.91 1.00 0.94 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.62 4.50 3.80"
+            },
+            {
+              "data_time": null,
+              "text": "1.62 3.80 5.00"
+            },
+            {
+              "data_time": null,
+              "text": "55.98% 20.15% 23.87%"
+            },
+            {
+              "data_time": null,
+              "text": "57.13% 24.36% 18.51%"
+            },
+            {
+              "data_time": null,
+              "text": "90.69%"
+            },
+            {
+              "data_time": null,
+              "text": "92.55%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 1.02 0.77"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.86 1.02"
+            },
+            {
+              "data_time": "2026-06-07 15:52:15",
+              "text": "11 必* 必* (英国) 1 1.62 4.50 3.80 1.62 3.80 5.00 55.98% 20.15% 23.87% 57.13% 24.36% 18.51% 90.69% 92.55% 0.92 1.02 0.77 0.92 0.86 1.02 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.65 3.30 4.55"
+            },
+            {
+              "data_time": null,
+              "text": "1.65 3.84 4.35"
+            },
+            {
+              "data_time": null,
+              "text": "53.69% 26.84% 19.47%"
+            },
+            {
+              "data_time": null,
+              "text": "55.28% 23.75% 20.97%"
+            },
+            {
+              "data_time": null,
+              "text": "91.21%"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.75 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.87 0.89"
+            },
+            {
+              "data_time": "2026-06-07 18:04:50",
+              "text": "12 1x**t 1x**t 1 1.65 3.30 4.55 1.65 3.84 4.35 53.69% 26.84% 19.47% 55.28% 23.75% 20.97% 88.58% 91.21% 0.94 0.75 0.93 0.94 0.87 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.57 4.00 4.75"
+            },
+            {
+              "data_time": null,
+              "text": "1.60 4.00 4.50"
+            },
+            {
+              "data_time": null,
+              "text": "58.04% 22.78% 19.18%"
+            },
+            {
+              "data_time": null,
+              "text": "56.96% 22.78% 20.25%"
+            },
+            {
+              "data_time": null,
+              "text": "91.12%"
+            },
+            {
+              "data_time": null,
+              "text": "91.14%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.91 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.91 0.92"
+            },
+            {
+              "data_time": "2026-06-07 17:59:51",
+              "text": "13 **ts**n **ts**n (瑞典) 1 1.57 4.00 4.75 1.60 4.00 4.50 58.04% 22.78% 19.18% 56.96% 22.78% 20.25% 91.12% 91.14% 0.89 0.91 0.97 0.91 0.91 0.92 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.56 4.25 4.25"
+            },
+            {
+              "data_time": null,
+              "text": "1.61 4.25 4.50"
+            },
+            {
+              "data_time": null,
+              "text": "57.67% 21.17% 21.17%"
+            },
+            {
+              "data_time": null,
+              "text": "57.58% 21.81% 20.60%"
+            },
+            {
+              "data_time": null,
+              "text": "89.96%"
+            },
+            {
+              "data_time": null,
+              "text": "92.71%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.97 0.87"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.97 0.92"
+            },
+            {
+              "data_time": "2026-06-07 15:42:14",
+              "text": "14 D***k T**********e D***k T**********e (丹麦) 1 1.56 4.25 4.25 1.61 4.25 4.50 57.67% 21.17% 21.17% 57.58% 21.81% 20.60% 89.96% 92.71% 0.89 0.97 0.87 0.92 0.97 0.92 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.55 3.75 4.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.57 3.90 4.40"
+            },
+            {
+              "data_time": null,
+              "text": "56.89% 23.51% 19.60%"
+            },
+            {
+              "data_time": null,
+              "text": "56.84% 22.88% 20.28%"
+            },
+            {
+              "data_time": null,
+              "text": "88.18%"
+            },
+            {
+              "data_time": null,
+              "text": "89.24%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.85 0.92"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.89 0.90"
+            },
+            {
+              "data_time": "2026-06-07 17:39:41",
+              "text": "15 Sv****a Spel Sv****a Spel (瑞典) 1 1.55 3.75 4.50 1.57 3.90 4.40 56.89% 23.51% 19.60% 56.84% 22.88% 20.28% 88.18% 89.24% 0.88 0.85 0.92 0.89 0.89 0.90 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1&handicapline=1&win=1.60&draw=3.55&lost=4.50&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=2&handicapline=1&win=1.60&draw=3.80&lost=4.33&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=6&handicapline=1&win=1.53&draw=3.80&lost=4.60&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=11&handicapline=1&win=1.58&draw=3.80&lost=4.40&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1055&handicapline=1&win=1.63&draw=4.14&lost=4.34&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=14&handicapline=1&win=1.60&draw=3.90&lost=4.20&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=291&handicapline=1&win=1.58&draw=3.75&lost=4.60&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=275&handicapline=1&win=1.58&draw=3.80&lost=4.40&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1487&handicapline=1&win=1.57&draw=3.75&lost=4.80&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1488&handicapline=1&win=1.61&draw=4.20&lost=4.50&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=18&handicapline=1&win=1.62&draw=4.50&lost=3.80&id=1406336",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1259&handicapline=1&win=1.65&draw=3.30&lost=4.55&id=1406336"
+          ]
+        },
+        "over_under": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/daxiao-1406336.shtml",
+          "bytes": 98572,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "摩洛哥VS挪威(2026友谊赛)-大小对比-500彩票网",
+          "row_count": 48,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.75↓ 2.5 0.95↑"
+            },
+            {
+              "data_time": null,
+              "text": "1.05 2.5 0.70"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.75↓ 2.5 0.95↑ 06-07 15:06 1.05 2.5 0.70 06-01 19:43 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.94↑ 2.5/3↑ 0.78↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 2.5 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.94↑ 2.5/3↑ 0.78↓ 1 06-07 15:57 0.86 2.5 0.86 06-06 18:03 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.80↓ 2.5 0.91↑"
+            },
+            {
+              "data_time": null,
+              "text": "1.00 2.5 0.73"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 0.80↓ 2.5 0.91↑ 06-07 15:38 1.00 2.5 0.73 05-31 10:02 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.00↑ 2.5/3↑ 0.80↓ 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 2/2.5 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 1.00↑ 2.5/3↑ 0.80↓ 2 06-07 18:00 0.85 2/2.5 0.95 06-01 19:45 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.80↓ 2.5 0.90↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 2.5 0.80"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 0.80↓ 2.5 0.90↑ 06-07 15:12 0.90 2.5 0.80 06-02 15:44 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.98↑ 2.5/3↑ 0.82↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 2.5 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.98↑ 2.5/3↑ 0.82↓ 1 06-07 17:56 0.88 2.5 0.88 06-03 23:07 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.04↑ 2.5/3↑ 0.84↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 2.5 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 1.04↑ 2.5/3↑ 0.84↓ 1 06-07 18:00 0.89 2.5 0.95 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.82↑ 2.5↑ 0.96↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.80 2/2.5 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "8 伟* 伟* 0.82↑ 2.5↑ 0.96↓ 1 06-07 18:00 0.80 2/2.5 0.98 05-30 16:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.88↓ 2.5 1.04↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.05 2.5 0.66"
+            },
+            {
+              "data_time": null,
+              "text": "9 on** on** 0.88↓ 2.5 1.04↑ 1 06-07 17:22 1.05 2.5 0.66 05-11 18:13 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.83↓ 2.5 1.01↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 2.5 0.85"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.83↓ 2.5 1.01↑ 06-07 17:48 0.90 2.5 0.85 06-03 01:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.92↑ 2.5/3↑ 0.79 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 2.5 0.79"
+            },
+            {
+              "data_time": null,
+              "text": "11 10**t 10**t 0.92↑ 2.5/3↑ 0.79 1 06-07 17:53 0.88 2.5 0.79 06-02 15:41 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.83↓ 2.5 0.99↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 2.5 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "12 利* 利* 0.83↓ 2.5 0.99↑ 06-07 17:35 0.85 2.5 0.95 06-07 08:59 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.01↑ 2.5/3↑ 0.81↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 2.5 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "13 M****on88 (明*) M****on88 (明*) 1.01↑ 2.5/3↑ 0.81↓ 1 06-07 17:39 0.86 2.5 0.94 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.85↑ 2.5↑ 0.85↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.82 2/2.5 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "14 香**会 香**会 0.85↑ 2.5↑ 0.85↓ 1 06-07 15:09 0.82 2/2.5 0.88 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "15 12**t (壹*博) 12**t (壹*博) 1.01↑ 2.5/3↑ 0.81↓ 1 06-07 17:38 0.86 2.5 0.94 06-05 07:18 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.80↓ 2.5↓ 0.94↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.26 2.5/3 0.58"
+            },
+            {
+              "data_time": null,
+              "text": "16 18**t 18**t 0.80↓ 2.5↓ 0.94↑ 1 06-07 17:57 1.26 2.5/3 0.58 05-30 01:58 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 2/2.5 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "17 W****t (盈*) W****t (盈*) 1.00↑ 2.5/3↑ 0.80↓ 2 06-07 17:56 0.84 2/2.5 0.96 06-02 00:16 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=293&bigpei=1.05&handi=2.5&smallpei=0.70&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=5&bigpei=0.86&handi=2.5&smallpei=0.86&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=2&bigpei=1.00&handi=2.5&smallpei=0.73&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=3&bigpei=0.85&handi=2/2.5&smallpei=0.95&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=4&bigpei=0.90&handi=2.5&smallpei=0.80&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=280&bigpei=0.88&handi=2.5&smallpei=0.88&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=9&bigpei=0.89&handi=2.5&smallpei=0.95&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=6&bigpei=0.80&handi=2/2.5&smallpei=0.98&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1484&bigpei=1.05&handi=2.5&smallpei=0.66&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1055&bigpei=0.90&handi=2.5&smallpei=0.85&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=16&bigpei=0.88&handi=2.5&smallpei=0.79&fixid=1406336",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=651&bigpei=0.85&handi=2.5&smallpei=0.95&fixid=1406336"
+          ]
+        },
+        "european_odds": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/ouzhi-1406336.shtml",
+          "bytes": 183431,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "摩洛哥VS挪威(2026友谊赛)-百家欧赔-500彩票网",
+          "row_count": 226,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "3.15 3.10 2.05"
+            },
+            {
+              "data_time": null,
+              "text": "3.05 2.92 2.18"
+            },
+            {
+              "data_time": null,
+              "text": "28.15% 28.60% 43.25%"
+            },
+            {
+              "data_time": null,
+              "text": "29.04% 30.33% 40.63%"
+            },
+            {
+              "data_time": null,
+              "text": "88.66%"
+            },
+            {
+              "data_time": null,
+              "text": "88.57%"
+            },
+            {
+              "data_time": null,
+              "text": "1.01 0.84 0.84"
+            },
+            {
+              "data_time": null,
+              "text": "0.98 0.80 0.89"
+            },
+            {
+              "data_time": "2026-06-07 15:51:24",
+              "text": "1 竞*官* 竞*官* (中国) 3.15 3.10 2.05 3.05 2.92 2.18 28.15% 28.60% 43.25% 29.04% 30.33% 40.63% 88.66% 88.57% 1.01 0.84 0.84 0.98 0.80 0.89 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.20 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.30 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "31.57% 28.61% 39.81%"
+            },
+            {
+              "data_time": null,
+              "text": "31.57% 27.74% 40.69%"
+            },
+            {
+              "data_time": null,
+              "text": "91.57%"
+            },
+            {
+              "data_time": null,
+              "text": "91.55%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.87 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.90 0.92"
+            },
+            {
+              "data_time": "2026-06-07 15:19:44",
+              "text": "2 威**尔 威**尔 (英国) 2.90 3.20 2.30 2.90 3.30 2.25 31.57% 28.61% 39.81% 31.57% 27.74% 40.69% 91.57% 91.55% 0.93 0.87 0.94 0.93 0.90 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.91 3.33 2.08"
+            },
+            {
+              "data_time": null,
+              "text": "2.70 3.33 2.20"
+            },
+            {
+              "data_time": null,
+              "text": "30.55% 26.70% 42.75%"
+            },
+            {
+              "data_time": null,
+              "text": "32.92% 26.69% 40.40%"
+            },
+            {
+              "data_time": null,
+              "text": "88.91%"
+            },
+            {
+              "data_time": null,
+              "text": "88.87%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.91 0.85"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.91 0.90"
+            },
+            {
+              "data_time": "2026-06-07 15:55:39",
+              "text": "3 *门 *门 (中国澳门) 2.91 3.33 2.08 2.70 3.33 2.20 30.55% 26.70% 42.75% 32.92% 26.69% 40.40% 88.91% 88.87% 0.93 0.91 0.85 0.86 0.91 0.90 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.40 2.37"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.50 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "32.50% 27.72% 39.77%"
+            },
+            {
+              "data_time": null,
+              "text": "32.37% 26.82% 40.81%"
+            },
+            {
+              "data_time": null,
+              "text": "94.26%"
+            },
+            {
+              "data_time": null,
+              "text": "93.87%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.93 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.95 0.94"
+            },
+            {
+              "data_time": "2026-06-07 15:38:56",
+              "text": "4 立* 立* (英国) 2.90 3.40 2.37 2.90 3.50 2.30 32.50% 27.72% 39.77% 32.37% 26.82% 40.81% 94.26% 93.87% 0.93 0.93 0.97 0.93 0.95 0.94 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.88 3.20 2.45"
+            },
+            {
+              "data_time": null,
+              "text": "3.00 3.40 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "32.51% 29.26% 38.22%"
+            },
+            {
+              "data_time": null,
+              "text": "31.10% 27.44% 41.46%"
+            },
+            {
+              "data_time": null,
+              "text": "93.64%"
+            },
+            {
+              "data_time": null,
+              "text": "93.29%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.87 1.00"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 0.93 0.92"
+            },
+            {
+              "data_time": "2026-06-07 17:59:35",
+              "text": "5 **t3*5 **t3*5 (英国) 2.88 3.20 2.45 3.00 3.40 2.25 32.51% 29.26% 38.22% 31.10% 27.44% 41.46% 93.64% 93.29% 0.92 0.87 1.00 0.96 0.93 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.25 2.35"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.35 2.35"
+            },
+            {
+              "data_time": null,
+              "text": "31.99% 28.54% 39.47%"
+            },
+            {
+              "data_time": null,
+              "text": "32.26% 27.93% 39.81%"
+            },
+            {
+              "data_time": null,
+              "text": "92.76%"
+            },
+            {
+              "data_time": null,
+              "text": "93.56%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.89 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.91 0.96"
+            },
+            {
+              "data_time": "2026-06-07 15:44:18",
+              "text": "6 I***rw**t*n I***rw**t*n (塞浦路斯) 2.90 3.25 2.35 2.90 3.35 2.35 31.99% 28.54% 39.47% 32.26% 27.93% 39.81% 92.76% 93.56% 0.93 0.89 0.96 0.93 0.91 0.96 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.97 3.40 2.12"
+            },
+            {
+              "data_time": null,
+              "text": "2.74 3.40 2.26"
+            },
+            {
+              "data_time": null,
+              "text": "30.54% 26.68% 42.78%"
+            },
+            {
+              "data_time": null,
+              "text": "33.13% 26.70% 40.17%"
+            },
+            {
+              "data_time": null,
+              "text": "90.70%"
+            },
+            {
+              "data_time": null,
+              "text": "90.78%"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.93 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.93 0.92"
+            },
+            {
+              "data_time": "2026-06-07 17:41:31",
+              "text": "7 *冠 *冠 (菲律宾) 2.97 3.40 2.12 2.74 3.40 2.26 30.54% 26.68% 42.78% 33.13% 26.70% 40.17% 90.70% 90.78% 0.95 0.93 0.86 0.88 0.93 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "3.20 3.30 2.22"
+            },
+            {
+              "data_time": null,
+              "text": "29.32% 28.43% 42.26%"
+            },
+            {
+              "data_time": null,
+              "text": "93.81%"
+            },
+            {
+              "data_time": null,
+              "text": "1.02 0.90 0.90"
+            },
+            {
+              "data_time": "2026-06-07 17:59:21",
+              "text": "8 易*博 易*博 (英国) 3.20 3.30 2.22 2.90 3.40 2.37 29.32% 28.43% 42.26% 32.50% 27.72% 39.77% 93.81% 94.26% 1.02 0.90 0.90 0.93 0.93 0.97 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.88 3.30 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "31.72% 27.68% 40.60%"
+            },
+            {
+              "data_time": null,
+              "text": "91.35%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.90 0.92"
+            },
+            {
+              "data_time": "2026-06-07 15:44:14",
+              "text": "9 伟* 伟* (直布罗陀) 2.90 3.20 2.30 2.88 3.30 2.25 31.57% 28.61% 39.81% 31.72% 27.68% 40.60% 91.57% 91.35% 0.93 0.87 0.94 0.92 0.90 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.25 2.37"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.40 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "32.09% 28.64% 39.27%"
+            },
+            {
+              "data_time": null,
+              "text": "31.83% 27.15% 41.02%"
+            },
+            {
+              "data_time": null,
+              "text": "93.07%"
+            },
+            {
+              "data_time": null,
+              "text": "92.30%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.89 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.93 0.92"
+            },
+            {
+              "data_time": "2026-06-07 15:37:22",
+              "text": "10 B**n B**n (奥地利) 2.90 3.25 2.37 2.90 3.40 2.25 32.09% 28.64% 39.27% 31.83% 27.15% 41.02% 93.07% 92.30% 0.93 0.89 0.97 0.93 0.93 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "3.15 3.32 2.18"
+            },
+            {
+              "data_time": null,
+              "text": "2.92 3.54 2.35"
+            },
+            {
+              "data_time": null,
+              "text": "29.47% 27.96% 42.58%"
+            },
+            {
+              "data_time": null,
+              "text": "32.60% 26.89% 40.51%"
+            },
+            {
+              "data_time": null,
+              "text": "92.82%"
+            },
+            {
+              "data_time": null,
+              "text": "95.19%"
+            },
+            {
+              "data_time": null,
+              "text": "1.01 0.90 0.89"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.96 0.96"
+            },
+            {
+              "data_time": "2026-06-07 17:48:17",
+              "text": "11 Pi****le平* Pi****le平* (荷兰) 3.15 3.32 2.18 2.92 3.54 2.35 29.47% 27.96% 42.58% 32.60% 26.89% 40.51% 92.82% 95.19% 1.01 0.90 0.89 0.94 0.96 0.96 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.90 3.35 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "2.95 3.40 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "31.70% 27.44% 40.86%"
+            },
+            {
+              "data_time": null,
+              "text": "31.74% 27.54% 40.71%"
+            },
+            {
+              "data_time": null,
+              "text": "91.93%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.91 0.92"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.93 0.94"
+            },
+            {
+              "data_time": "2026-06-07 17:52:26",
+              "text": "12 10**t 10**t (英国) 2.90 3.35 2.25 2.95 3.40 2.30 31.70% 27.44% 40.86% 31.74% 27.54% 40.71% 91.93% 93.64% 0.93 0.91 0.92 0.94 0.93 0.94 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "3.00 3.40 2.37"
+            },
+            {
+              "data_time": null,
+              "text": "3.00 3.50 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "31.76% 28.03% 40.21%"
+            },
+            {
+              "data_time": null,
+              "text": "31.34% 26.87% 41.79%"
+            },
+            {
+              "data_time": null,
+              "text": "95.29%"
+            },
+            {
+              "data_time": null,
+              "text": "94.03%"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 0.93 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 0.95 0.92"
+            },
+            {
+              "data_time": "2026-06-07 13:02:18",
+              "text": "13 C***l C***l (英国) 3.00 3.40 2.37 3.00 3.50 2.25 31.76% 28.03% 40.21% 31.34% 26.87% 41.79% 95.29% 94.03% 0.96 0.93 0.97 0.96 0.95 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.80 3.12 2.16"
+            },
+            {
+              "data_time": null,
+              "text": "2.69 3.12 2.33"
+            },
+            {
+              "data_time": null,
+              "text": "31.31% 28.10% 40.59%"
+            },
+            {
+              "data_time": null,
+              "text": "33.15% 28.58% 38.27%"
+            },
+            {
+              "data_time": null,
+              "text": "87.67%"
+            },
+            {
+              "data_time": null,
+              "text": "89.17%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.85 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.85 0.95"
+            },
+            {
+              "data_time": "2026-06-07 17:57:53",
+              "text": "14 利* 利* (英国) 2.80 3.12 2.16 2.69 3.12 2.33 31.31% 28.10% 40.59% 33.15% 28.58% 38.27% 87.67% 89.17% 0.90 0.85 0.88 0.86 0.85 0.95 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.85 3.35 2.35"
+            },
+            {
+              "data_time": null,
+              "text": "2.95 3.45 2.35"
+            },
+            {
+              "data_time": null,
+              "text": "32.64% 27.77% 39.59%"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1&win=3.15&draw=3.10&lost=2.05&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=293&win=2.90&draw=3.20&lost=2.30&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=5&win=2.91&draw=3.33&lost=2.08&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=2&win=2.90&draw=3.40&lost=2.37&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=3&win=2.88&draw=3.20&lost=2.45&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=4&win=2.90&draw=3.25&lost=2.35&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=280&win=2.97&draw=3.40&lost=2.12&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=9&win=3.20&draw=3.30&lost=2.22&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=6&win=2.90&draw=3.20&lost=2.30&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=11&win=2.90&draw=3.25&lost=2.37&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1055&win=3.15&draw=3.32&lost=2.18&fixtureid=1406336",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=16&win=2.90&draw=3.35&lost=2.25&fixtureid=1406336"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": "1411011",
+      "kickoff": "2026-06-08 03:00:00",
+      "row_text": "周日203 友谊赛 六月 06-08 03:00 希腊 VS 意大利 0.880 0.870 0.840 1.000 0.920 析 亚 欧",
+      "links": [
+        "//liansai.500.com/zuqiu-19472/",
+        "//liansai.500.com/team/49/",
+        "//liansai.500.com/team/19/",
+        "//odds.500.com/fenxi/shuju-1411011.shtml",
+        "//odds.500.com/fenxi/yazhi-1411011.shtml",
+        "//odds.500.com/fenxi/ouzhi-1411011.shtml"
+      ],
+      "details": {
+        "asian_handicap": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/yazhi-1411011.shtml",
+          "bytes": 97020,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "希腊VS意大利(2026友谊赛)-亚盘对比-500彩票网",
+          "row_count": 48,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.790↓ 平手/半球 降 0.860↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.200 半球 0.600"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.790↓ 平手/半球 降 0.860↑ 1 06-07 16:03 1.200 半球 0.600 06-01 20:07 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.840↓ 平手/半球 降 0.940↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.000 半球 0.780"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.840↓ 平手/半球 降 0.940↑ 1 06-07 16:02 1.000 半球 0.780 06-06 18:02 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.000↑ 半球 升 0.730↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.570 受半球 1.250"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 1.000↑ 半球 升 0.730↓ 1 06-07 03:10 0.570 受半球 1.250 05-30 00:05 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.870↑ 平手/半球 0.920↓ 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.800 平手/半球 1.000"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.870↑ 平手/半球 0.920↓ 2 06-07 18:03 0.800 平手/半球 1.000 06-01 19:54 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.100 半球 0.650 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.100 半球 0.650"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 1.100 半球 0.650 1 06-06 23:33 1.100 半球 0.650 06-01 20:12 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.920↓ 平手/半球 降 0.900↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.990 半球 0.770"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.920↓ 平手/半球 降 0.900↑ 1 06-07 18:03 0.990 半球 0.770 06-05 20:05 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.900↓ 平手/半球 降 0.960↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.040 半球 0.800"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 0.900↓ 平手/半球 降 0.960↑ 1 06-07 17:55 1.040 半球 0.800 06-03 16:23 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.920↑ 平手/半球 升 0.990↓ 3"
+            },
+            {
+              "data_time": null,
+              "text": "0.390 受一球 1.680"
+            },
+            {
+              "data_time": null,
+              "text": "8 on** on** 0.920↑ 平手/半球 升 0.990↓ 3 06-07 17:52 0.390 受一球 1.680 05-11 18:30 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.830↓ 平手/半球 0.890↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.000 平手/半球 0.740"
+            },
+            {
+              "data_time": null,
+              "text": "9 伟* 伟* 0.830↓ 平手/半球 0.890↑ 1 06-07 17:55 1.000 平手/半球 0.740 05-30 16:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.880 平手/半球 0.970↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.880 平手/半球 0.890"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.880 平手/半球 0.970↑ 1 06-07 17:48 0.880 平手/半球 0.890 06-05 01:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.910↑ 平手/半球 0.930↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.860 平手/半球 0.960"
+            },
+            {
+              "data_time": null,
+              "text": "11 利* 利* 0.910↑ 平手/半球 0.930↓ 06-07 18:05 0.860 平手/半球 0.960 06-07 08:58 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.900↑ 平手/半球 0.940↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.760 平手/半球 1.040"
+            },
+            {
+              "data_time": null,
+              "text": "12 M****on88 (明*) M****on88 (明*) 0.900↑ 平手/半球 0.940↓ 1 06-07 18:05 0.760 平手/半球 1.040 06-06 18:43 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.840↑ 平手/半球 0.920↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.690 平手/半球 1.110"
+            },
+            {
+              "data_time": null,
+              "text": "13 香**会 香**会 0.840↑ 平手/半球 0.920↓ 06-07 17:46 0.690 平手/半球 1.110 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.900↓ 平手/半球 0.940↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.940 平手/半球 0.860"
+            },
+            {
+              "data_time": null,
+              "text": "14 12**t (壹*博) 12**t (壹*博) 0.900↓ 平手/半球 0.940↑ 06-07 18:07 0.940 平手/半球 0.860 06-07 10:22 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.870↑ 平手/半球 0.890↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.790 平手/半球 0.940"
+            },
+            {
+              "data_time": null,
+              "text": "15 18**t 18**t 0.870↑ 平手/半球 0.890↓ 1 06-07 17:51 0.790 平手/半球 0.940 06-02 08:55 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.940↑ 平手/半球 0.880↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.810 平手/半球 1.010"
+            },
+            {
+              "data_time": null,
+              "text": "16 W****t (盈*) W****t (盈*) 0.940↑ 平手/半球 0.880↓ 1 06-07 18:05 0.810 平手/半球 1.010 06-01 20:40 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=293&cp=半球&id=1411011&s1=1.200&s2=0.600",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=5&cp=半球&id=1411011&s1=1.000&s2=0.780",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=2&cp=受半球&id=1411011&s1=0.570&s2=1.250",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=3&cp=平手/半球&id=1411011&s1=0.800&s2=1.000",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=4&cp=半球&id=1411011&s1=1.100&s2=0.650",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=280&cp=半球&id=1411011&s1=0.990&s2=0.770",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=9&cp=半球&id=1411011&s1=1.040&s2=0.800",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1484&cp=受一球&id=1411011&s1=0.390&s2=1.680",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=6&cp=平手/半球&id=1411011&s1=1.000&s2=0.740",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1055&cp=平手/半球&id=1411011&s1=0.880&s2=0.890",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=651&cp=平手/半球&id=1411011&s1=0.860&s2=0.960",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=140&cp=平手/半球&id=1411011&s1=0.760&s2=1.040"
+          ]
+        },
+        "handicap_1x2": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/rangqiu-1411011.shtml?lot=jczq",
+          "bytes": 109642,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "希腊VS意大利(2026友谊赛)-让球指数-500彩票网",
+          "row_count": 118,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "3.90 3.45 1.72"
+            },
+            {
+              "data_time": null,
+              "text": "4.86 3.70 1.53"
+            },
+            {
+              "data_time": null,
+              "text": "22.74% 25.70% 51.56%"
+            },
+            {
+              "data_time": null,
+              "text": "18.21% 23.93% 57.86%"
+            },
+            {
+              "data_time": null,
+              "text": "88.68%"
+            },
+            {
+              "data_time": null,
+              "text": "88.52%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.81 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "1.07 0.87 0.83"
+            },
+            {
+              "data_time": "2026-06-07 17:51:35",
+              "text": "1 竞*官* 竞*官* (中国) -1 3.90 3.45 1.72 4.86 3.70 1.53 22.74% 25.70% 51.56% 18.21% 23.93% 57.86% 88.68% 88.52% 0.86 0.81 0.94 1.07 0.87 0.83 同"
+            },
+            {
+              "data_time": null,
+              "text": "6.00 4.40 1.36"
+            },
+            {
+              "data_time": null,
+              "text": "3.90 3.80 1.67"
+            },
+            {
+              "data_time": null,
+              "text": "14.76% 20.13% 65.11%"
+            },
+            {
+              "data_time": null,
+              "text": "22.93% 23.53% 53.54%"
+            },
+            {
+              "data_time": null,
+              "text": "88.56%"
+            },
+            {
+              "data_time": null,
+              "text": "89.42%"
+            },
+            {
+              "data_time": null,
+              "text": "1.32 1.04 0.74"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.90 0.91"
+            },
+            {
+              "data_time": "2026-06-07 09:45:55",
+              "text": "2 立* 立* (英国) -1 6.00 4.40 1.36 3.90 3.80 1.67 14.76% 20.13% 65.11% 22.93% 23.53% 53.54% 88.56% 89.42% 1.32 1.04 0.74 0.86 0.90 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.60 3.80 1.53"
+            },
+            {
+              "data_time": null,
+              "text": "4.10 3.75 1.62"
+            },
+            {
+              "data_time": null,
+              "text": "19.17% 23.20% 57.63%"
+            },
+            {
+              "data_time": null,
+              "text": "21.63% 23.64% 54.73%"
+            },
+            {
+              "data_time": null,
+              "text": "88.17%"
+            },
+            {
+              "data_time": null,
+              "text": "88.66%"
+            },
+            {
+              "data_time": null,
+              "text": "1.01 0.90 0.83"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.88 0.88"
+            },
+            {
+              "data_time": "2026-06-07 17:49:33",
+              "text": "3 伟* 伟* (直布罗陀) -1 4.60 3.80 1.53 4.10 3.75 1.62 19.17% 23.20% 57.63% 21.63% 23.64% 54.73% 88.17% 88.66% 1.01 0.90 0.83 0.90 0.88 0.88 同"
+            },
+            {
+              "data_time": null,
+              "text": "6.25 4.50 1.37"
+            },
+            {
+              "data_time": null,
+              "text": "3.90 3.80 1.66"
+            },
+            {
+              "data_time": null,
+              "text": "14.39% 19.98% 65.63%"
+            },
+            {
+              "data_time": null,
+              "text": "22.85% 23.45% 53.69%"
+            },
+            {
+              "data_time": null,
+              "text": "89.92%"
+            },
+            {
+              "data_time": null,
+              "text": "89.13%"
+            },
+            {
+              "data_time": null,
+              "text": "1.37 1.06 0.75"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.90 0.90"
+            },
+            {
+              "data_time": "2026-06-07 09:45:33",
+              "text": "4 B**n B**n (奥地利) -1 6.25 4.50 1.37 3.90 3.80 1.66 14.39% 19.98% 65.63% 22.85% 23.45% 53.69% 89.92% 89.13% 1.37 1.06 0.75 0.86 0.90 0.90 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.05 4.13 1.65"
+            },
+            {
+              "data_time": null,
+              "text": "4.18 4.18 1.70"
+            },
+            {
+              "data_time": null,
+              "text": "22.55% 22.11% 55.34%"
+            },
+            {
+              "data_time": null,
+              "text": "22.43% 22.43% 55.15%"
+            },
+            {
+              "data_time": null,
+              "text": "91.32%"
+            },
+            {
+              "data_time": null,
+              "text": "93.75%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.97 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.98 0.93"
+            },
+            {
+              "data_time": "2026-06-07 17:33:38",
+              "text": "5 Pi****le平* Pi****le平* (荷兰) -1 4.05 4.13 1.65 4.18 4.18 1.70 22.55% 22.11% 55.34% 22.43% 22.43% 55.15% 91.32% 93.75% 0.89 0.97 0.90 0.92 0.98 0.93 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.20 3.90 1.61"
+            },
+            {
+              "data_time": null,
+              "text": "21.34% 22.98% 55.67%"
+            },
+            {
+              "data_time": null,
+              "text": "89.64%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.92 0.88"
+            },
+            {
+              "data_time": "2026-06-07 09:45:02",
+              "text": "6 C***l C***l (英国) -1 4.20 3.90 1.61 3.90 3.80 1.67 21.34% 22.98% 55.67% 22.93% 23.53% 53.54% 89.64% 89.42% 0.92 0.92 0.88 0.86 0.90 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.00 3.75 1.67"
+            },
+            {
+              "data_time": null,
+              "text": "4.35 3.80 1.65"
+            },
+            {
+              "data_time": null,
+              "text": "22.41% 23.91% 53.68%"
+            },
+            {
+              "data_time": null,
+              "text": "20.92% 23.94% 55.14%"
+            },
+            {
+              "data_time": null,
+              "text": "89.65%"
+            },
+            {
+              "data_time": null,
+              "text": "90.98%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.88 0.91"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 0.90 0.90"
+            },
+            {
+              "data_time": "2026-06-07 12:01:06",
+              "text": "7 U****t (优*客) U****t (优*客) (马耳他) -1 4.00 3.75 1.67 4.35 3.80 1.65 22.41% 23.91% 53.68% 20.92% 23.94% 55.14% 89.65% 90.98% 0.88 0.88 0.91 0.96 0.90 0.90 同"
+            },
+            {
+              "data_time": "2026-06-07 09:44:55",
+              "text": "8 S***t**g**t (博*堂) S***t**g**t (博*堂) (英国) -1 6.25 4.50 1.37 3.90 3.80 1.66 14.39% 19.98% 65.63% 22.85% 23.45% 53.69% 89.92% 89.13% 1.37 1.06 0.75 0.86 0.90 0.90 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.20 4.00 1.60"
+            },
+            {
+              "data_time": null,
+              "text": "21.39% 22.46% 56.15%"
+            },
+            {
+              "data_time": null,
+              "text": "89.84%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.94 0.87"
+            },
+            {
+              "data_time": "2026-06-07 17:40:09",
+              "text": "9 88****** 88****** (塞浦路斯) -1 4.20 4.00 1.60 4.00 3.75 1.67 21.39% 22.46% 56.15% 22.41% 23.91% 53.68% 89.84% 89.65% 0.92 0.94 0.87 0.88 0.88 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.00 4.10 1.70"
+            },
+            {
+              "data_time": null,
+              "text": "4.30 4.10 1.68"
+            },
+            {
+              "data_time": null,
+              "text": "23.10% 22.54% 54.36%"
+            },
+            {
+              "data_time": null,
+              "text": "21.70% 22.76% 55.54%"
+            },
+            {
+              "data_time": null,
+              "text": "92.41%"
+            },
+            {
+              "data_time": null,
+              "text": "93.31%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.97 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.97 0.92"
+            },
+            {
+              "data_time": "2026-06-07 12:01:19",
+              "text": "10 大巨* 大巨* (柬埔寨) -1 4.00 4.10 1.70 4.30 4.10 1.68 23.10% 22.54% 54.36% 21.70% 22.76% 55.54% 92.41% 93.31% 0.88 0.97 0.93 0.94 0.97 0.92 同"
+            },
+            {
+              "data_time": null,
+              "text": "3.50 4.00 1.77"
+            },
+            {
+              "data_time": null,
+              "text": "4.50 3.75 1.67"
+            },
+            {
+              "data_time": null,
+              "text": "25.96% 22.71% 51.33%"
+            },
+            {
+              "data_time": null,
+              "text": "20.43% 24.52% 55.05%"
+            },
+            {
+              "data_time": null,
+              "text": "90.85%"
+            },
+            {
+              "data_time": null,
+              "text": "91.94%"
+            },
+            {
+              "data_time": null,
+              "text": "0.77 0.94 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "0.99 0.88 0.91"
+            },
+            {
+              "data_time": "2026-06-07 15:28:57",
+              "text": "11 必* 必* (英国) -1 3.50 4.00 1.77 4.50 3.75 1.67 25.96% 22.71% 51.33% 20.43% 24.52% 55.05% 90.85% 91.94% 0.77 0.94 0.96 0.99 0.88 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.20 3.70 1.67"
+            },
+            {
+              "data_time": null,
+              "text": "3.98 3.68 1.72"
+            },
+            {
+              "data_time": null,
+              "text": "21.50% 24.41% 54.08%"
+            },
+            {
+              "data_time": null,
+              "text": "22.75% 24.61% 52.64%"
+            },
+            {
+              "data_time": null,
+              "text": "90.32%"
+            },
+            {
+              "data_time": null,
+              "text": "90.55%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.87 0.91"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.87 0.94"
+            },
+            {
+              "data_time": "2026-06-07 17:58:09",
+              "text": "12 1x**t 1x**t -1 4.20 3.70 1.67 3.98 3.68 1.72 21.50% 24.41% 54.08% 22.75% 24.61% 52.64% 90.32% 90.55% 0.92 0.87 0.91 0.87 0.87 0.94 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.00 3.75 1.72"
+            },
+            {
+              "data_time": null,
+              "text": "4.33 3.75 1.66"
+            },
+            {
+              "data_time": null,
+              "text": "22.77% 24.29% 52.95%"
+            },
+            {
+              "data_time": null,
+              "text": "20.99% 24.24% 54.76%"
+            },
+            {
+              "data_time": null,
+              "text": "91.07%"
+            },
+            {
+              "data_time": null,
+              "text": "90.91%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.88 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.88 0.90"
+            },
+            {
+              "data_time": "2026-06-07 18:06:51",
+              "text": "13 **ts**n **ts**n (瑞典) -1 4.00 3.75 1.72 4.33 3.75 1.66 22.77% 24.29% 52.95% 20.99% 24.24% 54.76% 91.07% 90.91% 0.88 0.88 0.94 0.95 0.88 0.90 同"
+            },
+            {
+              "data_time": null,
+              "text": "3.85 4.00 1.67"
+            },
+            {
+              "data_time": null,
+              "text": "4.25 4.00 1.67"
+            },
+            {
+              "data_time": null,
+              "text": "23.43% 22.55% 54.02%"
+            },
+            {
+              "data_time": null,
+              "text": "21.70% 23.06% 55.24%"
+            },
+            {
+              "data_time": null,
+              "text": "90.21%"
+            },
+            {
+              "data_time": null,
+              "text": "92.24%"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 0.94 0.91"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.94 0.91"
+            },
+            {
+              "data_time": "2026-06-07 12:01:24",
+              "text": "14 D***k T**********e D***k T**********e (丹麦) -1 3.85 4.00 1.67 4.25 4.00 1.67 23.43% 22.55% 54.02% 21.70% 23.06% 55.24% 90.21% 92.24% 0.85 0.94 0.91 0.93 0.94 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "4.10 3.75 1.64"
+            },
+            {
+              "data_time": null,
+              "text": "4.20 3.75 1.63"
+            },
+            {
+              "data_time": null,
+              "text": "21.77% 23.80% 54.43%"
+            },
+            {
+              "data_time": null,
+              "text": "21.29% 23.85% 54.86%"
+            },
+            {
+              "data_time": null,
+              "text": "89.26%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.88 0.89"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.88 0.89"
+            },
+            {
+              "data_time": "2026-06-07 18:08:12",
+              "text": "15 Sv****a Spel Sv****a Spel (瑞典) -1 4.10 3.75 1.64 4.20 3.75 1.63 21.77% 23.80% 54.43% 21.29% 23.85% 54.86% 89.26% 89.42% 0.90 0.88 0.89 0.92 0.88 0.89 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1&handicapline=-1&win=3.90&draw=3.45&lost=1.72&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=2&handicapline=-1&win=6.00&draw=4.40&lost=1.36&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=6&handicapline=-1&win=4.60&draw=3.80&lost=1.53&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=11&handicapline=-1&win=6.25&draw=4.50&lost=1.37&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1055&handicapline=-1&win=4.05&draw=4.13&lost=1.65&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=14&handicapline=-1&win=4.20&draw=3.90&lost=1.61&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=291&handicapline=-1&win=4.00&draw=3.75&lost=1.67&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=275&handicapline=-1&win=6.25&draw=4.50&lost=1.37&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1487&handicapline=-1&win=4.20&draw=4.00&lost=1.60&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1488&handicapline=-1&win=4.00&draw=4.10&lost=1.70&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=18&handicapline=-1&win=3.50&draw=4.00&lost=1.77&id=1411011",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1259&handicapline=-1&win=4.20&draw=3.70&lost=1.67&id=1411011"
+          ]
+        },
+        "over_under": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/daxiao-1411011.shtml",
+          "bytes": 98310,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "希腊VS意大利(2026友谊赛)-大小对比-500彩票网",
+          "row_count": 48,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.91↑ 2.5 0.80↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 2.5 0.85"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.91↑ 2.5 0.80↓ 06-07 11:41 0.85 2.5 0.85 06-01 19:51 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.90↑ 2.5 0.82↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 2.5 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.90↑ 2.5 0.82↓ 06-07 16:03 0.84 2.5 0.88 06-06 18:02 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.91↓ 2.5 0.80↑"
+            },
+            {
+              "data_time": null,
+              "text": "1.00 2.5 0.75"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 0.91↓ 2.5 0.80↑ 06-06 21:00 1.00 2.5 0.75 05-30 00:05 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.95↑ 2.5 0.85↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 2.5 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.95↑ 2.5 0.85↓ 06-07 18:03 0.90 2.5 0.90 06-01 19:54 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.90↑ 2.5 0.80↓"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 0.90↑ 2.5 0.80↓ 06-06 19:15 0.85 2.5 0.85 06-01 20:12 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.97↑ 2.5 0.83↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 2.5 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.97↑ 2.5 0.83↓ 06-07 15:42 0.86 2.5 0.90 06-05 20:05 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.01↑ 2.5 0.87↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 2.5 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 1.01↑ 2.5 0.87↓ 06-07 17:55 0.92 2.5 0.93 06-04 17:52 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.98↑ 2.5 0.93↑ 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 2.5 0.71"
+            },
+            {
+              "data_time": null,
+              "text": "8 on** on** 0.98↑ 2.5 0.93↑ 2 06-07 17:52 0.96 2.5 0.71 05-11 18:30 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.93↑ 2.5 0.85↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 2.5 0.87"
+            },
+            {
+              "data_time": null,
+              "text": "9 伟* 伟* 0.93↑ 2.5 0.85↓ 06-07 17:32 0.90 2.5 0.87 05-30 16:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.94↑ 2.5 0.89↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 2.5 0.87"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.94↑ 2.5 0.89↑ 06-07 17:48 0.88 2.5 0.87 06-05 01:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 2.5 0.86↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 2.5 0.83"
+            },
+            {
+              "data_time": null,
+              "text": "11 10**t 10**t 0.84 2.5 0.86↑ 06-07 17:53 0.84 2.5 0.83 06-01 20:06 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.97↑ 2.5 0.85↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 2.5 0.83"
+            },
+            {
+              "data_time": null,
+              "text": "12 利* 利* 0.97↑ 2.5 0.85↑ 06-07 14:55 0.93 2.5 0.83 06-07 10:26 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.01↑ 2.5 0.81↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 2.5 0.84"
+            },
+            {
+              "data_time": null,
+              "text": "13 M****on88 (明*) M****on88 (明*) 1.01↑ 2.5 0.81↓ 06-07 17:51 0.96 2.5 0.84 06-06 22:48 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.97↓ 2.5 0.74↑"
+            },
+            {
+              "data_time": null,
+              "text": "1.02 2.5 0.70"
+            },
+            {
+              "data_time": null,
+              "text": "14 香**会 香**会 0.97↓ 2.5 0.74↑ 06-07 16:43 1.02 2.5 0.70 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.01↓ 2.5 0.81↑"
+            },
+            {
+              "data_time": null,
+              "text": "1.02 2.5 0.78"
+            },
+            {
+              "data_time": null,
+              "text": "15 12**t (壹*博) 12**t (壹*博) 1.01↓ 2.5 0.81↑ 06-07 17:50 1.02 2.5 0.78 06-07 10:32 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.91↑ 2.5 0.84↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 2.5 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "16 18**t 18**t 0.91↑ 2.5 0.84↓ 06-07 17:44 0.87 2.5 0.86 06-02 08:55 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "17 W****t (盈*) W****t (盈*) 0.97↑ 2.5 0.83↓ 06-07 15:43 0.90 2.5 0.90 06-01 20:40 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=293&bigpei=0.85&handi=2.5&smallpei=0.85&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=5&bigpei=0.84&handi=2.5&smallpei=0.88&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=2&bigpei=1.00&handi=2.5&smallpei=0.75&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=3&bigpei=0.90&handi=2.5&smallpei=0.90&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=4&bigpei=0.85&handi=2.5&smallpei=0.85&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=280&bigpei=0.86&handi=2.5&smallpei=0.90&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=9&bigpei=0.92&handi=2.5&smallpei=0.93&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1484&bigpei=0.96&handi=2.5&smallpei=0.71&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=6&bigpei=0.90&handi=2.5&smallpei=0.87&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1055&bigpei=0.88&handi=2.5&smallpei=0.87&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=16&bigpei=0.84&handi=2.5&smallpei=0.83&fixid=1411011",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=651&bigpei=0.93&handi=2.5&smallpei=0.83&fixid=1411011"
+          ]
+        },
+        "european_odds": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/ouzhi-1411011.shtml",
+          "bytes": 183453,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "希腊VS意大利(2026友谊赛)-百家欧赔-500彩票网",
+          "row_count": 235,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "1.86 3.15 3.65"
+            },
+            {
+              "data_time": null,
+              "text": "2.13 2.96 3.10"
+            },
+            {
+              "data_time": null,
+              "text": "47.62% 28.12% 24.27%"
+            },
+            {
+              "data_time": null,
+              "text": "41.55% 29.90% 28.55%"
+            },
+            {
+              "data_time": null,
+              "text": "88.57%"
+            },
+            {
+              "data_time": null,
+              "text": "88.50%"
+            },
+            {
+              "data_time": null,
+              "text": "0.80 0.87 1.07"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.82 0.91"
+            },
+            {
+              "data_time": "2026-06-07 17:51:29",
+              "text": "1 竞*官* 竞*官* (中国) 1.86 3.15 3.65 2.13 2.96 3.10 47.62% 28.12% 24.27% 41.55% 29.90% 28.55% 88.57% 88.50% 0.80 0.87 1.07 0.92 0.82 0.91 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.25 3.25 2.90"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.20 3.20"
+            },
+            {
+              "data_time": null,
+              "text": "40.52% 28.05% 31.43%"
+            },
+            {
+              "data_time": null,
+              "text": "43.24% 28.38% 28.38%"
+            },
+            {
+              "data_time": null,
+              "text": "91.16%"
+            },
+            {
+              "data_time": null,
+              "text": "90.81%"
+            },
+            {
+              "data_time": null,
+              "text": "0.97 0.90 0.85"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.89 0.93"
+            },
+            {
+              "data_time": "2026-06-07 15:54:46",
+              "text": "2 威**尔 威**尔 (英国) 2.25 3.25 2.90 2.10 3.20 3.20 40.52% 28.05% 31.43% 43.24% 28.38% 28.38% 91.16% 90.81% 0.97 0.90 0.85 0.90 0.89 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.00 3.35 3.07"
+            },
+            {
+              "data_time": null,
+              "text": "2.06 3.10 3.15"
+            },
+            {
+              "data_time": null,
+              "text": "44.47% 26.55% 28.97%"
+            },
+            {
+              "data_time": null,
+              "text": "43.13% 28.66% 28.21%"
+            },
+            {
+              "data_time": null,
+              "text": "88.95%"
+            },
+            {
+              "data_time": null,
+              "text": "88.85%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.93 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.86 0.92"
+            },
+            {
+              "data_time": "2026-06-07 16:01:19",
+              "text": "3 *门 *门 (中国澳门) 2.00 3.35 3.07 2.06 3.10 3.15 44.47% 26.55% 28.97% 43.13% 28.66% 28.21% 88.95% 88.85% 0.86 0.93 0.90 0.89 0.86 0.92 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.25 3.40 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.40 3.25"
+            },
+            {
+              "data_time": null,
+              "text": "41.46% 27.44% 31.10%"
+            },
+            {
+              "data_time": null,
+              "text": "43.59% 27.57% 28.84%"
+            },
+            {
+              "data_time": null,
+              "text": "93.29%"
+            },
+            {
+              "data_time": null,
+              "text": "93.73%"
+            },
+            {
+              "data_time": null,
+              "text": "0.97 0.94 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.94 0.95"
+            },
+            {
+              "data_time": "2026-06-07 09:45:21",
+              "text": "4 立* 立* (英国) 2.25 3.40 3.00 2.15 3.40 3.25 41.46% 27.44% 31.10% 43.59% 27.57% 28.84% 93.29% 93.73% 0.97 0.94 0.88 0.93 0.94 0.95 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.00 3.40 3.25"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.40 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "45.38% 26.69% 27.93%"
+            },
+            {
+              "data_time": null,
+              "text": "43.15% 26.65% 30.20%"
+            },
+            {
+              "data_time": null,
+              "text": "90.76%"
+            },
+            {
+              "data_time": null,
+              "text": "90.61%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.94 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.94 0.88"
+            },
+            {
+              "data_time": "2026-06-07 17:59:27",
+              "text": "5 **t3*5 **t3*5 (英国) 2.00 3.40 3.25 2.10 3.40 3.00 45.38% 26.69% 27.93% 43.15% 26.65% 30.20% 90.76% 90.61% 0.86 0.94 0.95 0.90 0.94 0.88 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.25 3.35 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "2.20 3.35 3.20"
+            },
+            {
+              "data_time": null,
+              "text": "41.29% 27.73% 30.97%"
+            },
+            {
+              "data_time": null,
+              "text": "42.66% 28.01% 29.33%"
+            },
+            {
+              "data_time": null,
+              "text": "92.91%"
+            },
+            {
+              "data_time": null,
+              "text": "93.85%"
+            },
+            {
+              "data_time": null,
+              "text": "0.97 0.93 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.93 0.93"
+            },
+            {
+              "data_time": "2026-06-07 12:05:15",
+              "text": "6 I***rw**t*n I***rw**t*n (塞浦路斯) 2.25 3.35 3.00 2.20 3.35 3.20 41.29% 27.73% 30.97% 42.66% 28.01% 29.33% 92.91% 93.85% 0.97 0.93 0.88 0.95 0.93 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.99 3.50 3.20"
+            },
+            {
+              "data_time": null,
+              "text": "2.13 3.10 3.20"
+            },
+            {
+              "data_time": null,
+              "text": "45.65% 25.96% 28.39%"
+            },
+            {
+              "data_time": null,
+              "text": "42.50% 29.20% 28.29%"
+            },
+            {
+              "data_time": null,
+              "text": "90.85%"
+            },
+            {
+              "data_time": null,
+              "text": "90.53%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.97 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.86 0.93"
+            },
+            {
+              "data_time": "2026-06-07 17:37:25",
+              "text": "7 *冠 *冠 (菲律宾) 1.99 3.50 3.20 2.13 3.10 3.20 45.65% 25.96% 28.39% 42.50% 29.20% 28.29% 90.85% 90.53% 0.86 0.97 0.93 0.92 0.86 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.02 3.50 3.30"
+            },
+            {
+              "data_time": null,
+              "text": "2.12 3.50 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "45.68% 26.36% 27.96%"
+            },
+            {
+              "data_time": null,
+              "text": "43.25% 26.19% 30.56%"
+            },
+            {
+              "data_time": null,
+              "text": "92.27%"
+            },
+            {
+              "data_time": null,
+              "text": "91.68%"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 0.97 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.97 0.88"
+            },
+            {
+              "data_time": "2026-06-07 17:39:14",
+              "text": "8 易*博 易*博 (英国) 2.02 3.50 3.30 2.12 3.50 3.00 45.68% 26.36% 27.96% 43.25% 26.19% 30.56% 92.27% 91.68% 0.87 0.97 0.96 0.91 0.97 0.88 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.30 3.30 2.80"
+            },
+            {
+              "data_time": null,
+              "text": "2.10 3.30 3.13"
+            },
+            {
+              "data_time": null,
+              "text": "39.71% 27.68% 32.62%"
+            },
+            {
+              "data_time": null,
+              "text": "43.34% 27.58% 29.08%"
+            },
+            {
+              "data_time": null,
+              "text": "91.33%"
+            },
+            {
+              "data_time": null,
+              "text": "91.02%"
+            },
+            {
+              "data_time": null,
+              "text": "0.99 0.91 0.82"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.91 0.91"
+            },
+            {
+              "data_time": "2026-06-07 17:36:13",
+              "text": "9 伟* 伟* (直布罗陀) 2.30 3.30 2.80 2.10 3.30 3.13 39.71% 27.68% 32.62% 43.34% 27.58% 29.08% 91.33% 91.02% 0.99 0.91 0.82 0.90 0.91 0.91 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.25 3.40 2.95"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.40 3.20"
+            },
+            {
+              "data_time": null,
+              "text": "41.25% 27.30% 31.46%"
+            },
+            {
+              "data_time": null,
+              "text": "43.40% 27.44% 29.16%"
+            },
+            {
+              "data_time": null,
+              "text": "92.80%"
+            },
+            {
+              "data_time": null,
+              "text": "93.31%"
+            },
+            {
+              "data_time": null,
+              "text": "0.97 0.94 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.94 0.93"
+            },
+            {
+              "data_time": "2026-06-07 09:45:39",
+              "text": "10 B**n B**n (奥地利) 2.25 3.40 2.95 2.15 3.40 3.20 41.25% 27.30% 31.46% 43.40% 27.44% 29.16% 92.80% 93.31% 0.97 0.94 0.86 0.93 0.94 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.17 3.52 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "2.16 3.55 3.26"
+            },
+            {
+              "data_time": null,
+              "text": "42.74% 26.35% 30.91%"
+            },
+            {
+              "data_time": null,
+              "text": "44.03% 26.79% 29.18%"
+            },
+            {
+              "data_time": null,
+              "text": "92.74%"
+            },
+            {
+              "data_time": null,
+              "text": "95.11%"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.98 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.98 0.95"
+            },
+            {
+              "data_time": "2026-06-07 17:47:19",
+              "text": "11 Pi****le平* Pi****le平* (荷兰) 2.17 3.52 3.00 2.16 3.55 3.26 42.74% 26.35% 30.91% 44.03% 26.79% 29.18% 92.74% 95.11% 0.93 0.98 0.88 0.93 0.98 0.95 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.22 3.30 2.95"
+            },
+            {
+              "data_time": null,
+              "text": "2.23 3.40 3.05"
+            },
+            {
+              "data_time": null,
+              "text": "41.23% 27.74% 31.03%"
+            },
+            {
+              "data_time": null,
+              "text": "41.89% 27.48% 30.63%"
+            },
+            {
+              "data_time": null,
+              "text": "91.54%"
+            },
+            {
+              "data_time": null,
+              "text": "93.42%"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 0.91 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "0.96 0.94 0.89"
+            },
+            {
+              "data_time": "2026-06-07 17:25:50",
+              "text": "12 10**t 10**t (英国) 2.22 3.30 2.95 2.23 3.40 3.05 41.23% 27.74% 31.03% 41.89% 27.48% 30.63% 91.54% 93.42% 0.96 0.91 0.86 0.96 0.94 0.89 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.30 3.50 3.00"
+            },
+            {
+              "data_time": null,
+              "text": "2.15 3.40 3.30"
+            },
+            {
+              "data_time": null,
+              "text": "41.26% 27.11% 31.63%"
+            },
+            {
+              "data_time": null,
+              "text": "43.79% 27.69% 28.53%"
+            },
+            {
+              "data_time": null,
+              "text": "94.89%"
+            },
+            {
+              "data_time": null,
+              "text": "94.14%"
+            },
+            {
+              "data_time": null,
+              "text": "0.99 0.97 0.88"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.94 0.96"
+            },
+            {
+              "data_time": "2026-06-07 09:51:14",
+              "text": "13 C***l C***l (英国) 2.30 3.50 3.00 2.15 3.40 3.30 41.26% 27.11% 31.63% 43.79% 27.69% 28.53% 94.89% 94.14% 0.99 0.97 0.88 0.93 0.94 0.96 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.91 3.16 3.30"
+            },
+            {
+              "data_time": null,
+              "text": "2.17 3.08 2.97"
+            },
+            {
+              "data_time": null,
+              "text": "45.80% 27.69% 26.51%"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1&win=1.86&draw=3.15&lost=3.65&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=293&win=2.25&draw=3.25&lost=2.90&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=5&win=2.00&draw=3.35&lost=3.07&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=2&win=2.25&draw=3.40&lost=3.00&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=3&win=2.00&draw=3.40&lost=3.25&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=4&win=2.25&draw=3.35&lost=3.00&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=280&win=1.99&draw=3.50&lost=3.20&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=9&win=2.02&draw=3.50&lost=3.30&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=6&win=2.30&draw=3.30&lost=2.80&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=11&win=2.25&draw=3.40&lost=2.95&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1055&win=2.17&draw=3.52&lost=3.00&fixtureid=1411011",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=16&win=2.22&draw=3.30&lost=2.95&fixtureid=1411011"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": "1411013",
+      "kickoff": "2026-06-08 07:00:00",
+      "row_text": "周日204 友谊赛 六月 06-08 07:00 哥伦比亚 VS 约旦 0.790 0.950 0.950 0.570 0.800 析 亚 欧",
+      "links": [
+        "//liansai.500.com/zuqiu-19472/",
+        "//liansai.500.com/team/6/",
+        "//liansai.500.com/team/87/",
+        "//odds.500.com/fenxi/shuju-1411013.shtml",
+        "//odds.500.com/fenxi/yazhi-1411013.shtml",
+        "//odds.500.com/fenxi/ouzhi-1411013.shtml"
+      ],
+      "details": {
+        "asian_handicap": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/yazhi-1411013.shtml",
+          "bytes": 92384,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "哥伦比亚VS约旦(2026友谊赛)-亚盘对比-500彩票网",
+          "row_count": 45,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "0.860↑ 两球 升 0.760↓ 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.600 球半 1.250"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 0.860↑ 两球 升 0.760↓ 2 06-07 16:28 0.600 球半 1.250 06-06 18:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.950 两球 0.830"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.950 两球 0.830 06-06 22:33 0.950 两球 0.830 06-06 22:33 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.570↓ 球半 降 1.250↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.250 两球半 0.570"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 0.570↓ 球半 降 1.250↑ 1 06-07 07:10 1.250 两球半 0.570 06-06 06:26 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.950↑ 两球 0.850↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.830 两球 0.980"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.950↑ 两球 0.850↓ 06-07 17:50 0.830 两球 0.980 06-06 18:45 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.950↑ 两球 0.750↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.750 两球 0.950"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 0.950↑ 两球 0.750↓ 06-07 15:53 0.750 两球 0.950 06-05 00:37 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.800↓ 球半/两球 降 1.020↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.940 两球 0.820"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.800↓ 球半/两球 降 1.020↑ 1 06-07 16:58 0.940 两球 0.820 06-07 07:15 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.030↑ 两球 0.840↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.980 两球 0.890"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 1.030↑ 两球 0.840↓ 06-07 17:28 0.980 两球 0.890 06-07 07:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.850↑ 球半/两球 降 1.070↑ 2"
+            },
+            {
+              "data_time": null,
+              "text": "0.840 两球 0.820"
+            },
+            {
+              "data_time": null,
+              "text": "8 on** on** 0.850↑ 球半/两球 降 1.070↑ 2 06-07 16:52 0.840 两球 0.820 06-02 18:15 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.990↑ 两球 0.750↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.950 两球 0.780"
+            },
+            {
+              "data_time": null,
+              "text": "9 伟* 伟* 0.990↑ 两球 0.750↓ 1 06-07 17:24 0.950 两球 0.780 06-06 22:42 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.790↓ 球半/两球 1.040↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.910 球半/两球 0.840"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.790↓ 球半/两球 1.040↑ 1 06-07 17:24 0.910 球半/两球 0.840 06-06 19:46 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.040↑ 两球 0.800↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.890 两球 0.930"
+            },
+            {
+              "data_time": null,
+              "text": "11 利* 利* 1.040↑ 两球 0.800↓ 06-07 18:07 0.890 两球 0.930 06-07 11:04 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.040↑ 两球 0.800↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.900 两球 0.860"
+            },
+            {
+              "data_time": null,
+              "text": "12 M****on88 (明*) M****on88 (明*) 1.040↑ 两球 0.800↓ 1 06-07 18:08 0.900 两球 0.860 06-06 19:38 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.830↓ 球半/两球 0.930↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.880 球半/两球 0.880"
+            },
+            {
+              "data_time": null,
+              "text": "13 香**会 香**会 0.830↓ 球半/两球 0.930↑ 06-07 16:46 0.880 球半/两球 0.880 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "14 12**t (壹*博) 12**t (壹*博) 1.040↑ 两球 0.800↓ 1 06-07 18:06 0.900 两球 0.860 06-06 19:10 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.980↑ 两球 0.790↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.800 两球 0.930"
+            },
+            {
+              "data_time": null,
+              "text": "15 18**t 18**t 0.980↑ 两球 0.790↓ 1 06-07 17:23 0.800 两球 0.930 06-03 17:59 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.790↓ 球半/两球 降 1.030↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.970 两球 0.850"
+            },
+            {
+              "data_time": null,
+              "text": "16 W****t (盈*) W****t (盈*) 0.790↓ 球半/两球 降 1.030↑ 1 06-07 16:59 0.970 两球 0.850 06-07 00:51 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=293&cp=球半&id=1411013&s1=0.600&s2=1.250",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=5&cp=两球&id=1411013&s1=0.950&s2=0.830",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=2&cp=两球半&id=1411013&s1=1.250&s2=0.570",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=3&cp=两球&id=1411013&s1=0.830&s2=0.980",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=4&cp=两球&id=1411013&s1=0.750&s2=0.950",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=280&cp=两球&id=1411013&s1=0.940&s2=0.820",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=9&cp=两球&id=1411013&s1=0.980&s2=0.890",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1484&cp=两球&id=1411013&s1=0.840&s2=0.820",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=6&cp=两球&id=1411013&s1=0.950&s2=0.780",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=1055&cp=球半/两球&id=1411013&s1=0.910&s2=0.840",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=651&cp=两球&id=1411013&s1=0.890&s2=0.930",
+            "https://odds.500.com/fenxi1/yazhi_same.php?cid=140&cp=两球&id=1411013&s1=0.900&s2=0.860"
+          ]
+        },
+        "handicap_1x2": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/rangqiu-1411013.shtml?lot=jczq",
+          "bytes": 105142,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "哥伦比亚VS约旦(2026友谊赛)-让球指数-500彩票网",
+          "row_count": 109,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "2.75 3.80 1.99"
+            },
+            {
+              "data_time": null,
+              "text": "2.60 3.60 2.14"
+            },
+            {
+              "data_time": null,
+              "text": "32.20% 23.30% 44.50%"
+            },
+            {
+              "data_time": null,
+              "text": "34.05% 24.59% 41.36%"
+            },
+            {
+              "data_time": null,
+              "text": "88.55%"
+            },
+            {
+              "data_time": null,
+              "text": "88.52%"
+            },
+            {
+              "data_time": null,
+              "text": "0.99 0.90 0.81"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.85 0.87"
+            },
+            {
+              "data_time": "2026-06-07 16:54:34",
+              "text": "1 竞*官* 竞*官* (中国) -2 2.75 3.80 1.99 2.60 3.60 2.14 32.20% 23.30% 44.50% 34.05% 24.59% 41.36% 88.55% 88.52% 0.99 0.90 0.81 0.93 0.85 0.87 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.25 3.90 2.37"
+            },
+            {
+              "data_time": null,
+              "text": "2.50 3.80 2.15"
+            },
+            {
+              "data_time": null,
+              "text": "39.58% 22.84% 37.58%"
+            },
+            {
+              "data_time": null,
+              "text": "35.45% 23.32% 41.22%"
+            },
+            {
+              "data_time": null,
+              "text": "89.06%"
+            },
+            {
+              "data_time": null,
+              "text": "88.63%"
+            },
+            {
+              "data_time": null,
+              "text": "0.81 0.92 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.90 0.87"
+            },
+            {
+              "data_time": "2026-06-07 16:02:28",
+              "text": "2 立* 立* (英国) -2 2.25 3.90 2.37 2.50 3.80 2.15 39.58% 22.84% 37.58% 35.45% 23.32% 41.22% 89.06% 88.63% 0.81 0.92 0.96 0.90 0.90 0.87 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.45 3.70 2.20"
+            },
+            {
+              "data_time": null,
+              "text": "36.03% 23.85% 40.12%"
+            },
+            {
+              "data_time": null,
+              "text": "88.26%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.87 0.89"
+            },
+            {
+              "data_time": "2026-06-07 17:24:54",
+              "text": "3 伟* 伟* (直布罗陀) -2 2.45 3.70 2.20 2.45 3.70 2.20 36.03% 23.85% 40.12% 36.03% 23.85% 40.12% 88.26% 88.26% 0.88 0.87 0.89 0.88 0.87 0.89 同"
+            },
+            {
+              "data_time": "2026-06-07 16:00:53",
+              "text": "4 B**n B**n (奥地利) -2 2.25 3.90 2.37 2.50 3.80 2.15 39.58% 22.84% 37.58% 35.45% 23.32% 41.22% 89.06% 88.63% 0.81 0.92 0.96 0.90 0.90 0.87 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.84 4.16 1.99"
+            },
+            {
+              "data_time": null,
+              "text": "2.63 3.97 2.27"
+            },
+            {
+              "data_time": null,
+              "text": "32.16% 21.95% 45.89%"
+            },
+            {
+              "data_time": null,
+              "text": "35.45% 23.48% 41.07%"
+            },
+            {
+              "data_time": null,
+              "text": "91.32%"
+            },
+            {
+              "data_time": null,
+              "text": "93.23%"
+            },
+            {
+              "data_time": null,
+              "text": "1.02 0.98 0.81"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.94 0.92"
+            },
+            {
+              "data_time": "2026-06-07 17:25:28",
+              "text": "5 Pi****le平* Pi****le平* (荷兰) -2 2.84 4.16 1.99 2.63 3.97 2.27 32.16% 21.95% 45.89% 35.45% 23.48% 41.07% 91.32% 93.23% 1.02 0.98 0.81 0.95 0.94 0.92 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.30 3.90 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "38.61% 22.77% 38.61%"
+            },
+            {
+              "data_time": null,
+              "text": "88.81%"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 0.92 0.93"
+            },
+            {
+              "data_time": "2026-06-07 16:00:51",
+              "text": "6 C***l C***l (英国) -2 2.30 3.90 2.30 2.50 3.80 2.15 38.61% 22.77% 38.61% 35.45% 23.32% 41.22% 88.81% 88.63% 0.83 0.92 0.93 0.90 0.90 0.87 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.38 3.80 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "2.40 3.90 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "37.58% 23.54% 38.89%"
+            },
+            {
+              "data_time": null,
+              "text": "37.28% 22.94% 39.77%"
+            },
+            {
+              "data_time": null,
+              "text": "89.44%"
+            },
+            {
+              "data_time": null,
+              "text": "89.48%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.90 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.92 0.91"
+            },
+            {
+              "data_time": "2026-06-07 15:46:13",
+              "text": "7 U****t (优*客) U****t (优*客) (马耳他) -2 2.38 3.80 2.30 2.40 3.90 2.25 37.58% 23.54% 38.89% 37.28% 22.94% 39.77% 89.44% 89.48% 0.86 0.90 0.93 0.86 0.92 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.45 3.80 2.20"
+            },
+            {
+              "data_time": null,
+              "text": "36.25% 23.37% 40.37%"
+            },
+            {
+              "data_time": null,
+              "text": "88.82%"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.90 0.89"
+            },
+            {
+              "data_time": "2026-06-07 16:01:36",
+              "text": "8 S***t**g**t (博*堂) S***t**g**t (博*堂) (英国) -2 2.45 3.80 2.20 2.50 3.80 2.15 36.25% 23.37% 40.37% 35.45% 23.32% 41.22% 88.82% 88.63% 0.88 0.90 0.89 0.90 0.90 0.87 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.40 4.00 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "2.40 3.80 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "37.50% 22.50% 40.00%"
+            },
+            {
+              "data_time": null,
+              "text": "37.38% 23.61% 39.01%"
+            },
+            {
+              "data_time": null,
+              "text": "90.00%"
+            },
+            {
+              "data_time": null,
+              "text": "89.72%"
+            },
+            {
+              "data_time": null,
+              "text": "0.86 0.94 0.91"
+            },
+            {
+              "data_time": "2026-06-07 16:21:00",
+              "text": "9 88****** 88****** (塞浦路斯) -2 2.40 4.00 2.25 2.40 3.80 2.30 37.50% 22.50% 40.00% 37.38% 23.61% 39.01% 90.00% 89.72% 0.86 0.94 0.91 0.86 0.90 0.93 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.27 4.30 2.55"
+            },
+            {
+              "data_time": null,
+              "text": "2.55 4.10 2.31"
+            },
+            {
+              "data_time": null,
+              "text": "41.35% 21.83% 36.81%"
+            },
+            {
+              "data_time": null,
+              "text": "36.69% 22.82% 40.50%"
+            },
+            {
+              "data_time": null,
+              "text": "93.88%"
+            },
+            {
+              "data_time": null,
+              "text": "93.55%"
+            },
+            {
+              "data_time": null,
+              "text": "0.82 1.01 1.03"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.97 0.94"
+            },
+            {
+              "data_time": "2026-06-07 15:45:27",
+              "text": "10 大巨* 大巨* (柬埔寨) -2 2.27 4.30 2.55 2.55 4.10 2.31 41.35% 21.83% 36.81% 36.69% 22.82% 40.50% 93.88% 93.55% 0.82 1.01 1.03 0.92 0.97 0.94 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.30 3.80 2.40"
+            },
+            {
+              "data_time": null,
+              "text": "2.63 3.80 2.20"
+            },
+            {
+              "data_time": null,
+              "text": "39.01% 23.61% 37.38%"
+            },
+            {
+              "data_time": null,
+              "text": "34.63% 23.97% 41.40%"
+            },
+            {
+              "data_time": null,
+              "text": "91.08%"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 0.90 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.90 0.89"
+            },
+            {
+              "data_time": "2026-06-07 17:10:55",
+              "text": "11 必* 必* (英国) -2 2.30 3.80 2.40 2.63 3.80 2.20 39.01% 23.61% 37.38% 34.63% 23.97% 41.40% 89.72% 91.08% 0.83 0.90 0.97 0.95 0.90 0.89 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.37 4.00 2.32"
+            },
+            {
+              "data_time": null,
+              "text": "2.44 3.84 2.32"
+            },
+            {
+              "data_time": null,
+              "text": "38.25% 22.67% 39.08%"
+            },
+            {
+              "data_time": null,
+              "text": "37.21% 23.65% 39.14%"
+            },
+            {
+              "data_time": null,
+              "text": "90.66%"
+            },
+            {
+              "data_time": null,
+              "text": "90.80%"
+            },
+            {
+              "data_time": null,
+              "text": "0.85 0.94 0.94"
+            },
+            {
+              "data_time": null,
+              "text": "0.88 0.91 0.94"
+            },
+            {
+              "data_time": "2026-06-07 17:46:26",
+              "text": "12 1x**t 1x**t -2 2.37 4.00 2.32 2.44 3.84 2.32 38.25% 22.67% 39.08% 37.21% 23.65% 39.14% 90.66% 90.80% 0.85 0.94 0.94 0.88 0.91 0.94 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.35 3.75 2.45"
+            },
+            {
+              "data_time": null,
+              "text": "2.60 3.75 2.25"
+            },
+            {
+              "data_time": null,
+              "text": "38.67% 24.23% 37.09%"
+            },
+            {
+              "data_time": null,
+              "text": "35.10% 24.34% 40.56%"
+            },
+            {
+              "data_time": null,
+              "text": "90.88%"
+            },
+            {
+              "data_time": null,
+              "text": "91.26%"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 0.88 0.99"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.88 0.91"
+            },
+            {
+              "data_time": "2026-06-07 18:09:09",
+              "text": "13 **ts**n **ts**n (瑞典) -2 2.35 3.75 2.45 2.60 3.75 2.25 38.67% 24.23% 37.09% 35.10% 24.34% 40.56% 90.88% 91.26% 0.84 0.88 0.99 0.93 0.88 0.91 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.50 3.85 2.30"
+            },
+            {
+              "data_time": null,
+              "text": "36.55% 23.73% 39.72%"
+            },
+            {
+              "data_time": null,
+              "text": "91.36%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.91 0.93"
+            },
+            {
+              "data_time": "2026-06-07 13:19:49",
+              "text": "14 D***k T**********e D***k T**********e (丹麦) -2 2.35 3.75 2.45 2.50 3.85 2.30 38.67% 24.23% 37.09% 36.55% 23.73% 39.72% 90.88% 91.36% 0.84 0.88 0.99 0.90 0.91 0.93 同"
+            },
+            {
+              "data_time": null,
+              "text": "2.30 3.65 2.40"
+            },
+            {
+              "data_time": null,
+              "text": "2.55 3.60 2.20"
+            },
+            {
+              "data_time": null,
+              "text": "38.63% 24.34% 37.02%"
+            },
+            {
+              "data_time": null,
+              "text": "34.87% 24.70% 40.42%"
+            },
+            {
+              "data_time": null,
+              "text": "88.86%"
+            },
+            {
+              "data_time": null,
+              "text": "88.93%"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 0.86 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.85 0.89"
+            },
+            {
+              "data_time": "2026-06-07 16:45:22",
+              "text": "15 Sv****a Spel Sv****a Spel (瑞典) -2 2.30 3.65 2.40 2.55 3.60 2.20 38.63% 24.34% 37.02% 34.87% 24.70% 40.42% 88.86% 88.93% 0.83 0.86 0.97 0.92 0.85 0.89 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1&handicapline=-2&win=2.75&draw=3.80&lost=1.99&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=2&handicapline=-2&win=2.25&draw=3.90&lost=2.37&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=6&handicapline=-2&win=2.45&draw=3.70&lost=2.20&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=11&handicapline=-2&win=2.25&draw=3.90&lost=2.37&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1055&handicapline=-2&win=2.84&draw=4.16&lost=1.99&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=14&handicapline=-2&win=2.30&draw=3.90&lost=2.30&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=291&handicapline=-2&win=2.38&draw=3.80&lost=2.30&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=275&handicapline=-2&win=2.45&draw=3.80&lost=2.20&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1487&handicapline=-2&win=2.40&draw=4.00&lost=2.25&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1488&handicapline=-2&win=2.27&draw=4.30&lost=2.55&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=18&handicapline=-2&win=2.30&draw=3.80&lost=2.40&id=1411013",
+            "https://odds.500.com/fenxi1/rangqiu_same.php?cid=1259&handicapline=-2&win=2.37&draw=4.00&lost=2.32&id=1411013"
+          ]
+        },
+        "over_under": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/daxiao-1411013.shtml",
+          "bytes": 93893,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "哥伦比亚VS约旦(2026友谊赛)-大小对比-500彩票网",
+          "row_count": 46,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "1.30 3.5 0.55 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.30 3.5 0.55"
+            },
+            {
+              "data_time": null,
+              "text": "1 威**尔 威**尔 1.30 3.5 0.55 1 06-07 16:20 1.30 3.5 0.55 06-06 18:45 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.82 3 0.90"
+            },
+            {
+              "data_time": null,
+              "text": "2 *门 *门 0.82 3 0.90 06-06 22:33 0.82 3 0.90 06-06 22:33 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.55↑ 2.5 1.30↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.44 2.5 1.60"
+            },
+            {
+              "data_time": null,
+              "text": "3 立* 立* 0.55↑ 2.5 1.30↓ 1 06-07 16:02 0.44 2.5 1.60 06-05 21:25 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.87↑ 3 0.92↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 3 0.98"
+            },
+            {
+              "data_time": null,
+              "text": "4 **t3*5 **t3*5 0.87↑ 3 0.92↓ 06-07 17:42 0.83 3 0.98 06-06 18:45 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.30↑ 3.5 0.55↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.05 3.5 0.70"
+            },
+            {
+              "data_time": null,
+              "text": "5 I***rw**t*n I***rw**t*n 1.30↑ 3.5 0.55↓ 1 06-06 20:19 1.05 3.5 0.70 06-05 00:37 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.86↑ 3 0.94↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.84 3 0.92"
+            },
+            {
+              "data_time": null,
+              "text": "6 *冠 *冠 0.86↑ 3 0.94↑ 06-07 11:28 0.84 3 0.92 06-07 07:15 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 3 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "7 易*博 易*博 0.91 3 0.97 06-07 17:28 0.91 3 0.97 06-07 07:01 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.89↑ 3 0.88↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.87 3 0.91"
+            },
+            {
+              "data_time": null,
+              "text": "8 伟* 伟* 0.89↑ 3 0.88↓ 06-07 17:24 0.87 3 0.91 06-06 22:33 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.84↑ 3 0.81↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.72 3 0.95"
+            },
+            {
+              "data_time": null,
+              "text": "9 on** on** 0.84↑ 3 0.81↓ 1 06-07 16:52 0.72 3 0.95 06-02 18:15 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.92↑ 3↑ 0.88↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.76 2.5/3 0.99"
+            },
+            {
+              "data_time": null,
+              "text": "10 Pi****le平* Pi****le平* 0.92↑ 3↑ 0.88↓ 1 06-07 17:24 0.76 2.5/3 0.99 06-06 19:46 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.81 3↓ 0.89↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.81 3/3.5 0.86"
+            },
+            {
+              "data_time": null,
+              "text": "11 10**t 10**t 0.81 3↓ 0.89↑ 1 06-07 17:41 0.81 3/3.5 0.86 06-05 00:28 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.92↑ 3 0.90↓"
+            },
+            {
+              "data_time": null,
+              "text": "0.83 3 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "12 利* 利* 0.92↑ 3 0.90↓ 06-07 18:07 0.83 3 0.93 06-07 11:59 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.91↓ 3↓ 0.91↑ 1"
+            },
+            {
+              "data_time": null,
+              "text": "1.00 3/3.5 0.76"
+            },
+            {
+              "data_time": null,
+              "text": "13 M****on88 (明*) M****on88 (明*) 0.91↓ 3↓ 0.91↑ 1 06-07 18:05 1.00 3/3.5 0.76 06-06 19:38 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.74 2.5/3 0.97"
+            },
+            {
+              "data_time": null,
+              "text": "14 香**会 香**会 0.74 2.5/3 0.97 06-06 13:53 0.74 2.5/3 0.97 06-06 13:53 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "15 12**t (壹*博) 12**t (壹*博) 0.91↓ 3↓ 0.91↑ 1 06-07 18:06 1.00 3/3.5 0.76 06-06 19:10 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.87↑ 3 0.88↓ 1"
+            },
+            {
+              "data_time": null,
+              "text": "0.77 3 0.96"
+            },
+            {
+              "data_time": null,
+              "text": "16 18**t 18**t 0.87↑ 3 0.88↓ 1 06-07 17:21 0.77 3 0.96 06-03 17:59 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "0.87↓ 3 0.93↑"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 3 0.91"
+            },
+            {
+              "data_time": null,
+              "text": "17 W****t (盈*) W****t (盈*) 0.87↓ 3 0.93↑ 06-07 12:08 0.89 3 0.91 06-07 00:51 主 客 同"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=293&bigpei=1.30&handi=3.5&smallpei=0.55&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=5&bigpei=0.82&handi=3&smallpei=0.90&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=2&bigpei=0.44&handi=2.5&smallpei=1.60&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=3&bigpei=0.83&handi=3&smallpei=0.98&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=4&bigpei=1.05&handi=3.5&smallpei=0.70&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=280&bigpei=0.84&handi=3&smallpei=0.92&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=9&bigpei=0.91&handi=3&smallpei=0.97&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=6&bigpei=0.87&handi=3&smallpei=0.91&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1484&bigpei=0.72&handi=3&smallpei=0.95&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=1055&bigpei=0.76&handi=2.5/3&smallpei=0.99&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=16&bigpei=0.81&handi=3/3.5&smallpei=0.86&fixid=1411013",
+            "https://odds.500.com/fenxi1/daxiao_same.php?cid=651&bigpei=0.83&handi=3&smallpei=0.93&fixid=1411013"
+          ]
+        },
+        "european_odds": {
+          "status": 200,
+          "url": "https://odds.500.com/fenxi/ouzhi-1411013.shtml",
+          "bytes": 179224,
+          "charset": "gb2312",
+          "attempt": 1,
+          "title": "哥伦比亚VS约旦(2026友谊赛)-百家欧赔-500彩票网",
+          "row_count": 222,
+          "rows": [
+            {
+              "data_time": null,
+              "text": "1.15 5.60 12.50"
+            },
+            {
+              "data_time": null,
+              "text": "77.08% 15.83% 7.09%"
+            },
+            {
+              "data_time": null,
+              "text": "88.64%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.83 0.89"
+            },
+            {
+              "data_time": "2026-06-07 09:17:26",
+              "text": "1 竞*官* 竞*官* (中国) 1.15 5.60 12.50 1.15 5.60 12.50 77.08% 15.83% 7.09% 77.08% 15.83% 7.09% 88.64% 88.64% 0.90 0.83 0.89 0.90 0.83 0.89 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.18 6.00 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.20 6.00 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "77.67% 15.28% 7.05%"
+            },
+            {
+              "data_time": null,
+              "text": "77.38% 15.48% 7.14%"
+            },
+            {
+              "data_time": null,
+              "text": "91.66%"
+            },
+            {
+              "data_time": null,
+              "text": "92.86%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.89 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.89 0.93"
+            },
+            {
+              "data_time": "2026-06-07 16:19:17",
+              "text": "2 威**尔 威**尔 (英国) 1.18 6.00 13.00 1.20 6.00 13.00 77.67% 15.28% 7.05% 77.38% 15.48% 7.14% 91.66% 92.86% 0.92 0.89 0.93 0.94 0.89 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.14 6.00 12.00"
+            },
+            {
+              "data_time": null,
+              "text": "77.82% 14.79% 7.39%"
+            },
+            {
+              "data_time": null,
+              "text": "88.72%"
+            },
+            {
+              "data_time": null,
+              "text": "0.89 0.89 0.86"
+            },
+            {
+              "data_time": "2026-06-06 22:32:05",
+              "text": "3 *门 *门 (中国澳门) 1.14 6.00 12.00 1.14 6.00 12.00 77.82% 14.79% 7.39% 77.82% 14.79% 7.39% 88.72% 88.72% 0.89 0.89 0.86 0.89 0.89 0.86 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.18 7.00 15.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.22 6.50 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "80.18% 13.52% 6.31%"
+            },
+            {
+              "data_time": null,
+              "text": "78.03% 14.65% 7.32%"
+            },
+            {
+              "data_time": null,
+              "text": "94.61%"
+            },
+            {
+              "data_time": null,
+              "text": "95.20%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 1.03 1.07"
+            },
+            {
+              "data_time": null,
+              "text": "0.95 0.96 0.93"
+            },
+            {
+              "data_time": "2026-06-07 16:01:36",
+              "text": "4 立* 立* (英国) 1.18 7.00 15.00 1.22 6.50 13.00 80.18% 13.52% 6.31% 78.03% 14.65% 7.32% 94.61% 95.20% 0.92 1.03 1.07 0.95 0.96 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.17 6.00 15.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.17 6.25 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "78.55% 15.32% 6.13%"
+            },
+            {
+              "data_time": null,
+              "text": "78.30% 14.66% 7.05%"
+            },
+            {
+              "data_time": null,
+              "text": "91.91%"
+            },
+            {
+              "data_time": null,
+              "text": "91.61%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 1.07"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.92 0.93"
+            },
+            {
+              "data_time": "2026-06-06 21:39:26",
+              "text": "5 **t3*5 **t3*5 (英国) 1.17 6.00 15.00 1.17 6.25 13.00 78.55% 15.32% 6.13% 78.30% 14.66% 7.05% 91.91% 91.61% 0.91 0.89 1.07 0.91 0.92 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.17 6.75 16.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.20 6.75 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "80.23% 13.91% 5.87%"
+            },
+            {
+              "data_time": null,
+              "text": "78.73% 14.00% 7.27%"
+            },
+            {
+              "data_time": null,
+              "text": "93.87%"
+            },
+            {
+              "data_time": null,
+              "text": "94.48%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 1.00 1.15"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 1.00 0.93"
+            },
+            {
+              "data_time": "2026-06-07 15:52:45",
+              "text": "6 I***rw**t*n I***rw**t*n (塞浦路斯) 1.17 6.75 16.00 1.20 6.75 13.00 80.23% 13.91% 5.87% 78.73% 14.00% 7.27% 93.87% 94.48% 0.91 1.00 1.15 0.94 1.00 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.17 6.30 11.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.19 6.00 10.50"
+            },
+            {
+              "data_time": null,
+              "text": "77.67% 14.42% 7.90%"
+            },
+            {
+              "data_time": null,
+              "text": "76.24% 15.12% 8.64%"
+            },
+            {
+              "data_time": null,
+              "text": "90.88%"
+            },
+            {
+              "data_time": null,
+              "text": "90.72%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.93 0.82"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.89 0.75"
+            },
+            {
+              "data_time": "2026-06-07 16:58:23",
+              "text": "7 *冠 *冠 (菲律宾) 1.17 6.30 11.50 1.19 6.00 10.50 77.67% 14.42% 7.90% 76.24% 15.12% 8.64% 90.88% 90.72% 0.91 0.93 0.82 0.93 0.89 0.75 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.18 6.10 15.00"
+            },
+            {
+              "data_time": null,
+              "text": "78.61% 15.21% 6.18%"
+            },
+            {
+              "data_time": null,
+              "text": "92.76%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.90 1.07"
+            },
+            {
+              "data_time": "2026-06-06 23:27:54",
+              "text": "8 易*博 易*博 (英国) 1.18 6.10 15.00 1.18 6.10 15.00 78.61% 15.21% 6.18% 78.61% 15.21% 6.18% 92.76% 92.76% 0.92 0.90 1.07 0.92 0.90 1.07 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.15 6.50 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.17 6.00 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "79.03% 13.98% 6.99%"
+            },
+            {
+              "data_time": null,
+              "text": "77.82% 15.18% 7.00%"
+            },
+            {
+              "data_time": null,
+              "text": "91.05%"
+            },
+            {
+              "data_time": null,
+              "text": "0.90 0.96 0.93"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 0.93"
+            },
+            {
+              "data_time": "2026-06-07 17:22:09",
+              "text": "9 伟* 伟* (直布罗陀) 1.15 6.50 13.00 1.17 6.00 13.00 79.03% 13.98% 6.99% 77.82% 15.18% 7.00% 90.88% 91.05% 0.90 0.96 0.93 0.91 0.89 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.18 7.00 14.50"
+            },
+            {
+              "data_time": null,
+              "text": "1.21 6.50 12.50"
+            },
+            {
+              "data_time": null,
+              "text": "80.00% 13.49% 6.51%"
+            },
+            {
+              "data_time": null,
+              "text": "77.95% 14.51% 7.55%"
+            },
+            {
+              "data_time": null,
+              "text": "94.40%"
+            },
+            {
+              "data_time": null,
+              "text": "94.31%"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 1.03 1.04"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.96 0.89"
+            },
+            {
+              "data_time": "2026-06-07 16:00:35",
+              "text": "10 B**n B**n (奥地利) 1.18 7.00 14.50 1.21 6.50 12.50 80.00% 13.49% 6.51% 77.95% 14.51% 7.55% 94.40% 94.31% 0.92 1.03 1.04 0.94 0.96 0.89 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.20 6.15 10.21"
+            },
+            {
+              "data_time": null,
+              "text": "1.18 6.93 12.76"
+            },
+            {
+              "data_time": null,
+              "text": "76.18% 14.86% 8.95%"
+            },
+            {
+              "data_time": null,
+              "text": "79.19% 13.48% 7.32%"
+            },
+            {
+              "data_time": null,
+              "text": "91.42%"
+            },
+            {
+              "data_time": null,
+              "text": "93.45%"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.91 0.73"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 1.02 0.91"
+            },
+            {
+              "data_time": "2026-06-07 17:23:15",
+              "text": "11 Pi****le平* Pi****le平* (荷兰) 1.20 6.15 10.21 1.18 6.93 12.76 76.18% 14.86% 8.95% 79.19% 13.48% 7.32% 91.42% 93.45% 0.94 0.91 0.73 0.92 1.02 0.91 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.17 6.00 14.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.19 6.40 13.00"
+            },
+            {
+              "data_time": null,
+              "text": "78.21% 15.25% 6.54%"
+            },
+            {
+              "data_time": null,
+              "text": "78.28% 14.56% 7.17%"
+            },
+            {
+              "data_time": null,
+              "text": "91.51%"
+            },
+            {
+              "data_time": null,
+              "text": "93.15%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.89 1.00"
+            },
+            {
+              "data_time": null,
+              "text": "0.93 0.95 0.93"
+            },
+            {
+              "data_time": "2026-06-07 15:45:44",
+              "text": "12 10**t 10**t (英国) 1.17 6.00 14.00 1.19 6.40 13.00 78.21% 15.25% 6.54% 78.28% 14.56% 7.17% 91.51% 93.15% 0.91 0.89 1.00 0.93 0.95 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.20 7.00 15.00"
+            },
+            {
+              "data_time": null,
+              "text": "79.91% 13.70% 6.39%"
+            },
+            {
+              "data_time": null,
+              "text": "95.89%"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 1.03 1.07"
+            },
+            {
+              "data_time": "2026-06-07 16:02:30",
+              "text": "13 C***l C***l (英国) 1.20 7.00 15.00 1.22 6.50 13.00 79.91% 13.70% 6.39% 78.03% 14.65% 7.32% 95.89% 95.20% 0.94 1.03 1.07 0.95 0.96 0.93 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.16 5.70 9.60"
+            },
+            {
+              "data_time": null,
+              "text": "1.18 5.70 9.80"
+            },
+            {
+              "data_time": null,
+              "text": "75.51% 15.37% 9.12%"
+            },
+            {
+              "data_time": null,
+              "text": "75.33% 15.60% 9.07%"
+            },
+            {
+              "data_time": null,
+              "text": "87.59%"
+            },
+            {
+              "data_time": null,
+              "text": "88.89%"
+            },
+            {
+              "data_time": null,
+              "text": "0.91 0.84 0.69"
+            },
+            {
+              "data_time": null,
+              "text": "0.92 0.84 0.70"
+            },
+            {
+              "data_time": "2026-06-07 18:05:52",
+              "text": "14 利* 利* (英国) 1.16 5.70 9.60 1.18 5.70 9.80 75.51% 15.37% 9.12% 75.33% 15.60% 9.07% 87.59% 88.89% 0.91 0.84 0.69 0.92 0.84 0.70 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.27 4.70 9.00"
+            },
+            {
+              "data_time": null,
+              "text": "1.20 6.50 15.00"
+            },
+            {
+              "data_time": null,
+              "text": "70.86% 19.15% 10.00%"
+            },
+            {
+              "data_time": null,
+              "text": "79.08% 14.60% 6.33%"
+            },
+            {
+              "data_time": null,
+              "text": "89.99%"
+            },
+            {
+              "data_time": null,
+              "text": "94.89%"
+            },
+            {
+              "data_time": null,
+              "text": "0.99 0.69 0.64"
+            },
+            {
+              "data_time": null,
+              "text": "0.94 0.96 1.07"
+            },
+            {
+              "data_time": "2026-06-07 16:50:44",
+              "text": "15 U****t (优*客) U****t (优*客) (马耳他) 1.27 4.70 9.00 1.20 6.50 15.00 70.86% 19.15% 10.00% 79.08% 14.60% 6.33% 89.99% 94.89% 0.99 0.69 0.64 0.94 0.96 1.07 主 客 同"
+            },
+            {
+              "data_time": null,
+              "text": "1.19 7.00 14.00"
+            },
+            {
+              "data_time": null,
+              "text": "79.68% 13.55% 6.77%"
+            }
+          ],
+          "same_history_links": [
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1&win=1.15&draw=5.60&lost=12.50&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=293&win=1.18&draw=6.00&lost=13.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=5&win=1.14&draw=6.00&lost=12.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=2&win=1.18&draw=7.00&lost=15.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=3&win=1.17&draw=6.00&lost=15.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=4&win=1.17&draw=6.75&lost=16.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=280&win=1.17&draw=6.30&lost=11.50&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=9&win=1.18&draw=6.10&lost=15.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=6&win=1.15&draw=6.50&lost=13.00&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=11&win=1.18&draw=7.00&lost=14.50&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=1055&win=1.20&draw=6.15&lost=10.21&fixtureid=1411013",
+            "https://odds.500.com/fenxi1/ouzhi_same.php?cid=16&win=1.17&draw=6.00&lost=14.00&fixtureid=1411013"
+          ]
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "list_status": {
+    "status": 200,
+    "url": "https://odds.500.com/yazhi_jczq.shtml",
+    "bytes": 50208,
+    "charset": "gb2312",
+    "attempt": 1
+  },
+  "list_match_count": 4
+}
