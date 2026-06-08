@@ -44,6 +44,13 @@ ODDS_SEARCH_SITE_QUERIES = [
     "site:jibao.310win.com 竞彩足球 欧赔 亚盘",
 ]
 
+NATIONAL_TEAM_SEARCH_QUERIES = [
+    "FIFA World Cup squad roster injuries suspension probable lineup",
+    "national team squad roster injuries suspension probable lineup",
+    "国家队 大名单 伤停 停赛 首发 战意 世界杯",
+    "世界杯 大名单 伤停 停赛 首发 阵容",
+]
+
 REVIEW_SOURCES = [
     ("17500赛果参考", "https://6.17500.cn/?lottery=bet&lotteryId=s_fb"),
     ("Flashscore", "https://www.flashscore.com/"),
@@ -305,6 +312,28 @@ def extract_jincai_matches(source_blocks: str) -> list[tuple[str, str, str, str]
     return matches
 
 
+def is_national_team_context(league: str, home: str, away: str) -> bool:
+    text = f"{league} {home} {away}"
+    national_markers = [
+        "世界杯",
+        "世预赛",
+        "欧洲杯",
+        "美洲杯",
+        "亚洲杯",
+        "非洲杯",
+        "友谊赛",
+        "国际赛",
+        "国家队",
+        "World Cup",
+        "FIFA",
+        "UEFA Nations",
+        "CONMEBOL",
+        "AFC",
+        "CAF",
+    ]
+    return any(marker in text for marker in national_markers)
+
+
 def build_search_supplement(*, day: str, source_blocks: str, mode: str) -> str:
     if os.environ.get("JINCAI_SEARCH_ENABLED", "1").strip().lower() in {"0", "false", "no"}:
         return "## 搜索补充\nSTATUS: disabled by JINCAI_SEARCH_ENABLED\n"
@@ -324,9 +353,15 @@ def build_search_supplement(*, day: str, source_blocks: str, mode: str) -> str:
                 f"{day} 竞彩足球 {match_id} {league} {home} vs {away} "
                 "欧赔 亚盘 大小球 凯利 必发 竞彩网 500彩票网 足彩网 澳客 7M 新球体育"
             )
+            if is_national_team_context(league, home, away):
+                queries.append(
+                    f"{day} {match_id} {league} {home} vs {away} "
+                    "World Cup squad roster probable lineup injuries suspension 国家队 大名单 伤停 停赛 首发 战意"
+                )
         else:
             queries.append(f"{day} 竞彩足球 {match_id} {home} vs {away} 赛果 比分")
     if mode == "plan":
+        queries.extend(f"{day} {query}" for query in NATIONAL_TEAM_SEARCH_QUERIES)
         # 逐场搜索优先，避免通用站点查询挤掉仅开放让球玩法的比赛。
         queries.extend(f"{day} {query}" for query in ODDS_SEARCH_SITE_QUERIES)
 
@@ -579,6 +614,9 @@ def build_plan_prompt(
 17. 必须加入“亚洲大小球变化与预测”独立主表。11:30 记录亚洲大小球基线；17:00 比较 11:30 与当前窗口；21:05 比较 11:30、17:00 与当前窗口。逐场写清盘口档位、代表公司、初盘/即时盘或跨窗口盘位、大球水位、小球水位、变化信号、大小球预测（大球/小球/观察）、置信等级、核心依据、最大反方证据和推翻条件。缺少可靠水位时写明缺口，不得补造。
 18. 亚洲大小球预测只作为独立观察项和其他方向的结构证据，不得因为单一大小球信号把黄灯或红灯升级为执行绿。若当前只有一个快照，明确写“仅建立基线，暂无跨窗口变化结论”。
 19. 让球玩法必须先做结算语义校验。每个单选和双选都要写清命中所需的原始净胜球区间。主队`+1让胜`只覆盖原始主胜或平局，主队输1球时应结算`让平`；主队`-1让胜`要求原始净胜至少2球。不得把`+1让胜`写成覆盖“只输1球”，不得用单项玩法冒充双选覆盖范围。
+20. 必须加入“世界杯/国家队冷门观察”独立分支：仅适用于世界杯、世预赛、洲际杯、国家队友谊赛等国家队场景。赔率、亚盘、凯利、大小球和跨窗口变化是主线；大名单、伤停、停赛、预计首发、长途旅行、战意和轮换只作为确认、降级或推翻条件，不得用基本面故事单独升绿。
+21. 国家队冷门观察必须逐场写清：赛事属性、强队名气热度、受让方保护方向、胜平负双选/让球双选方向、大名单核验状态、核心缺口位置（门将/中卫/后腰/锋线）、赔率是否已经消化基本面、最大反方证据、推翻条件和执行层级。名单无法可靠核验时必须写“名单缺口”，并增加不确定性惩罚。
+22. 世界杯/国家队场景不得直接套用五大联赛冷门率。强队深让、名气过热、战意不透明、轮换未知时最多升观察绿；只有赔率结构与名单硬信息同向、且无重大数据缺口时，才允许作为执行绿的外部确认之一。
 
 请按以下结构输出：
 - 标题
@@ -586,6 +624,7 @@ def build_plan_prompt(
 - 数据来源与数据缺口
 - 候选场次总表
 - 亚洲大小球变化与预测
+- 世界杯/国家队冷门观察
 - 正式方案结论
 - 黄灯双选/让球双选升级检查
 - 热门穿盘观察
@@ -655,6 +694,7 @@ def build_review_prompt(now: dt.datetime) -> tuple[str, dt.date]:
 6. 热门穿盘观察必须单独统计让球胜命中、失误和走盘，不与冷门双选或正式方案混算；累计样本少于10场时只记录，不调整主模型权重。
 7. 历史相似盘口观察必须单独复盘：记录赛前样本数、全网/同联赛分栏、亚盘赢走输、亚洲大小球大走小、欧赔胜平负、ROI与校准缺口。滚球样本不得混入；样本门槛未满足时不得调整主模型权重。
 8. 验收让球玩法时必须按结算规则写出原始净胜球区间。主队`+1让胜`不覆盖输1球；主队`-1让胜`要求原始净胜至少2球。发现赛前覆盖范围描述错误时，单独标记为结算语义错误，不得混入概率误差。
+9. 世界杯/国家队冷门观察必须单独复盘，不与五大联赛、普通友谊赛或热门穿盘混算。复盘要区分赔率信号是否先出现、名单/伤停是否只是确认或推翻、以及是否发生“基本面故事干扰赔率主线”。
 
 本地上下文：
 {local_context(day, previous_day=day)}
