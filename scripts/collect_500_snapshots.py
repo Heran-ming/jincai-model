@@ -308,6 +308,14 @@ def collect_snapshot(
     except ValueError:
         latest_value = str(out)
     (out_dir / ".latest_path").write_text(latest_value, encoding="utf-8")
+    if os.environ.get("JINCAI_ODDS_STORE_ENABLED", "1").strip().lower() not in {"0", "false", "no"}:
+        try:
+            from build_odds_store import build_store_for_day
+
+            _, summary_path = build_store_for_day(f"{now:%Y-%m-%d}")
+            print(f"wrote {summary_path}")
+        except Exception as exc:  # pragma: no cover
+            print(f"odds store build failed: {type(exc).__name__}: {exc}")
     return out
 
 
