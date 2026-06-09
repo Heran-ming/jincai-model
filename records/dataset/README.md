@@ -7,6 +7,17 @@ The goal is to make blind replay, market-type hit rate, and 1u return analysis r
 ## Files
 
 - `match_observations.csv`: one locked observation per row.
+- `jincai_match_database.json`: compact one-file match database for daily model reads. It keeps one record per match, with `odds_windows[]`, `predictions[]`, `result`, source paths, and compact market direction summaries. Raw snapshots remain in `records/odds_snapshots/` for audit.
+
+## Lightweight database
+
+Build or refresh it with:
+
+```powershell
+python scripts\build_match_database.py
+```
+
+Daily prediction prompts should prefer `records/dataset/jincai_match_database.json` first, then open raw snapshot files only when a match needs detailed audit evidence.
 
 ## Row rules
 
@@ -23,4 +34,3 @@ The goal is to make blind replay, market-type hit rate, and 1u return analysis r
 - market context: `market_type`, `market_scope`, `line`, `selection`, `odds_at_lock`
 - model context: `confidence_color`, scores, probability gap when available
 - settlement: `result_score`, `settlement`, `hit`, `return_amount`, `profit`, `review_record`
-
