@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "source": "500彩票网",
+  "source_url": "https://odds.500.com/yazhi_jczq.shtml",
+  "generated_at": "2026-07-13T14:36:33.190201+08:00",
+  "pre_match_only": true,
+  "mapping_note": "500比赛ID不是竞彩周编号。报告引用前必须结合队名与开赛时间核验映射。",
+  "matches": [],
+  "errors": [
+    {
+      "stage": "list",
+      "detail": "url_error:[Errno 111] Connection refused"
+    }
+  ],
+  "list_status": {
+    "status": null,
+    "url": "https://odds.500.com/yazhi_jczq.shtml",
+    "attempt": 3,
+    "error": "url_error:[Errno 111] Connection refused"
+  }
+}
